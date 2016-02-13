@@ -1,0 +1,81 @@
+﻿@model KJGarmentsWeb.DAL.ProductOrder
+@{
+    ViewBag.Title = "Order Confirmation";
+}
+            <div id="heading">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="heading-content">
+                                <h2>Order Confirmation</h2>
+                                @*<span>Home / <a href="contact-us.html">Contact Us</a></span>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+@using (Html.BeginForm()) {
+<div id="contact-us">
+                        <div class="container">
+                            <div class="row">
+                        <div class="col-md-12">
+                            <div class="heading-section">
+                                <h2>Shipping Information</h2>
+                                <img src="~/images/under-heading.png" alt="" >
+                            </div>
+                        </div>
+                    </div>
+                            <div class="row">
+                                <div class="product-item col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-8">  
+                                            <div class="message-form">
+                                                <form action="#" method="post" class="send-message">
+                                                    <div class="row">
+                                                    <div class="name col-md-4">
+                                                        @*<input type="text" name="name" id="name" placeholder="Name" />*@
+                                                         @Html.TextBoxFor(model => model.Customer_name,null, new { @placeholder="Name" })
+                                                         @Html.ValidationMessageFor(model => model.Customer_name)
+                                                    </div>
+                                                    <div class="email col-md-4">
+                                                        @*<input type="text" name="email" id="email" placeholder="Email" />*@
+                                                        @Html.TextBoxFor(model => model.Emailid,null, new { @placeholder="Email" })
+                                                        @Html.ValidationMessageFor(model => model.Emailid)
+                                                    </div>
+                                                    <div class="subject col-md-4">
+                                                        @*<input type="text" name="subject" id="subject" placeholder="Mobile" />*@
+                                                         @Html.TextBoxFor(model => model.mobileNo,null, new { @placeholder="Mobile" })
+                                                         @Html.ValidationMessageFor(model => model.mobileNo)
+                                                    </div>
+                                                    </div>
+                                                    <div class="row">        
+                                                        <div class="text col-md-12 mrg-top-20">
+                                                            @*<textarea name="text" placeholder="Address"></textarea>*@                                                            
+                                                            @Html.TextAreaFor(model => model.Customer_Address, new { @placeholder="Address"  })
+                                                            @Html.ValidationMessageFor(model => model.Customer_Address)
+                                                        </div>   
+                                                    </div>                              
+                                                    <div class="send">
+                                                        <button type="submit">Submit</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        @*<div class="col-md-4">
+                                            <div class="info">
+                                                <p>Sed dignissim, diam id molestie faucibus, purus nisl pretium quam, in pulvinar velit massa id elit. </p>
+                                                <ul>
+                                                    <li><i class="fa fa-phone"></i>010-020-0340</li>
+                                                    <li><i class="fa fa-globe"></i>123 Dagon Studio, Yakin Street, Digital Estate</li>
+                                                    <li><i class="fa fa-envelope"></i><a href="#">info@company.com</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>    *@ 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+}
+

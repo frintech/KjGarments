@@ -1,0 +1,102 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@using GridMvc.Html
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+@model IPagedList<KJGarmentsWeb.Models.ImageDetailsModel>
+@{
+    ViewBag.Title = "Display";
+}
+
+@{
+    KJGarmentsWeb.DAL.peakzartEntities db = new KJGarmentsWeb.DAL.peakzartEntities();
+}
+
+@using (Html.BeginForm())
+{
+     <div class="content aligncenter">             
+         <h5>@Html.ActionLink("Click here to Upload Image", "ImageView")</h5>
+        <div class="floatleft">
+            <div class="PagedList">
+                  @Html.PagedListPager(Model, page => Url.Action("Display", new { page }), PagedListRenderOptions.PageNumbersOnly)
+            </div>
+            <div class="datagrid">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Title</th>
+                            <th>Description</th>
+                             <th>Price (@System.Configuration.ConfigurationManager.AppSettings["currency_code"])</th>
+                            <th>Category</th>
+                            <th>Artist</th>
+                            <th>Active</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+
+                    </thead>
+                    @*<tfoot>
+                        <tr>
+                            <td colspan="4">
+                                <div id="paging">
+                                    <ul>
+                                        <li><a href="#"><span>Previous</span></a></li>
+                                        <li><a href="#" class="active"><span>1</span></a></li>
+                                        <li><a href="#"><span>2</span></a></li>
+                                        <li><a href="#"><span>3</span></a></li>
+                                        <li><a href="#"><span>4</span></a></li>
+                                        <li><a href="#"><span>5</span></a></li>
+                                        <li><a href="#"><span>Next</span></a></li>
+                                    </ul>
+                                </div>
+                                </tr>                        
+                    </tfoot>*@
+                    <tbody>                        
+                        @{        
+                            var i=0;                 
+                        foreach (var item in Model) 
+                            {
+
+                                if (i % 2 == 0)
+                                {
+                                    <tr>
+                                        <td><img src="@Url.Content("~/Images/RESZIMGS/" + @item.ImagePath)" width="100" height="100" /></td>
+                                        <td>@item.ImageTitle</td>
+                                        <td>@item.ImageDescription</td>
+                                        <td>@item.Price</td>
+                                        <td>@item.CategoryName</td>
+                                        <td>@item.ArtistName</td>  
+                                        <td>@item.Active</td>          
+                                        <td>@Html.ActionLink("Edit", "Edit", new { id=item.ImageId })</td>
+                                        <td>@Html.ActionLink("Delete", "Delete", new { id=item.ImageId })</td>
+                                    </tr>
+                                }
+                                else
+                                {
+                                    <tr class="alt">
+                                        <td><img src="@Url.Content("~/Images/RESZIMGS/" + @item.ImagePath)" width="100" height="100" /></td>
+                                        <td>@item.ImageTitle</td>
+                                        <td>@item.ImageDescription</td>
+                                         <td>@item.Price</td>
+                                        <td>@item.CategoryName</td>                                        
+                                        <td>@item.ArtistName</td>  
+                                        <td>@item.Active</td>          
+                                        <td>@Html.ActionLink("Edit", "Edit", new { id=item.ImageId })</td>
+                                        <td>@Html.ActionLink("Delete", "Delete", new { id=item.ImageId })</td>
+                                    </tr>
+                                }
+                                
+                                    
+                                i += 1;
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div class="PagedList">
+                  @Html.PagedListPager(Model, page => Url.Action("Display", new { page }), PagedListRenderOptions.PageNumbersOnly)
+            </div>             
+        </div>
+    </div>
+            
+}

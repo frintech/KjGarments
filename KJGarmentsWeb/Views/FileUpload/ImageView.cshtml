@@ -1,0 +1,150 @@
+﻿@model KJGarmentsWeb.DAL.ImageInfo
+@{
+    ViewBag.Title = "Add Image";
+}
+
+
+@using (Html.BeginForm("ImageView", "FileUpload", FormMethod.Post,
+                    new { enctype = "multipart/form-data" }))
+{
+
+ 
+    <div class="content aligncenter ">
+            <div class="contant_contactus  grdOuter">
+                <fieldset>
+                    <legend>Upload Image</legend>
+
+                    <div >
+                         <div class="dispBlock">Title: </div> <div class="dispBlock">   @Html.TextBoxFor(m => m.ImageTitile,null,new { @class = "txtContact"}) 
+                               @Html.ValidationMessageFor(m=>m.ImageTitile)<br /><br />
+                                                              </div> 
+                         <div class="dispBlock">Description  : </div> <div class="dispBlock">  @Html.TextBoxFor(m => m.ImageDesc,null,new { @class = "txtContact"})
+                                @Html.ValidationMessageFor(m=>m.ImageDesc)<br /><br />
+                                                                      </div> 
+                           <div class="dispBlock">Price (@System.Configuration.ConfigurationManager.AppSettings["currency_code"])  : </div> <div class="dispBlock">  @Html.TextBoxFor(m => m.Price,null,new { @class = "txtContact"})
+                                @Html.ValidationMessageFor(m=>m.Price)<br /><br />
+                                                                      </div> 
+                        <div class="dispBlock">Category </div> <div > @Html.DropDownListFor(m => m.CategoryId ,new SelectList(ViewBag.Categories, "Value", "Text"),"- Select Category -") 
+                                  @Html.ValidationMessageFor(m => m.CategoryId)<br /><br /> </div> 
+
+                        <div class="dispBlock" >Artist </div> <div >
+                         @Html.DropDownListFor(m => m.ArtistId ,new SelectList(ViewBag.Artist, "Value", "Text"),"- Select Artist -") 
+                           
+                                              @*     @Html.ValidationMessageFor(m => m.ArtistId)*@<br /><br /> </div>
+                        <div class="dispBlock">   @Html.LabelFor(m => m.ImagePhoto)</div>
+                                                 <div >
+                              @Html.TextBoxFor(m => m.ImagePhoto, new { type = "file" })
+                        @Html.ValidationMessageFor(m => m.ImagePhoto, string.Empty, new { id = "validationTxt" })<br /><br /><br />
+                         </div>
+                            <div class="dispBlock">  Banner Image</div>
+                                                 <div >
+                              @Html.TextBoxFor(m => m.ImageTitile, new { type = "file" })
+                        @Html.ValidationMessageFor(m => m.ImageTitile, string.Empty, new { id = "validationTxt" })<br /><br /><br />
+                         </div>
+                         <input type="submit" value="Upload" class="btnBlue" />
+                     </div>
+                </fieldset>
+            </div>
+               
+    </div>
+    
+    
+      
+}
+ <script type="text/jscript">
+
+        //get file size
+
+
+        //get file path from client system
+
+        function getNameFromPath(strFilepath) {
+
+            var objRE = new RegExp(/([^\/\\]+)$/);
+
+            var strName = objRE.exec(strFilepath);
+
+ 
+
+            if (strName == null) {
+
+                return null;
+
+            }
+
+            else {
+
+                return strName[0];
+
+            }
+
+        }
+
+ 
+
+        $(function () {
+
+            $("#ImagePhoto").change(function () {
+
+                var file = getNameFromPath($(this).val());
+
+                if (file != null) {
+
+                    var extension = file.substr((file.lastIndexOf('.') + 1));
+                   
+                    switch (extension) {
+
+                        case 'jpg':
+                            flag = true;
+                        case 'jpeg':
+                            flag = true;
+                        case 'JPG':
+                            flag = true;
+                        case 'png':
+                            flag = true;
+                        case 'gif':
+
+                            flag = true;
+
+                            break;
+
+                        default:
+
+                            flag = false;
+
+                    }
+
+                }
+
+                if (flag == false) {
+
+                    $("#validationTxt").text("You can upload only jpg,jpeg,png,gif extension file");
+
+                    return false;
+
+                }
+
+                else {
+
+                    var size =0;
+
+                    if (size > 3) {
+
+                        $("#validationTxt").text("You can upload file up to 1 MB");
+
+                    }
+
+                    else {
+
+                        $("#validationTxt").text("");
+
+                    }
+
+                }
+
+            });
+
+        });
+
+    </script>
+

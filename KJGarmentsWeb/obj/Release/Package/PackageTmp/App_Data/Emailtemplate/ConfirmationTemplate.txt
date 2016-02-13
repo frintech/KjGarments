@@ -1,0 +1,107 @@
+﻿    <html>
+    <body style=”color:grey; font-size:15px;”>
+    <font face=”Helvetica, Arial, sans-serif”>
+
+    <div style=”position:absolute; height:100px; width:600px; background-color:0d1d36; padding:30px;”>
+    <img src=”logo” />
+    </div>
+
+    <br/>
+    <br/>
+
+    <div style=”background-color: #ece8d4; width:600px; height:200px; padding:30px; margin-top:30px;”>
+
+    <p>Dear Mughapu<p>
+	    Please find order details below.
+	  
+   <table border ="1">
+   <tr>
+   <td>
+			 Tracking Reference Id:
+   </td>
+   <td>
+		   {0} 
+   </td>
+   </tr>
+     <tr>
+   <td>
+			Purchase Item  Description:
+   </td>
+   <td>
+		    {1}
+   </td>
+   </tr>
+     <tr>
+   <td>
+			 Price(INR):
+   </td>
+   <td>
+		    {7}
+   </td>
+   </tr>
+    
+    <tr>
+   <td>
+			 Qty:
+   </td>
+   <td>
+		    {8}
+   </td>
+   </tr>
+    
+   <tr>
+   <td>
+			 Total Amount(INR):
+   </td>
+   <td>
+		    {2}
+   </td>
+   </tr>
+    <tr>
+   <td>
+			 Order Date:
+   </td>
+   <td>
+		    {9}
+   </td>
+   </tr>
+   <tr>
+   <td>
+			Customer Name :
+   </td>
+   <td>
+		    {3}
+   </td>
+   </tr>
+     <tr>
+   <td>
+			  Customer Email Id:
+   </td>
+   <td>
+		    {4}
+   </td>
+   </tr>
+
+  <tr>
+   <td>
+			  Customer Mobile No:
+   </td>
+   <td>
+		    {5}
+   </td>
+   </tr>
+     <tr>
+   <td>
+			  Customer Address:
+   </td>
+   <td>
+		    {6}
+   </td>
+   </tr>
+   </table>
+  
+    <br/>
+    <p>Thank you</p>
+    </div>
+    </body>
+    </html>

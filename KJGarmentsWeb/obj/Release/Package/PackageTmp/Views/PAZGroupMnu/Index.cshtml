@@ -1,0 +1,36 @@
+﻿@model IEnumerable<KJGarmentsWeb.Models.PAZMnuViewModel>
+
+@{
+    ViewBag.Title = "Gallery";
+}
+
+
+
+
+
+<div class="content aligncenter">
+    <div class="floatleft margintop">
+         @*@Html.ActionLink("Gallery", "Index","PAZGroupMnu",new {GrpID= 1 },null)*@
+        <a class="gallerylink" href="@Url.Action("Index","PAZGroupMnu",new {GrpID= 1 },null)">Gallery</a><hr class="fancy-line"/>
+        @foreach (var item in Model) {
+            <a href="@Url.Action("Index", "CatDetails",new {catID= @item.categoryid},null)">
+                <div class="wraptocenter boxshadow imgcaption"><img class="indeximgsize" src="@Url.Content( @item.ImagePath)" /><br />@Html.DisplayFor(modelItem => item.CategoryName)</div>
+            </a>
+        }    
+            @* 
+            @foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CategoryName)
+        </td>
+       <td>
+             <a href="@Url.Action("Index", "CatDetails",new {catID= @item.categoryid},null)">
+                    <img src="@Url.Content( @item.ImagePath)" width="400" height="400" />
+                </a>
+        </td>
+        
+    </tr>
+}
+             *@      
+        </div>  
+</div>

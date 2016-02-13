@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Transaction Cancelled!";
+}
+<style>
+    .fontstyl2 {
+        font-weight:normal;
+        font-size:16px;
+        margin-left:25px;
+        line-height:22px;
+    }
+    .fontstyl4 {
+        font-weight:bold; 
+        font-size:20px; 
+        color:rgb(0,71,102);
+    }
+</style>
+<div class="content aligncenter">
+    <div class="floatleft margintop">        
+        <fieldset style="height:100px;">
+            <legend class="fontstyl4">@ViewBag.Title</legend>
+            <br />
+            <div class="fontstyl2">You have cancelled the transaction. Please go <a href="@Url.Action("Index", "ShoppingCart")">Back to Cart</a> to proceed further.</div>            
+        </fieldset>
+    </div>
+</div>

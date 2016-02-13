@@ -1,0 +1,40 @@
+﻿@model IEnumerable<KJGarmentsWeb.Models.artistDetailsViewModel>
+@{
+    ViewBag.Title = "Artists";
+}
+
+
+
+<div class="content aligncenter">
+    <div class="floatleft margintop">
+         @*@Html.ActionLink("Gallery", "Index","PAZGroupMnu",new {GrpID= 1 },null)*@
+        
+        @if (ViewBag.ArtistsId != 0)
+        {
+            <a class="gallerylink" href="@Url.Action("Index","Artists",null,null)">Artists > </a><a class="gallerylink" href="@Url.Action("Index","Artists",new {ArtistsId= ViewBag.ArtistsId},null)">@Model.First().ArtistsName</a><hr class="fancy-line"/>
+            foreach (var item in Model) {
+            <a href="@Url.Action("Index", "ImageDetails",new {id= @item.ImgId},null)">
+                <div class="wraptocenter boxshadow imgcaption"><img class="indeximgsize" src="@Url.Content( @item.ImagePath)" /><br />@Html.DisplayFor(modelItem => item.ImageName)
+                      Price(@System.Configuration.ConfigurationManager.AppSettings["currency_code"]) :@Html.DisplayFor(modelItem=>item.Price)<br />
+                    <br /> <br />                    
+                    <a href="@Url.Action("AddToCart","ShoppingCart",new {id= item.ImgId  },null)">
+                    <input type="submit" class="btnBlueAddCart" value="+ Cart" />
+                    </a>                     
+                </div>
+            </a>
+        }    
+        
+        }
+        else
+        {
+            <a class="gallerylink" href="@Url.Action("Index","Artists",null,null)">Artists</a><hr class="fancy-line"/>    
+            foreach (var item in Model) {
+            <a href="@Url.Action("Index", "Artists",new {ArtistsId= item.ArtistsId},null)">
+                <div class="wraptocenter boxshadow imgcaption"><img class="indeximgsize" src="@Url.Content( @item.ImagePath)" /><br />@Html.DisplayFor(modelItem => item.ArtistsName)</div>
+            </a>
+        }    
+        
+        }
+             
+        </div>  
+</div>

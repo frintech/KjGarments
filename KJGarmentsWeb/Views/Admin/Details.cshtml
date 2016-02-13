@@ -1,0 +1,106 @@
+﻿@model MughapuWeb.DAL.PRODUCT
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>PRODUCT</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Pid)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Pid)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PDT_CODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PDT_CODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PDT_Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PDT_Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PDT_Price)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PDT_Price)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PDT_Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PDT_Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Category_id)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Category_id)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Sub_Category_id)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Sub_Category_id)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Brand_id)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Brand_id)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.offer_id)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.offer_id)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Add_user_Id)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Add_user_Id)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Add_Datetime)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Add_Datetime)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Mod_user_id)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Mod_user_id)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Mod_Datetime)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Mod_Datetime)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,21 @@
+﻿@model KJGarmentsWeb.Models.CouponModel
+@foreach (var item in Model.tvlists)
+{ 
+    <ul>
+    @if (item != null)
+    {        
+        <li>
+            
+            <a href="#" class="usr jstree-clicked" >@item.Item_Name @Html.TextBoxFor(model => model.Discountpct, new { id = "itemdiscountId",@class="txtOffer" })   @Html.DropDownListFor(model => model.offer_id ,new SelectList(ViewBag.offers, "Value", "Text"),new { @class = "dropdown dropdown-smaller", id = "itemOfrId" }) 
+                @Html.HiddenFor(model=>item.menu_id, new { id = "itemMnuId" }) 
+                @Html.HiddenFor(model =>item.origin, new { id = "itemOrigin" }) 
+            </a>
+          
+        @if (item.tvlists.Count > 0)
+        {         
+            @Html.Partial("Childrens", item)           
+        }
+        </li>
+    }
+    </ul>
+}

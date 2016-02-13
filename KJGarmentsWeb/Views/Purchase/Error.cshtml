@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Error with Transaction";
+}
+<style>
+    .fontstyl4 {
+        font-weight:bold; 
+        font-size:20px; 
+        color:rgb(0,71,102);
+    }
+    .fontstyl3 {
+        font-size:18px; 
+        margin-left:25px; 
+        font-weight:bold; 
+        color:#006793;
+    }
+    .fontstylred {
+        font-weight:normal; 
+        font-size:16px; 
+        color:red;
+        margin-left:50px;
+    }
+</style>
+<div class="content aligncenter">
+    <div class="floatleft margintop">        
+        <fieldset style="width:600px;">
+            <legend class="fontstyl4">@ViewBag.Title</legend>
+            <div class="fontstyl3">User friendly error message:</div>
+            <div class="fontstylred">@ViewBag.ErrorMessage</div>
+        </fieldset>
+    </div>
+</div>

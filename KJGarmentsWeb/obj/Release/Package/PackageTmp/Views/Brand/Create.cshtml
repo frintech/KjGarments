@@ -1,0 +1,219 @@
+﻿@model KJGarmentsWeb.Models.AddBrandModel
+@{
+    ViewBag.Title = "Add Brand";
+}
+
+ @if (TempData["brnd_Message"] != null)
+{
+<script language="javascript">
+    if (confirm('@TempData["brnd_Message"]' + "\nAre you OK to continue add Brand?") == true) {
+    }
+    else {
+        window.location.href = '@Url.Content("~/Brand/Index/{params}")';
+    }
+
+</script>
+}
+
+@using (Html.BeginForm("Create", "Brand", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+   <div class="container">      
+
+       <div class="row mrg-top-xs">
+           <div class="col-md-3"> 
+               <span class="mandatory">*</span>              
+           </div>
+           <div class="col-md-2">
+               Category
+           </div>
+           <div class="col-md-3">
+               @Html.DropDownListFor(model => model.Category_id, new SelectList(ViewBag.Menus, "Value", "Text"), "- Select Category -",new { @class = "dropdown dropdown-large" }) 
+           </div>
+           <div class="col-md-3">
+               @Html.ValidationMessageFor(model => model.Category_id,null,"Please select Category")
+           </div>
+       </div>
+
+       <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>
+           <div class="col-md-2">
+               Sub Category
+           </div>
+           <div class="col-md-3">
+              @Html.DropDownListFor(model => model.Sub_Category_id ,new SelectList(ViewBag.subcategory, "Value", "Text"), "- Select Sub Category -",new { @class = "dropdown dropdown-large" })
+                @* <select id="Sub_Category_id"></select> *@
+           </div>
+           <div class="col-md-3">
+                @Html.ValidationMessageFor(model => model.Sub_Category_id)
+           </div>
+       </div>      
+       <div class="row mrg-top-20">
+           <div class="col-md-3">      
+               <span class="mandatory">*</span>         
+           </div>          
+           <div class="col-md-5">
+                @Html.TextBoxFor(model => model.BRND_Name,null, new {  @class="pName", @data_animation="slide",@data_label="Brand Name" })
+           </div>
+           <div class="col-md-3">
+               @Html.ValidationMessageFor(model => model.BRND_Name)
+           </div>
+       </div>
+
+       <div class="row mrg-top-20">
+           <div class="col-md-3">     
+               <span class="mandatory">*</span>          
+           </div>           
+           <div class="col-md-5">
+                @Html.TextBoxFor(model => model.BRND_Description,null, new { @class="pName", @data_animation="slide",@data_label="Brand Description" })
+           </div>
+           <div class="col-md-3">
+               @Html.ValidationMessageFor(model => model.BRND_Description)
+           </div>
+       </div>      
+    
+       <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-3">
+                 @Html.TextBoxFor(model => model.BRND_Img_Path, new { type = "file",@class="upload-file" })
+           </div>
+           <div class="col-md-2">
+               Upload brand Image 
+                
+           </div>
+            <div class="col-md-3">                 
+               
+           </div>            
+       </div>     
+      
+       <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-2">
+                 <button type="submit" class="btnBlue sub-reset">Submit</button>
+           </div>
+           <div class="col-md-2">
+                 <h5 class="btnBlue sub-reset-cancel"> @Html.ActionLink("Cancel", "Index")</h5>
+           </div>
+           <div class="col-md-2">
+                 <h5 class="btnBlue sub-reset-cancel"> @Html.ActionLink("Reset", "Create")</h5>
+           </div>
+       </div>
+   </div>
+      
+}
+
+<script type="text/javascript">
+    function randomString() {
+        var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+        var string_length = Math.floor((Math.random() * 5) + 1);
+        var randomstring = '';
+        for (var i = 0; i < string_length; i++) {
+            var rnum = Math.floor(Math.random() * chars.length);
+            randomstring += chars.substring(rnum, rnum + 1);
+        }
+        $('#spnstring').html(randomstring);
+    }
+
+    //get file size
+
+
+    //get file path from client system
+
+    function getNameFromPath(strFilepath) {
+        var objRE = new RegExp(/([^\/\\]+)$/);
+        var strName = objRE.exec(strFilepath);
+
+        if (strName == null) {
+            return null;
+        }
+        else {
+            return strName[0];
+        }
+    }
+
+
+
+    $(function () {
+        $("#BRND_Img_Path").change(function () {
+            var file = getNameFromPath($(this).val());
+            if (file != null) {
+                var extension = file.substr((file.lastIndexOf('.') + 1));
+                switch (extension) {
+                    case 'jpg':
+                        flag = true;
+                    case 'jpeg':
+                        flag = true;
+                    case 'JPG':
+                        flag = true;
+                    case 'png':
+                        flag = true;
+                    case 'gif':
+                        flag = true;
+                        break;
+                    default:
+                        flag = false;
+                }
+            }
+
+            if (flag == false) {
+                $("#validationTxt").text("You can upload only jpg,jpeg,png,gif extension file");
+                return false;
+            }
+            else {
+                var size = 0;
+                if (size > 3) {
+                    $("#validationTxt").text("You can upload file up to 1 MB");
+                }
+                else {
+                    $("#validationTxt").text("");
+                }
+            }
+        });
+    });
+
+
+
+    $(document).ready(function () {
+        $("#Sub_Category_id").prop("disabled", true);
+
+        $("#Category_id").change(function () {
+
+            if ($("#Category_id").val() != "") {
+                var menuid = $("#Category_id").val();
+                $.post('@Url.Action("LoadSubCategory", "Admin")', { "menuid": menuid },
+                   function (data) {
+                       $("#Sub_Category_id").empty();
+                       $.each(data, function (id, option) {
+                           $("#Sub_Category_id").append($('<option></option>').val(option.Mnu_id).html(option.Mnu_Name));
+                       });
+                       $("#Sub_Category_id").prop("disabled", false);
+                   });
+            }
+        })
+
+        $('#BRND_Name').keypress(function (event) {
+            var keyCode = event.keyCode == 0 ? event.charCode : e.keyCode;
+            if ((keyCode >= 48 && keyCode <= 57) || (keyCode >= 65 && keyCode <= 90) || (keyCode >= 97 && keyCode <= 122) || (specialKeys.indexOf(e.keyCode) != -1 && e.charCode != e.keyCode)) {
+                event.preventDefault();
+            }
+        })
+      
+        $('#BRND_Description').keypress(function (event) {
+            var keyCode = event.keyCode == 0 ? event.charCode : e.keyCode;
+            if ((keyCode >= 48 && keyCode <= 57) || (keyCode >= 65 && keyCode <= 90) || (keyCode >= 97 && keyCode <= 122) || (specialKeys.indexOf(e.keyCode) != -1 && e.charCode != e.keyCode)) {
+                event.preventDefault();
+            }
+        })
+
+    });
+
+
+</script>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    
+}

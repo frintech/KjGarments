@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="peakzartModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="peakzartModelStoreContainer">
+    <EntitySet Name="Artists" EntityType="peakzartModel.Store.Artists" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Cart" EntityType="peakzartModel.Store.Cart" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Category" EntityType="peakzartModel.Store.Category" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Group" EntityType="peakzartModel.Store.Group" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ImageDetail" EntityType="peakzartModel.Store.ImageDetail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Order" EntityType="peakzartModel.Store.Order" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OrderDetail" EntityType="peakzartModel.Store.OrderDetail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PayPalTransaction" EntityType="peakzartModel.Store.PayPalTransaction" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SHIPDETAILS" EntityType="peakzartModel.Store.SHIPDETAILS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User" EntityType="peakzartModel.Store.User" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserRole" EntityType="peakzartModel.Store.UserRole" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__InvoiceLi__Invoi__2F10007B" Association="peakzartModel.Store.FK__InvoiceLi__Invoi__2F10007B">
+      <End Role="Order" EntitySet="Order" />
+      <End Role="OrderDetail" EntitySet="OrderDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cart_Album" Association="peakzartModel.Store.FK_Cart_Album">
+      <End Role="ImageDetail" EntitySet="ImageDetail" />
+      <End Role="Cart" EntitySet="Cart" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InvoiceLine_Album" Association="peakzartModel.Store.FK_InvoiceLine_Album">
+      <End Role="ImageDetail" EntitySet="ImageDetail" />
+      <End Role="OrderDetail" EntitySet="OrderDetail" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Artists">
+    <Key>
+      <PropertyRef Name="ArtistsId" />
+    </Key>
+    <Property Name="ArtistsId" Type="int" Nullable="false" />
+    <Property Name="ArtistsName" Type="nvarchar" MaxLength="300" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifieBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Cart">
+    <Key>
+      <PropertyRef Name="RecordId" />
+    </Key>
+    <Property Name="RecordId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CartId" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ImageId" Type="int" Nullable="false" />
+    <Property Name="Count" Type="int" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="GroupID" Type="int" Nullable="false" />
+    <Property Name="CategoryName" Type="nvarchar" MaxLength="300" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifieBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Group">
+    <Key>
+      <PropertyRef Name="GroupId" />
+    </Key>
+    <Property Name="GroupId" Type="int" Nullable="false" />
+    <Property Name="GroupName" Type="nvarchar" MaxLength="300" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifieBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ImageDetail">
+    <Key>
+      <PropertyRef Name="ImageId" />
+    </Key>
+    <Property Name="ImageId" Type="int" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="ArtistId" Type="int" />
+    <Property Name="ImageTitle" Type="nvarchar" MaxLength="300" />
+    <Property Name="ImageDescription" Type="nvarchar" MaxLength="2000" />
+    <Property Name="ImagePath" Type="nvarchar" MaxLength="2000" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifieBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="Price" Type="numeric" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OrderDate" Type="datetime" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="256" />
+    <Property Name="Tracking_REF_ID" Type="nvarchar(max)" />
+    <Property Name="Currency" Type="nvarchar" MaxLength="160" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Total" Type="numeric" Nullable="false" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="OrderDetail">
+    <Key>
+      <PropertyRef Name="OrderDetailId" />
+    </Key>
+    <Property Name="OrderDetailId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OrderId" Type="int" Nullable="false" />
+    <Property Name="ImageId" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="UnitPrice" Type="numeric" Nullable="false" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="PayPalTransaction">
+    <Key>
+      <PropertyRef Name="SeqNo" />
+    </Key>
+    <Property Name="SeqNo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RequestId" Type="varchar(max)" Nullable="false" />
+    <Property Name="TrackingReference" Type="nvarchar(max)" />
+    <Property Name="RequestTime" Type="datetime" />
+    <Property Name="RequestStatus" Type="nvarchar(max)" />
+    <Property Name="TimeStamp" Type="nvarchar(max)" />
+    <Property Name="RequestError" Type="nvarchar(max)" />
+    <Property Name="Token" Type="nvarchar(max)" />
+    <Property Name="PayerId" Type="nvarchar(max)" />
+    <Property Name="RequestData" Type="nvarchar(max)" />
+    <Property Name="PaymentTransactionId" Type="nvarchar(max)" />
+    <Property Name="PaymentError" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="SHIPDETAILS">
+    <Key>
+      <PropertyRef Name="SHIPID" />
+    </Key>
+    <Property Name="SHIPID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SHIPTONAME" Type="nvarchar(max)" />
+    <Property Name="SHIPTOSTREET" Type="nvarchar(max)" />
+    <Property Name="SHIPTOCITY" Type="nvarchar(max)" />
+    <Property Name="SHIPTOSTATE" Type="nvarchar(max)" />
+    <Property Name="SHIPTOCOUNTRYCODE" Type="nvarchar(max)" />
+    <Property Name="SHIPTOZIP" Type="nvarchar(max)" />
+    <Property Name="SHIPTOCONTACTNO" Type="nvarchar(max)" />
+    <Property Name="NOTESTOSELLER" Type="nvarchar(max)" />
+    <Property Name="TrackingReference" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="300" />
+    <Property Name="UserPassword" Type="nvarchar" MaxLength="2000" />
+    <Property Name="EmailID" Type="nvarchar" MaxLength="1000" />
+    <Property Name="MobileNo" Type="nvarchar" MaxLength="10" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifieBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="UserRole">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="int" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="300" />
+    <Property Name="RoleDescription" Type="nvarchar" MaxLength="2000" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifieBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <Association Name="FK__InvoiceLi__Invoi__2F10007B">
+    <End Role="Order" Type="peakzartModel.Store.Order" Multiplicity="1" />
+    <End Role="OrderDetail" Type="peakzartModel.Store.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="OrderId" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cart_Album">
+    <End Role="ImageDetail" Type="peakzartModel.Store.ImageDetail" Multiplicity="1" />
+    <End Role="Cart" Type="peakzartModel.Store.Cart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ImageDetail">
+        <PropertyRef Name="ImageId" />
+      </Principal>
+      <Dependent Role="Cart">
+        <PropertyRef Name="ImageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InvoiceLine_Album">
+    <End Role="ImageDetail" Type="peakzartModel.Store.ImageDetail" Multiplicity="1" />
+    <End Role="OrderDetail" Type="peakzartModel.Store.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ImageDetail">
+        <PropertyRef Name="ImageId" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="ImageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

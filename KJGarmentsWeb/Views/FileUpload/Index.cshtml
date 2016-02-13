@@ -1,0 +1,55 @@
+﻿@model KJGarmentsWeb.Models.CatList
+@{
+    ViewBag.Title = "FileUploadCreate";
+}
+
+
+@using (Html.BeginForm("FileUpload", "FileUpload", FormMethod.Post,
+                    new { enctype = "multipart/form-data" }))
+{
+     @Html.ValidationSummary(true)
+@*<div>
+Title<br />
+ @Html.ValidationSummary()
+Description<br />
+@Html.TextBox("Desc") <br />
+category<br />
+
+    Artist<br />
+ @Html.DropDownListFor(m => m.ArtistId ,new SelectList(ViewBag.Artist, "Value", "Text"),"- Select Artist -") 
+ @Html.ValidationMessageFor(m => m.ArtistId)<br />
+Image<br />
+<input type="file" name="file" id="file" style="width: 100%;" /> <br />
+<input type="submit" value="Upload" class="submit" />
+</div>   
+    *@<div class="content aligncenter ">
+            <div class="contant_contactus  grdOuter">
+                    <div class="floatleft grditemstyle2">
+                         <div class="dispBlock">Title: </div> <div class="dispBlock">   @Html.TextBox("Imgtitle",null,new { @class = "txtContact"}) <br /><br />
+                               @Html.ValidationMessageFor(m=>m.ImageTitile)
+                                                              </div> 
+                         <div class="dispBlock">Description  : </div> <div class="dispBlock">  @Html.TextBox("Desc",null,new { @class = "txtContact"}) <br /><br />
+                                @Html.ValidationMessageFor(m=>m.ImageDesc)
+                                                                      </div> 
+                        <div class="dispBlock">Price (in SGD): </div> <div class="dispBlock">   @Html.TextBox("Price",null,new { @class = "txtContact"}) <br /><br />
+                               @Html.ValidationMessageFor(m=>m.Price)
+                                                              </div> 
+                        <div class="dispBlock">Category </div> <div class="dispBlock"> @Html.DropDownListFor(m => m.CategoryId ,new SelectList(ViewBag.Categories, "Value", "Text"),"- Select Category -") 
+                                  @Html.ValidationMessageFor(m => m.CategoryId)<br /> <br /> </div> 
+                        <div class="dispBlock">Artist </div> <div class="dispBlock">
+                         @Html.DropDownListFor(m => m.ArtistId ,new SelectList(ViewBag.Artist, "Value", "Text"),"- Select Artist -") 
+                                                   @Html.ValidationMessageFor(m => m.ArtistId)<br /><br /> </div>
+                         <div class="dispBlock"><input type="file" name="file" id="file" style="width: 100%;" /> <br /> <br />
+                               @Html.ValidationMessageFor(m=>m.ImageFilePath)
+                         </div>
+                         <input type="submit" value="Upload" class="btnBlue" />
+                        </div>
+
+                </div>
+
+    </div>
+    
+    
+      
+}
+

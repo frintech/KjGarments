@@ -1,0 +1,564 @@
+﻿@model KJGarmentsWeb.Models.ProductdetailsView
+
+@{
+    ViewBag.Title = "Image Over View";
+
+}
+
+
+<div id="heading">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="heading-content">
+                <h2>Product Detail</h2>
+                @*<span>Home / <a href="contact-us.html">Contact Us</a></span>*@
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="~/Scripts/js/jquery-1.8.3.min.js"></script>
+	<script src="~/Scripts/js/jquery.elevatezoom.js"></script>
+ <style>
+        /*set a border on the images to prevent shifting*/ 
+        #gallery_01 img{border:2px solid white;} 
+        /*Change the colour*/ 
+        .active img{border:2px solid #333 !important;} 
+        /*- See more at: http://www.elevateweb.co.uk/image-zoom/examples#sthash.M35qJfgq.dpuf*/
+
+        #gallery_01 {
+            width:500px;
+            max-width:500px;
+            /*border:1px solid red;*/
+        }
+     /*#showing {
+         position:absolute;
+     }*/
+     .detail-img {
+         width:500px;
+         height:400px;
+         /*vertical-align:central;*/
+         /*border:1px solid;*/
+     }
+     .detail-img img {
+         max-width:496px;
+         max-height:396px;
+         /*display:inline-block;*/
+         /*border:1px solid red;*/
+     }
+    </style>
+
+   @using (Html.BeginForm("AddToCart", "ShoppingCart", FormMethod.Post, new { enctype = "multipart/form-data" }))
+   {
+         @Html.ValidationSummary(true) 
+<div id="contact-us">
+    <div class="container">
+        <div class="row">
+    <div class="col-md-12">
+        <div class="heading-section">
+            <h2>Prouct Information</h2>
+            <img src="~/images/under-heading.png" alt="" >
+        </div>
+    </div>
+</div>
+         @{  
+                                               
+       System.Globalization.CultureInfo Indian = new System.Globalization.CultureInfo("hi-IN");
+         }
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-6 detail-img">
+                    <!-- Lets make a simple image magnifier -->
+                    @*<img id="zoom_01" src="~/Images/Logo.png" data-zoom-image="@Url.Content("~/Images/Original/" + @Model.Imagepath)"/>*@
+                    <img id="showimg" src="@Url.Content("~/Images/RESZIMGS/" + @Model.Imagepath)" data-zoom-image="@Url.Content("~/Images/Original/" + @Model.Imagepath)" alt="" />
+                 </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                     <div id="gallery_01">
+                         <a href="#" data-image="@Url.Content("~/Images/RESZIMGS/" + @Model.Imagepath)" data-zoom-image="@Url.Content("~/Images/Original/" + @Model.Imagepath)"> 
+                                    <img id="thumb2" src="@Url.Content("~/Images/RESZIMGS/" + @Model.Imagepath)" alt="" width="75" height="75" /> 
+                                </a>             
+                        @{var count = 2;
+                          foreach (var item in Model.ImageList)
+                          {          
+                                <a href="#" data-image="@Url.Content("~/Images/RESZIMGS/" + item)" data-zoom-image="@Url.Content("~/Images/Original/" + item)"> 
+                                    <img id="@string.Format("thumb{0}", count)" src="@Url.Content("~/Images/RESZIMGS/" + item)" alt="" width="75" height="75" /> 
+                                </a> 
+                                @*<img id="@string.Format("thumb{0}", count)" src="@Url.Content("~/Images/RESZIMGS/" + item)" data-zoom-image="@Url.Content("~/Images/Original/" + item)" alt="" width="75" height="75">*@
+                              count += 1;
+                          } 
+                         }
+                      </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-2">
+                   <h4><b>Product</b></h4>
+                </div>
+                <div class="col-md-4">
+                   <h5> @Html.DisplayFor(model => model.Product_Name)</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <h4><b>Code</b></h4>
+                </div>
+                <div class="col-md-2">
+                   <h5> @Html.DisplayFor(model => model.Product_Code)</h5>
+                </div>
+            </div>
+             @{
+       if (!string.IsNullOrEmpty(Model.Product_offer.ToString()) && (Model.Product_offer!=0))
+                {      
+            <div class="row">
+               <div class="col-md-2">
+                   <h4><b>Price</b></h4>
+                </div>
+                <div class="col-md-3">
+                    
+                  <h4 class="price strik">@System.Configuration.ConfigurationManager.AppSettings["currency_code"]@(String.Format(Indian, "{0:N}", @Model.Product_Price))</h4>
+                                  
+                </div>
+                
+            </div>
+                  <div class="row">
+                   <div class="col-md-2">
+                   <h4><b>Discount Price</b></h4>
+                   </div> 
+                <div class="col-md-3">
+                         <h4 class="price">@System.Configuration.ConfigurationManager.AppSettings["currency_code"]@(String.Format(Indian, "{0:N}", @Model.discount_price))</h4> 
+                 </div> 
+                      </div>
+                  <div class="row">
+               <div class="col-md-2">
+                   <h4><b>Discount</b></h4>
+                </div>
+                <div class="col-md-1">
+                    
+                   <div class="circleBase type2"> @Model.Product_offer.ToString() @Model.offer_type</div>  
+                                  
+                </div></div>
+                 }
+                    else
+                    {
+                          <div class="row">
+               <div class="col-md-2">
+                   <h4><b>Price</b></h4>
+                </div>
+                <div class="col-md-3">
+                    
+                  <h4 class="price">@System.Configuration.ConfigurationManager.AppSettings["currency_code"]@(String.Format(Indian, "{0:N}", @Model.Product_Price))</h4>
+                      </div>
+                                  
+                </div>
+                     }
+                  }  
+            
+            <div class="row">
+                <div class="col-md-2">
+                   <h4><b>Quantity</b></h4>
+                </div>
+                <div class="col-md-5">
+                <h5>  <button class="button-small" id="qtyminus" onclick="return false">-</button>
+                    <input class="txt-small" name="qty" id="qty" type="text" value="1" maxlength="2"/ style="margin-top:0px;">
+                    <button class="button-small" id="qtyplus" onclick="return false">+</button>
+                </h5>
+                </div>
+                
+            </div>
+
+                 @if (!string.IsNullOrEmpty(Model.Product_offer.ToString()) && (Model.Product_offer==0))
+                { 
+            <div class="row">
+                <div class="col-md-2">
+                   <h4><b>Coupon Code</b></h4>
+                </div>
+                <div class="col-md-3" >                 
+                    @* @Html.TextBoxFor(model => model.Coupon_Code,null, new { @placeholder="Enter Code" })*@
+                    <input type="text" name="CuponCode" id="CuponCode" placeholder="Enter Code" style="margin-top:0px; width:100px;" />
+                </div>
+                  
+                <div class="col-md-3">
+                <div class="validate"  style=visibility:hidden  id="divCupnCode">It is invalid Coupon Code.Please enter valid Coupon Code.</div>
+           </div>
+            </div>
+                 }
+            <div class="row">
+                <div class="col-md-1">
+                   
+                </div>
+                <div class="col-md-4">
+                    <div class="send">
+                    @*<input type="submit" value="+ Cart"/>*@
+                        <button id='btnSubmit' type="submit" class="btnBlue">+ Cart</button>
+                        <input type="hidden" name="id" value="@Model.Pid"/>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+           </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-2">
+                    <h3 class="bold">Specification</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 heading-color">
+                    <h4 class="bold">General</h4>
+                </div>
+            </div>
+            <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Brand</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model => model.Brand)</h5>
+                </div>
+            </div>
+            @if(Model.Category_id==1)
+            {
+               <div id="divwatches">
+            <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Model</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model => model.Model)</h5>
+                </div>
+            </div>
+            <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Movement</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model => model.Movement)</h5>
+                </div>
+            </div>
+            <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Features</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model => model.Features)</h5>
+                </div>
+            </div>
+            <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Water Resistance</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model => model.Water_Resistance)</h5>
+                </div>
+            </div>
+            <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Box</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model => model.Box)</h5>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2  heading-color">
+                    <h4 class="bold">Body Features</h4>
+                </div>
+            </div>
+            <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Case Material</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model => model.Case_Material)</h5>
+                </div>
+            </div>
+            <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Case Back</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model => model.Case_Back)</h5>
+                </div>
+            </div>
+            <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Case Size</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model => model.Case_Size)</h5>
+                </div>
+            </div>
+            <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Glass</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model => model.Glass)</h5>
+                </div>
+            </div>
+            <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Dial Colour</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model => model.Dial_Colour)</h5>
+                </div>
+            </div>
+            <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Strap Type</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model => model.Strap_Type)</h5>
+                </div>
+            </div>
+</div>
+            }
+             @if(Model.Category_id==4)
+            {
+            <div id="divSunglasses" >
+                  <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Lens Type</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model => model.Lens_Type)</h5>
+                </div>
+            </div>
+                  <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Lens Colour</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model => model.Lens_Colour)</h5>
+                </div>
+            </div>
+                  <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Frame Colour</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model => model.Frame_Colour)</h5>
+                </div>
+            </div>
+      </div>
+             }
+             @if(Model.Category_id==5)
+             {
+            <div id="divLuxuryPens" >
+                  <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Model</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model => model.Model)</h5>
+                </div>
+            </div>
+                  <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Product Type</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model => model.Product_Type)</h5>
+                </div>
+            </div>
+                  <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Pen Colour</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model => model.Pen_Colour)</h5>
+                </div>
+            </div>
+      </div>
+             }
+             @if(Model.Category_id==6)
+             {
+             <div id="divBelts">
+                   <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Belt Size</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model => model.Belt_Size)</h5>
+                </div>
+            </div>
+                  <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Buckle Colour</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model => model.Buckle_Colour)</h5>
+                </div>
+            </div>
+                  <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Belt Colour</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model => model.Belt_Colour)</h5>
+                </div>
+            </div>
+                 </div>
+             }
+             @if(Model.Category_id==7)
+             {
+                <div id="divWallets" style="display:none">
+                   <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Wallet Colour</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model => model.Wallet_Colour)</h5>
+                </div>
+            </div>
+                    </div>
+             }
+
+            <div class="row">
+                <div class="col-md-2  heading-color">
+                    <h4 class="bold">Warranty</h4>
+                </div>
+            </div>
+            <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Warranty</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model => model.Warranty)</h5>
+                </div>
+            </div>
+            <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Shipping</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model => model.Shipping)</h5>
+                </div>
+            </div>
+            <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Payment Method</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model => model.Payment_Method)</h5>
+                </div>
+            </div>         
+        </div>
+    </div>
+</div> 
+</div>
+</div>
+   }
+
+
+
+<script type="text/javascript">
+
+    $(function () {
+        $("#qtyplus").click(function () {
+            $(":text[name='qty']").val(Number($(":text[name='qty']").val()) + 1);
+        });
+        $("#qtyminus").click(function () {
+            if ($(':text[name="qty"]').val() > 1) {
+                $(":text[name='qty']").val(Number($(":text[name='qty']").val()) - 1);
+            }
+        });
+
+    });
+
+    $('#CuponCode').keyup(function (event) {
+      
+        if ((document.getElementById("CuponCode").value).length != 0) {
+            var pdt_name = document.getElementById("CuponCode").value
+            $.post('@Url.Action("CheckValidpromoCode", "ImageDetails")', { "pdt_code": pdt_name },
+                       function (data) {
+                           if (data == false) {
+                               document.getElementById("divCupnCode").style.visibility = "visible";
+                               return false;
+
+                           }
+                           else {
+                               document.getElementById("divCupnCode").style.visibility = "hidden";
+                               
+                           }
+
+
+
+                       });
+        }
+        else {
+            document.getElementById("divCupnCode").style.visibility = "hidden";
+
+        }
+       
+    })
+
+ 
+
+@*    $(document).on('click', '#btnSubmit', function () {
+        alert('test');
+        if ((document.getElementById("CuponCode").value).length != 0) {
+            var pdt_name = document.getElementById("CuponCode").value
+            $.post('@Url.Action("CheckValidpromoCode", "ImageDetails")', { "pdt_code": pdt_name },
+                       function (data) {
+
+                           if (data == false) {
+
+                               document.getElementById("divCupnCode").style.visibility = "visible";
+                               return false;
+
+                           }
+                           else {
+                               //document.getElementById("divCupnCode").style.visibility = "hidden";
+                               document.getElementById("divCupnCode").style.visibility = "visible";
+                               return false;
+                           }
+
+
+
+                       });
+            }
+     });*@
+    function RegainFocus() {
+        if ((document.getElementById("qty").value).length == 0 || document.getElementById("qty").value == 0) {
+            document.getElementById("qty").focus();
+            alert("Quantity cannot be empty or zero(0)");
+            document.getElementById("qty").value = document.getElementById("qty").defaultValue;
+            return false;
+        }
+    }
+    $(document).ready(function () {
+        //called when key is pressed in textbox
+        $("#qty").keypress(function (e) {
+            //if the letter is not digit then display error and don't type anything
+            if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                //display error message
+                $("#errmsg").html("Please enter Digits Only").show().fadeOut("slow");
+                return false;
+            }
+        });
+       
+        //initiate the plugin and pass the id of the div containing gallery images 
+        $("#showimg").elevateZoom({ gallery: 'gallery_01', cursor: 'pointer', galleryActiveClass: 'active', imageCrossfade: true, loadingIcon: 'http://www.elevateweb.co.uk/spinner.gif' });
+        //pass the images to Fancybox 
+        $("#showimg").bind("click", function (e) {
+            var ez = $('#showimg').data('elevateZoom');
+            $.fancybox(ez.getGalleryList()); return false;
+        });
+
+    });
+</script>

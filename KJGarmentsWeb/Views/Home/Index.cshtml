@@ -1,0 +1,118 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@using GridMvc.Html
+@model IPagedList<KJGarmentsWeb.Models.MnuSubcatProductDetails>
+@{
+    ViewBag.Title = "Home Page";
+  //  Layout = null;
+}
+  @if (TempData["CHNG_PWD"] != null)
+{
+<script>
+    alert('@TempData["CHNG_PWD"]');
+       
+ 
+</script>
+}
+
+  <div id="slider" style="max-height:350px">
+                <div class="flexslider">
+                  <ul class="slides">
+                       @{
+                           List<KJGarmentsWeb.Models.BannerImagedetails> BannerImgList = (List<KJGarmentsWeb.Models.BannerImagedetails>)ViewBag.BannerImage;
+                              foreach (var item in BannerImgList)
+                               {
+                                  <li>
+                                   <img src="@Url.Content(System.Configuration.ConfigurationManager.AppSettings["BNR_IMG_Path"] + item.Imagepath)"  alt="" />
+                                    </li>
+                               }
+                          }
+                     </ul>
+                </div>
+            </div>
+                   
+
+  <div id="products-post">
+                <div class="container">
+                     <div class="row">
+               
+                         <div class="row">
+             @*  <div class="col-md-1">*@
+                     @Html.PagedListPager(Model, page => Url.Action("Index", new {page= page }),PagedListRenderOptions.PageNumbersOnly)
+              
+             </div>
+<div  style="float: right;" class="col-md-1">
+                <b>Sort By: </b>  @Html.DropDownList("Sortby", new SelectListItem[] { new SelectListItem() { Text = "Newest to Oldest", Value = "1" }, new SelectListItem() { Text = "Oldest to Newest", Value = "6" }, new SelectListItem() { Text = "price:Low to high", Value = "3" }, new SelectListItem() { Text = "price:High to Low", Value = "2" }, new SelectListItem() { Text = "Name:A=>Z", Value = "4" }, new SelectListItem() { Text = "Name:Z=>A", Value = "5" }},new {  @class = "dropdown dropdown-large"  })
+                 </div> 
+                    <div class="row" id="Container">
+                         @{  
+                                               
+                                                System.Globalization.CultureInfo Indian = new System.Globalization.CultureInfo("hi-IN");
+                            }
+                        @* Loop start *@
+                        @foreach (var item in Model) {  
+                            
+                            <div class="col-md-3 col-sm-6 mix portfolio-item home-img-panel">       
+                                <div class="portfolio-wrapper  ">         
+                                    <a href="@Url.Action("Index", "ImageDetails",new {id= @item.Pid},null)">       
+                                    <div class="portfolio-thumb">
+                                        @*<div id="container22">*@                                           
+                                           @* <div id="infoi"><div class="img-fixed-size"  class="circleBase type1"> @item.Product_Offer.ToString()@item.offer</div></div>*@
+                                        @*</div>*@
+                                        
+                                        <img class="img-circle" src="@Url.Content("~/Images/RESZIMGS/" + item.Imagepath)" alt="" />
+                                        <div class="hover">
+                                            @*<div class="hover-iner">
+                                                <a class="fancybox" href="@Url.Content("~/Images/RESZIMGS/" + item.Imagepath)"></a>
+                                               
+                                            </div>*@
+                                        </div>
+                                    </div>  
+                                    <div class="label-text">
+                                        @*<h3><a href="@Url.Action("Index", "ImageDetails",new {id= @item.Pid},null)">@Html.DisplayFor(modelItem => item.ProductName)</a></h3>*@
+                                        <h3>@Html.DisplayFor(modelItem => item.ProductName)</h3>
+                                        <span class="text-category">@System.Configuration.ConfigurationManager.AppSettings["currency_code"]@(String.Format(Indian, "{0:N}",@item.Price))</span>                                        
+                                    </div>
+                                    </a>
+                                </div>          
+                            </div>  
+                            
+                               
+                        }    
+                        @* Loop end *@
+                        
+                    </div>
+                    
+                         <div class="row">
+                @* <div class="col-md-2">*@
+                     @Html.PagedListPager(Model, page => Url.Action("Index", new {page= page }), PagedListRenderOptions.PageNumbersOnly)
+                 @*</div>*@
+             </div>
+                       @if (Model.TotalItemCount == null || Model.TotalItemCount == 0)
+                                            {
+                                                                   <table border="1">
+                                                                       <tr>
+                                                                             <h1><strong><span>No Records found.</span></strong></h1>
+                                                                       </tr>
+
+                                                                   </table>
+                      
+                                            }
+                     
+                </div>
+            </div>
+</div>
+      <script type="text/javascript">
+          $(document).ready(function () {
+              $("#Sortby").change(function () {
+
+                  if ($("#Sortby").val() != "") {
+                      var menuid = $("#Sortby").val();
+
+                      window.location.href = '@Url.Content("~/Home/Index")' + '?sortby=' + $('#Sortby').val();
+
+
+                  }
+              })
+          });
+ </script>

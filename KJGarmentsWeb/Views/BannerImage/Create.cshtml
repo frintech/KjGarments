@@ -1,0 +1,130 @@
+﻿@model KJGarmentsWeb.Models.AddBannerImageModel
+@{
+    ViewBag.Title = "Add Image";
+}
+
+ @if (TempData["Message"] != null)
+{
+<script language="javascript">
+    if (confirm('@TempData["Message"]' + "\nAre you OK to continue add Bannerimage?") == true) {
+    }
+    else {
+        window.location.href = '@Url.Content("~/BannerImage/Index/{params}")';
+    }
+
+</script>
+}
+
+@using (Html.BeginForm("Create", "BannerImage", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+   <div class="container">      
+
+       <div class="row mrg-top-20">
+           <div class="col-md-3">               
+               <span class="mandatory">*</span>
+           </div>           
+           <div class="col-md-3">
+                @Html.TextBoxFor(model => model.Imagepath, new { type = "file",@class="upload-file" })
+           </div>
+           <div class="col-md-2">
+              
+           </div>
+            <div class="col-md-3">                 
+                @Html.ValidationMessageFor(model => model.Imagepath)
+                 
+           </div>            
+       </div>
+   
+       <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-2">
+                 <button type="submit" class="btnBlue sub-reset">Save</button>
+           </div>
+           <div class="col-md-2">
+                 <h5 class="btnBlue sub-reset-cancel"> @Html.ActionLink("Cancel", "Index")</h5>
+           </div>
+           <div class="col-md-2">
+                 <h5 class="btnBlue sub-reset-cancel"> @Html.ActionLink("Reset", "Create")</h5>
+           </div>
+       </div>
+  </div>
+}
+
+<script type="text/javascript">
+    function randomString() {
+        var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+        var string_length = Math.floor((Math.random() * 5) + 1);
+        var randomstring = '';
+        for (var i = 0; i < string_length; i++) {
+            var rnum = Math.floor(Math.random() * chars.length);
+            randomstring += chars.substring(rnum, rnum + 1);
+        }
+        $('#spnstring').html(randomstring);
+    }
+
+    //get file size
+
+
+    //get file path from client system
+
+    function getNameFromPath(strFilepath) {
+        var objRE = new RegExp(/([^\/\\]+)$/);
+        var strName = objRE.exec(strFilepath);
+
+        if (strName == null) {
+            return null;
+        }
+        else {
+            return strName[0];
+        }
+    }
+
+
+
+    $(function () {
+        $("#Imagepath").change(function () {
+            var file = getNameFromPath($(this).val());
+            if (file != null) {
+                var extension = file.substr((file.lastIndexOf('.') + 1));
+                switch (extension) {
+                    case 'jpg':
+                        flag = true;
+                    case 'jpeg':
+                        flag = true;
+                    case 'JPG':
+                        flag = true;
+                    case 'png':
+                        flag = true;
+                    case 'gif':
+                        flag = true;
+                        break;
+                    default:
+                        flag = false;
+                }
+            }
+
+            if (flag == false) {
+                $("#validationTxt").text("You can upload only jpg,jpeg,png,gif extension file");
+                return false;
+            }
+            else {
+                var size = 0;
+                if (size > 3) {
+                    $("#validationTxt").text("You can upload file up to 1 MB");
+                }
+                else {
+                    $("#validationTxt").text("");
+                }
+            }
+        });
+    });
+
+
+
+
+
+
+</script>
+
+

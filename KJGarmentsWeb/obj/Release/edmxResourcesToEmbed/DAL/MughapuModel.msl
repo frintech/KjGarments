@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_77377_muphase1ModelStoreContainer" CdmEntityContainer="MughapuEntities">
+    <EntitySetMapping Name="Brands">
+      <EntityTypeMapping TypeName="MughapuModel.Brand">
+        <MappingFragment StoreEntitySet="Brand">
+          <ScalarProperty Name="sub_cat_id" ColumnName="sub_cat_id" />
+          <ScalarProperty Name="cat_id" ColumnName="cat_id" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="BRND_id" ColumnName="BRND_id" />
+          <ScalarProperty Name="BRND_Name" ColumnName="BRND_Name" />
+          <ScalarProperty Name="BRND_Description" ColumnName="BRND_Description" />
+          <ScalarProperty Name="BRND_Img_Path" ColumnName="BRND_Img_Path" />
+          <ScalarProperty Name="Is_Add_img" ColumnName="Is_Add_img" />
+          <ScalarProperty Name="Add_User_id" ColumnName="Add_User_id" />
+          <ScalarProperty Name="Add_Datetime" ColumnName="Add_Datetime" />
+          <ScalarProperty Name="Mod_User_Id" ColumnName="Mod_User_Id" />
+          <ScalarProperty Name="Modify_Datetime" ColumnName="Modify_Datetime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KEY_Specifications">
+      <EntityTypeMapping TypeName="MughapuModel.KEY_Specifications">
+        <MappingFragment StoreEntitySet="KEY_Specifications">
+          <ScalarProperty Name="spec_col_id" ColumnName="spec_col_id" />
+          <ScalarProperty Name="spec_col_Name" ColumnName="spec_col_Name" />
+          <ScalarProperty Name="spec_cate_id" ColumnName="spec_cate_id" />
+          <ScalarProperty Name="Add_User_id" ColumnName="Add_User_id" />
+          <ScalarProperty Name="Add_Datetime" ColumnName="Add_Datetime" />
+          <ScalarProperty Name="Mod_User_Id" ColumnName="Mod_User_Id" />
+          <ScalarProperty Name="Modify_Datetime" ColumnName="Modify_Datetime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menus">
+      <EntityTypeMapping TypeName="MughapuModel.Menu">
+        <MappingFragment StoreEntitySet="Menu">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Mnu_id" ColumnName="Mnu_id" />
+          <ScalarProperty Name="Mnu_Name" ColumnName="Mnu_Name" />
+          <ScalarProperty Name="Mnu_Description" ColumnName="Mnu_Description" />
+          <ScalarProperty Name="Add_User_id" ColumnName="Add_User_id" />
+          <ScalarProperty Name="Add_Datetime" ColumnName="Add_Datetime" />
+          <ScalarProperty Name="Mod_User_Id" ColumnName="Mod_User_Id" />
+          <ScalarProperty Name="Modify_Datetime" ColumnName="Modify_Datetime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="menuTrees">
+      <EntityTypeMapping TypeName="MughapuModel.menuTree">
+        <MappingFragment StoreEntitySet="menuTree">
+          <ScalarProperty Name="Tree_id" ColumnName="Tree_id" />
+          <ScalarProperty Name="Menu_id" ColumnName="Menu_id" />
+          <ScalarProperty Name="Parent_Menuid" ColumnName="Parent_Menuid" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Add_User_id" ColumnName="Add_User_id" />
+          <ScalarProperty Name="Add_Datetime" ColumnName="Add_Datetime" />
+          <ScalarProperty Name="Mod_User_Id" ColumnName="Mod_User_Id" />
+          <ScalarProperty Name="Modify_Datetime" ColumnName="Modify_Datetime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="offers">
+      <EntityTypeMapping TypeName="MughapuModel.offer">
+        <MappingFragment StoreEntitySet="offer">
+          <ScalarProperty Name="offer_id" ColumnName="offer_id" />
+          <ScalarProperty Name="offer_Name" ColumnName="offer_Name" />
+          <ScalarProperty Name="offer_Description" ColumnName="offer_Description" />
+          <ScalarProperty Name="Add_User_id" ColumnName="Add_User_id" />
+          <ScalarProperty Name="Add_Datetime" ColumnName="Add_Datetime" />
+          <ScalarProperty Name="Mod_User_Id" ColumnName="Mod_User_Id" />
+          <ScalarProperty Name="Modify_Datetime" ColumnName="Modify_Datetime" />
+          <ScalarProperty Name="OFR_Value_type" ColumnName="OFR_Value_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Offer_Mapping">
+      <EntityTypeMapping TypeName="MughapuModel.Offer_Mapping">
+        <MappingFragment StoreEntitySet="Offer_Mapping">
+          <ScalarProperty Name="OMP_id" ColumnName="OMP_id" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Mappid" ColumnName="Mappid" />
+          <ScalarProperty Name="Offer_id" ColumnName="Offer_id" />
+          <ScalarProperty Name="offer_type_id" ColumnName="offer_type_id" />
+          <ScalarProperty Name="Add_User_id" ColumnName="Add_User_id" />
+          <ScalarProperty Name="Add_Datetime" ColumnName="Add_Datetime" />
+          <ScalarProperty Name="Mod_User_Id" ColumnName="Mod_User_Id" />
+          <ScalarProperty Name="Modify_Datetime" ColumnName="Modify_Datetime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Offer_type">
+      <EntityTypeMapping TypeName="MughapuModel.Offer_type">
+        <MappingFragment StoreEntitySet="Offer_type">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="OFT_id" ColumnName="OFT_id" />
+          <ScalarProperty Name="OFT_Name" ColumnName="OFT_Name" />
+          <ScalarProperty Name="OFT_Description" ColumnName="OFT_Description" />
+          <ScalarProperty Name="Add_User_id" ColumnName="Add_User_id" />
+          <ScalarProperty Name="Add_Datetime" ColumnName="Add_Datetime" />
+          <ScalarProperty Name="Mod_User_Id" ColumnName="Mod_User_Id" />
+          <ScalarProperty Name="Modify_Datetime" ColumnName="Modify_Datetime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OFFER_VALUE_TYPE">
+      <EntityTypeMapping TypeName="MughapuModel.OFFER_VALUE_TYPE">
+        <MappingFragment StoreEntitySet="OFFER_VALUE_TYPE">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="OFR_VAl_Type_Id" ColumnName="OFR_VAl_Type_Id" />
+          <ScalarProperty Name="Ofr_Value_type" ColumnName="Ofr_Value_type" />
+          <ScalarProperty Name="Ofr_Value_description" ColumnName="Ofr_Value_description" />
+          <ScalarProperty Name="Add_User_id" ColumnName="Add_User_id" />
+          <ScalarProperty Name="Add_Datetime" ColumnName="Add_Datetime" />
+          <ScalarProperty Name="Mod_User_Id" ColumnName="Mod_User_Id" />
+          <ScalarProperty Name="Modify_Datetime" ColumnName="Modify_Datetime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PDT_IMAGE_PATH">
+      <EntityTypeMapping TypeName="MughapuModel.PDT_IMAGE_PATH">
+        <MappingFragment StoreEntitySet="PDT_IMAGE_PATH">
+          <ScalarProperty Name="Img_type" ColumnName="Img_type" />
+          <ScalarProperty Name="img_id" ColumnName="img_id" />
+          <ScalarProperty Name="PDT_ID" ColumnName="PDT_ID" />
+          <ScalarProperty Name="Image_Path" ColumnName="Image_Path" />
+          <ScalarProperty Name="Home_Flag" ColumnName="Home_Flag" />
+          <ScalarProperty Name="Banner_Flag" ColumnName="Banner_Flag" />
+          <ScalarProperty Name="First_Flag" ColumnName="First_Flag" />
+          <ScalarProperty Name="User_id" ColumnName="User_id" />
+          <ScalarProperty Name="His_Datetime" ColumnName="His_Datetime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUCTs">
+      <EntityTypeMapping TypeName="MughapuModel.PRODUCT">
+        <MappingFragment StoreEntitySet="PRODUCT">
+          <ScalarProperty Name="PDT_Discount_price" ColumnName="PDT_Discount_price" />
+          <ScalarProperty Name="PDT_offer" ColumnName="PDT_offer" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="offer_value_type_id" ColumnName="offer_value_type_id" />
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+          <ScalarProperty Name="PDT_CODE" ColumnName="PDT_CODE" />
+          <ScalarProperty Name="PDT_Name" ColumnName="PDT_Name" />
+          <ScalarProperty Name="PDT_Price" ColumnName="PDT_Price" />
+          <ScalarProperty Name="PDT_Description" ColumnName="PDT_Description" />
+          <ScalarProperty Name="Category_id" ColumnName="Category_id" />
+          <ScalarProperty Name="Sub_Category_id" ColumnName="Sub_Category_id" />
+          <ScalarProperty Name="Brand_id" ColumnName="Brand_id" />
+          <ScalarProperty Name="Add_user_Id" ColumnName="Add_user_Id" />
+          <ScalarProperty Name="Add_Datetime" ColumnName="Add_Datetime" />
+          <ScalarProperty Name="Mod_user_id" ColumnName="Mod_user_id" />
+          <ScalarProperty Name="Mod_Datetime" ColumnName="Mod_Datetime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Spec_category">
+      <EntityTypeMapping TypeName="MughapuModel.Spec_category">
+        <MappingFragment StoreEntitySet="Spec_category">
+          <ScalarProperty Name="spec_cat_id" ColumnName="spec_cat_id" />
+          <ScalarProperty Name="spec_cat_Name" ColumnName="spec_cat_Name" />
+          <ScalarProperty Name="spec_cat_Description" ColumnName="spec_cat_Description" />
+          <ScalarProperty Name="Add_User_id" ColumnName="Add_User_id" />
+          <ScalarProperty Name="Add_Datetime" ColumnName="Add_Datetime" />
+          <ScalarProperty Name="Mod_User_Id" ColumnName="Mod_User_Id" />
+          <ScalarProperty Name="Modify_Datetime" ColumnName="Modify_Datetime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Value_Specification">
+      <EntityTypeMapping TypeName="MughapuModel.Value_Specification">
+        <MappingFragment StoreEntitySet="Value_Specification">
+          <ScalarProperty Name="Spec_value_id" ColumnName="Spec_value_id" />
+          <ScalarProperty Name="Key_spec_id" ColumnName="Key_spec_id" />
+          <ScalarProperty Name="key_Col_Value" ColumnName="key_Col_Value" />
+          <ScalarProperty Name="Product_id" ColumnName="Product_id" />
+          <ScalarProperty Name="AddUser_id" ColumnName="AddUser_id" />
+          <ScalarProperty Name="Add_Datetime" ColumnName="Add_Datetime" />
+          <ScalarProperty Name="mod_user_Id" ColumnName="mod_user_Id" />
+          <ScalarProperty Name="Mod_Datetime" ColumnName="Mod_Datetime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductCarts">
+      <EntityTypeMapping TypeName="MughapuModel.ProductCart">
+        <MappingFragment StoreEntitySet="ProductCart">
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="PDT_Id" ColumnName="PDT_Id" />
+          <ScalarProperty Name="CartId" ColumnName="CartId" />
+          <ScalarProperty Name="RecordId" ColumnName="RecordId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductOrders">
+      <EntityTypeMapping TypeName="MughapuModel.ProductOrder">
+        <MappingFragment StoreEntitySet="ProductOrder">
+          <ScalarProperty Name="Cupn_id" ColumnName="Cupn_id" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="mobileNo" ColumnName="mobileNo" />
+          <ScalarProperty Name="Emailid" ColumnName="Emailid" />
+          <ScalarProperty Name="Customer_Address" ColumnName="Customer_Address" />
+          <ScalarProperty Name="Customer_name" ColumnName="Customer_name" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductOrderDetails">
+      <EntityTypeMapping TypeName="MughapuModel.ProductOrderDetail">
+        <MappingFragment StoreEntitySet="ProductOrderDetail">
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="PDT_Id" ColumnName="PDT_Id" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="OrderDetailId" ColumnName="OrderDetailId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Coupons">
+      <EntityTypeMapping TypeName="MughapuModel.Coupon">
+        <MappingFragment StoreEntitySet="Coupon">
+          <ScalarProperty Name="OFR_Value_type" ColumnName="OFR_Value_type" />
+          <ScalarProperty Name="Modify_Datetime" ColumnName="Modify_Datetime" />
+          <ScalarProperty Name="Mod_User_Id" ColumnName="Mod_User_Id" />
+          <ScalarProperty Name="Add_Datetime" ColumnName="Add_Datetime" />
+          <ScalarProperty Name="Add_User_id" ColumnName="Add_User_id" />
+          <ScalarProperty Name="cupn_value" ColumnName="cupn_value" />
+          <ScalarProperty Name="cupn_Description" ColumnName="cupn_Description" />
+          <ScalarProperty Name="cupn_Code" ColumnName="cupn_Code" />
+          <ScalarProperty Name="cupn_id" ColumnName="cupn_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SpecialOffers">
+      <EntityTypeMapping TypeName="MughapuModel.SpecialOffer">
+        <MappingFragment StoreEntitySet="SpecialOffer">
+          <ScalarProperty Name="ModifiedUser" ColumnName="ModifiedUser" />
+          <ScalarProperty Name="AddDatetime" ColumnName="AddDatetime" />
+          <ScalarProperty Name="Adduser" ColumnName="Adduser" />
+          <ScalarProperty Name="Image_Path_Name" ColumnName="Image_Path_Name" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="offer_Name" ColumnName="offer_Name" />
+          <ScalarProperty Name="offer_Code" ColumnName="offer_Code" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="MaxQty" ColumnName="MaxQty" />
+          <ScalarProperty Name="MinQty" ColumnName="MinQty" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="usr_Category" ColumnName="usr_Category" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="SpecialOfferID" ColumnName="SpecialOfferID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SpecialOfferProducts">
+      <EntityTypeMapping TypeName="MughapuModel.SpecialOfferProduct">
+        <MappingFragment StoreEntitySet="SpecialOfferProduct">
+          <ScalarProperty Name="OFR_VAL_TYPE" ColumnName="OFR_VAL_TYPE" />
+          <ScalarProperty Name="DiscountPct" ColumnName="DiscountPct" />
+          <ScalarProperty Name="PDT_TYPE" ColumnName="PDT_TYPE" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUser" ColumnName="ModifiedUser" />
+          <ScalarProperty Name="AddDatetime" ColumnName="AddDatetime" />
+          <ScalarProperty Name="Adduser" ColumnName="Adduser" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="SpecialOfferID" ColumnName="SpecialOfferID" />
+          <ScalarProperty Name="SeqNo" ColumnName="SeqNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetTreeView" FunctionName="DB_77377_muphase1Model.Store.GetTreeView" />
+    <EntitySetMapping Name="TreeviewLists">
+      <EntityTypeMapping TypeName="MughapuModel.TreeviewList">
+        <MappingFragment StoreEntitySet="TreeviewList">
+          <ScalarProperty Name="parent_name" ColumnName="parent_name" />
+          <ScalarProperty Name="Item_Name" ColumnName="Item_Name" />
+          <ScalarProperty Name="origin" ColumnName="origin" />
+          <ScalarProperty Name="Parent_Menuid" ColumnName="Parent_Menuid" />
+          <ScalarProperty Name="menu_id" ColumnName="menu_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Coupon_Code">
+      <EntityTypeMapping TypeName="MughapuModel.Coupon_Code">
+        <MappingFragment StoreEntitySet="Coupon_Code">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUser" ColumnName="ModifiedUser" />
+          <ScalarProperty Name="AddDatetime" ColumnName="AddDatetime" />
+          <ScalarProperty Name="Adduser" ColumnName="Adduser" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="MaxQty" ColumnName="MaxQty" />
+          <ScalarProperty Name="MinQty" ColumnName="MinQty" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Cupn_Name" ColumnName="Cupn_Name" />
+          <ScalarProperty Name="Cupn_Code" ColumnName="Cupn_Code" />
+          <ScalarProperty Name="Cupn_Id" ColumnName="Cupn_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CouponProducts">
+      <EntityTypeMapping TypeName="MughapuModel.CouponProduct">
+        <MappingFragment StoreEntitySet="CouponProduct">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUser" ColumnName="ModifiedUser" />
+          <ScalarProperty Name="AddDatetime" ColumnName="AddDatetime" />
+          <ScalarProperty Name="Adduser" ColumnName="Adduser" />
+          <ScalarProperty Name="OFR_VAL_TYPE" ColumnName="OFR_VAL_TYPE" />
+          <ScalarProperty Name="DiscountPct" ColumnName="DiscountPct" />
+          <ScalarProperty Name="PDT_TYPE" ColumnName="PDT_TYPE" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="CupnID" ColumnName="CupnID" />
+          <ScalarProperty Name="cupn_No" ColumnName="cupn_No" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="MughapuModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifieBy" ColumnName="ModifieBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_Info">
+      <EntityTypeMapping TypeName="MughapuModel.User_Info">
+        <MappingFragment StoreEntitySet="User_Info">
+          <ScalarProperty Name="Isactive" ColumnName="Isactive" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Usr_type" ColumnName="Usr_type" />
+          <ScalarProperty Name="Usr_pwd" ColumnName="Usr_pwd" />
+          <ScalarProperty Name="Address_Communication" ColumnName="Address_Communication" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="E_mail_id" ColumnName="E-mail_id" />
+          <ScalarProperty Name="Mobile_number" ColumnName="Mobile_number" />
+          <ScalarProperty Name="Last_name" ColumnName="Last_name" />
+          <ScalarProperty Name="First_name" ColumnName="First_name" />
+          <ScalarProperty Name="UidNo" ColumnName="UidNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Banner_Image_Dtl">
+      <EntityTypeMapping TypeName="MughapuModel.Banner_Image_Dtl">
+        <MappingFragment StoreEntitySet="Banner_Image_Dtl">
+          <ScalarProperty Name="Mod_DateTime" ColumnName="Mod_DateTime" />
+          <ScalarProperty Name="Mod_User" ColumnName="Mod_User" />
+          <ScalarProperty Name="Add_DateTime" ColumnName="Add_DateTime" />
+          <ScalarProperty Name="Add_user" ColumnName="Add_user" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="BNR_Image_Path" ColumnName="BNR_Image_Path" />
+          <ScalarProperty Name="BNR_Img_Id" ColumnName="BNR_Img_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Sp_GetOffer" FunctionName="DB_77377_muphase1Model.Store.Sp_GetOffer" />
+    <EntitySetMapping Name="ProductOfferValues">
+      <EntityTypeMapping TypeName="MughapuModel.ProductOfferValue">
+        <MappingFragment StoreEntitySet="ProductOfferValue">
+          <ScalarProperty Name="OfrValtype" ColumnName="OfrValtype" />
+          <ScalarProperty Name="offer" ColumnName="offer" />
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Sp_GetCoupon" FunctionName="DB_77377_muphase1Model.Store.Sp_GetCoupon" />
+    <EntitySetMapping Name="ProductCouponValues">
+      <EntityTypeMapping TypeName="MughapuModel.ProductCouponValue">
+        <MappingFragment StoreEntitySet="ProductCouponValue">
+          <ScalarProperty Name="offervaltype" ColumnName="offervaltype" />
+          <ScalarProperty Name="offer" ColumnName="offer" />
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

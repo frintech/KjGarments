@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Events";
+}
+<script>
+    $(document).ready(function () {
+        $(".sliderBanner").bxSlider({
+            auto: true,
+            slideWidth: 280,
+            minSlides: 2,
+            maxSlides: 4,
+            moveSlides: 1,
+            slideMargin: 2
+        });
+    });
+    </script>  
+<div class="content aligncenter margintop">
+            
+<div class="divouterhome">
+    <div class="sliderBanner">                           
+	@*<?php
+        $folder = 'imagesuploaded/imgevents/';
+        $filetype = '*.*';
+        $files = glob($folder.$filetype);
+        $filecount =count($files);                       
+        for ($i=0; $i<$filecount; $i++) {                        
+            echo '<div class="slide"><img class="imgBox floatleft clsclk" src="'.$files[$i].'" /></div>';                      
+			//echo '<a class="slide" href="gallery.php"><img class="imgBox floatleft clsclk" src="'.$files[$i].'" /></a>';                      
+        }                    
+    ?>        *@
+        <a class="slide" href="gallery.php"><img class="imgBox floatleft clsclk" src="~/Images/imgevents/1.jpg" /></a>
+        <a class="slide" href="gallery.php"><img class="imgBox floatleft clsclk" src="~/Images/imgevents/2.jpg" /></a>
+        <a class="slide" href="gallery.php"><img class="imgBox floatleft clsclk" src="~/Images/imgevents/3.jpg" /></a>
+        <a class="slide" href="gallery.php"><img class="imgBox floatleft clsclk" src="~/Images/imgevents/4.jpg" /></a>
+        <a class="slide" href="gallery.php"><img class="imgBox floatleft clsclk" src="~/Images/imgevents/5.jpg" /></a>
+    </div>
+</div>  
+<h2 class="aboutHeader">Art Events and Exhibitions</h2>             
+<p class="indexcontent">Peakart organizes art exhibition and also takes part in International Art Fairs.   We also have other events
+		such as art competitions and art workshop for those who prefer small groups sessions.  Learning from
+			practicing artists and pursuing their passion is also one of our mission.</P>
+</div> 

@@ -1,0 +1,80 @@
+﻿@{
+    ViewBag.Title = "ContactUS";
+}
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script>
+        function initialize() {
+            var myLatlng = new google.maps.LatLng(1.35819, 103.87832);
+            var mapOptions = {
+                zoom: 15,
+                center: myLatlng
+            }
+            var map = new google.maps.Map(document.getElementById('map-canvassing'), mapOptions);
+
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: 'Peakzart Singapore!'
+            });
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+
+        function initializekar() {
+            var myLatlng = new google.maps.LatLng(10.06670, 78.78330);
+            var mapOptions = {
+                zoom: 10,
+                center: myLatlng
+            }
+            var map = new google.maps.Map(document.getElementById('map-canvaskar'), mapOptions);
+
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: 'Peakzart Karikudi!'
+            });
+        }
+
+        google.maps.event.addDomListener(window, 'load', initializekar);
+
+    </script>
+<div class="content aligncenter ">
+            <div class="contant_contactus  grdOuter">
+                <div class="floatleft grditemstyle1"> 
+                    <div class="floatleft grdinneritemstyle1"> 
+                        <figure class="indent-bot floatleft">
+                             <div id="map-canvassing"  style="width:12em; height:12em;"></div>
+                        </figure> 
+                        <br />                                         
+                        <div class="smallHeadingContact dispBlock">Corporate Office</div>                   
+                        <div class="addressContent">
+                            36, Ee Teow Leng Road<br />
+                            Singapore – 549645<br />                            
+                            Email: <a href="mailto:peakzart@gmail.com">peakzart@gmail.com</a><br />
+                        </div>
+                    </div>
+                    <div class="floatleft grdinneritemstyle2"> 
+                        <figure class="indent-bot floatleft">                                
+                            <div id="map-canvaskar"  style="width:12em; height:12em;"></div>
+                        </figure>  
+                        <br />
+                        <div class="smallHeadingContact dispBlock">Branch Office</div>
+                        <div class="addressContent">
+                            9-4/324, Nagammai nagar<br />
+                            Karaikudi City<br />
+                            TamilNadu - 630004<br />                            
+                            Email: <a href="mailto:peakzart@gmail.com">peakzart@gmail.com</a><br />
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="floatleft grditemstyle2">
+                    <div class="dispBlock">Name</div> <input type="text" name="txtName" class="txtContact" /><br />
+                    <div class="dispBlock">Address</div> <input type="text" name="txtAddress" class="txtContact" /><br />
+                    <div class="dispBlock">Email</div> <input type="text" name="txtEmail" class="txtContact" /><br />
+                    <div class="dispBlock">Phone</div> <input type="text" name="txtPhone" class="txtContact" /><br />
+                    <div class="dispBlock">Comments</div> <input type="text" name="txtComments" class="txtArea" /><br /><br />
+                    <input type="submit" class="btnBlue" value="Submit" /> 
+                </div>                                   
+            </div>
+        </div>   

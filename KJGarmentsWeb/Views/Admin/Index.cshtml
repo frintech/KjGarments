@@ -1,0 +1,219 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@using GridMvc.Html
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+<link href="~/css/theme.default.css" rel="stylesheet" type="text/css" />
+@model IPagedList<KJGarmentsWeb.Models.ViewProductdetails>
+@{
+    ViewBag.Title = "View Product";
+}
+  @{  
+                                               
+      System.Globalization.CultureInfo Indian = new System.Globalization.CultureInfo("hi-IN");
+  }
+  @if (TempData["Message"] != null)
+{
+<script>  
+         alert('@TempData["Message"]');
+       
+ 
+</script>
+}
+@*<link href="~/CSS/theme.default.css" rel="stylesheet">*@
+@*@Styles.Render("~/css/theme.default.css")*@
+
+ @*@using (Html.BeginForm("Filterable", "Products", FormMethod.Get))
+                             {
+                               <fieldset class="filtering">
+                                  <legend>Filter Product Results</legend>
+                                  <div>
+                                     <b>Show Products In:</b>
+                                      @Html.DropDownList("Category_id",ViewData["Menus"] as SelectList)                                      
+                                       <select id="SubCat"></select>                                      
+                                      @Html.DropDownList("BRND_id",ViewData["brands"]  as SelectList) 
+                                     <input type="submit" value="Filter Results" />
+                                  </div>
+                               </fieldset>
+                             } *@
+@using (Html.BeginForm())
+{
+     
+     <div class="container">
+         @*<div class="admin-container">*@
+             <div class="row">
+                 <div class="col-md-2">
+                     <h5 class="btnBlue btnAddProduct">@Html.ActionLink("Add product", "Create")</h5>
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="col-md-2">
+                     @Html.PagedListPager(Model, page => Url.Action("Index", new { page }), PagedListRenderOptions.PageNumbersOnly)
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="col-md-12">
+                     <div class="datagrid">
+                <table class="tablesorter">
+                    <thead>
+                         <tr>
+                             <th>
+                                     Product Image
+                             </th>
+                            @*<th>
+                                Product Id
+                            </th>*@
+             
+                            <th>
+                              Product Code                              
+                            </th>
+        
+                            <th>
+                              Product Name 
+                            </th>
+                            <th>
+                                Price (@System.Configuration.ConfigurationManager.AppSettings["currency_code"])                            
+                            </th>
+                            <th>
+                                Description
+                            </th>
+                            <th>
+                                Category 
+                            </th>
+                            <th>
+                                Sub category                              
+                            </th>
+                            <th>
+                              Brand   
+                            </th>
+                            @*<th>
+                                Offer 
+                            </th>*@
+        
+                           <th></th>
+                           <th></th>
+                        </tr>
+
+                    </thead>
+                  
+                    <tbody>                        
+                        @{        
+    var i = 0;
+    foreach (var item in Model)
+    {
+
+        if (i % 2 == 0)
+        {
+                                    <tr>
+                                        <td><img src="@Url.Content("~/Images/RESZIMGS/" + @item.ImagePath)" width="100" height="100" class="img-admin-view" /></td>
+                                        @*<td>@item.Pid</td>*@
+                                        <td>@item.Product_Code</td>
+                                        <td>@item.Product_Name</td>
+                                        <td>@(String.Format(Indian, "{0:N}", @item.Product_Price)) </td>
+                                        <td>@item.Product_Description</td>  
+                                        <td>@item.Category</td>  
+                                        <td>@item.Sub_Category</td>  
+                                        <td>@item.brand</td>  
+                                       @* <td>@item.Product_offer.ToString()  @item.offer</td> *@         
+                                        @*<td>@Html.ActionLink("Edit", "Edit", new { id = item.Pid }, new { @class = "edit-link" })</td>*@
+                                         @if (item.Isactive == false)
+                                         {
+                                             <td></td>   
+                                           <td>@Html.ActionLink("ReActivate", "ReActivate", new { id = item.Pid }, new { @class = "reactivate-link" })</td>
+                                         }
+                                         else
+                                         {
+                                            <td>@Html.ActionLink("Edit", "Edit", new { id = item.Pid }, new { @class = "edit-link" })</td>  
+                                            <td>@Html.ActionLink("Delete", "Delete", new { id = item.Pid }, new { @class = "delete-link" })</td>
+                                         }
+                                    </tr>
+        }
+        else
+        {
+                                    <tr>
+                                        <td><img src="@Url.Content("~/Images/RESZIMGS/" + @item.ImagePath)" width="100" height="100" class="img-admin-view"  /></td>
+                                        @*<td>@item.Pid</td>*@
+                                        <td>@item.Product_Code</td>
+                                        <td>@item.Product_Name</td>
+                                        <td>@(String.Format(Indian, "{0:N}", @item.Product_Price)) </td>
+                                        <td>@item.Product_Description</td>  
+                                        <td>@item.Category</td>  
+                                        <td>@item.Sub_Category</td>  
+                                        <td>@item.brand</td>  
+                                    @*    <td>@item.Product_offer.ToString()  @item.offer</td> *@        
+                                                                             
+                                        @if (item.Isactive == false)
+                                        {
+                                            <td></td>   
+                                            <td>@Html.ActionLink("ReActivate", "ReActivate", new { id = item.Pid }, new { @class = "reactivate-link" })</td>
+                                        }
+                                        else
+                                        {
+                                            <td>@Html.ActionLink("Edit", "Edit", new { id = item.Pid }, new { @class = "edit-link" })</td>   
+                                            <td>@Html.ActionLink("Delete", "Delete", new { id = item.Pid }, new { @class = "delete-link" })</td>
+                                        }
+                                    </tr>
+        }
+
+        i += 1;
+    }
+                        }
+                    </tbody>
+                </table>
+            </div>
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="col-md-2">
+                     @Html.PagedListPager(Model, page => Url.Action("Index", new { page }), PagedListRenderOptions.PageNumbersOnly)
+                 </div>
+             </div>
+          @*</div>*@
+    </div>
+            
+}
+
+	<script src="~/Scripts/jquery.tablesorter.min.js"></script>
+	<script src="~/Scripts/jquery.tablesorter.widgets.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#SubCat").prop("disabled", true);
+        $("#Category_id").change(function () {
+           
+            if ($("#Category_id").val() != "") {
+               
+                var menuid = $("#Category_id").val();
+                
+                $.post('@Url.Action("LoadSubCategory", "Admin")', { "menuid": menuid },
+                   function (data) {
+                       $("#SubCat").empty();
+                       $.each(data, function (id, option) {
+                           $("#SubCat").append($('<option></option>').val(option.Mnu_id).html(option.Mnu_Name));
+                       });
+                       $("#SubCat").prop("disabled", false);
+                   });
+            }
+            })
+    });
+
+    $(function () {
+
+        var $table = $('table').tablesorter({
+            theme: 'blue',
+            widgets: ["zebra", "filter"],
+            widgetOptions: {
+                // filter_anyMatch replaced! Instead use the filter_external option
+                // Set to use a jQuery selector (or jQuery object) pointing to the
+                // external filter (column specific or any match)
+                filter_external: '.search',
+                // add a default type search to the first name column
+                filter_defaultFilter: { 1: '~{query}' },
+                // include column filters
+                filter_columnFilters: true,
+                filter_placeholder: { search: 'Search...' },
+                filter_saveFilters: true,
+                filter_reset: '.reset'
+            }
+        });
+
+    });
+</script>

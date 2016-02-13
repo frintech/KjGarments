@@ -1,0 +1,22 @@
+﻿    <html>
+    <body style="font-family:'Segoe UI'; font-size:16px; color:black;">
+    
+    
+    <div style="background-color: #ece8d4; width:600px; padding:30px; margin-top:10px;">
+        <div style="position:relative;  width:600px; background-color:#a7bc7a;">
+    <img src="http://www.mughapu.com/images/logo.png" />
+    </div>
+    <p>Dear {3},</p>
+	   Thank you for shopping at mughapu.com. Please find your order summary details below.<br />
+&nbsp;<br/>
+	
+   {7}
+    <br/> Please use Tracking Reference Id while contacting us.
+    <br/>
+	    <br />
+    <p>Thank you <br/>
+	    Mughapu
+	</p>
+    </div>
+    </body>
+    </html>

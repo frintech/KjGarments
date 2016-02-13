@@ -1,0 +1,90 @@
+﻿@model KJGarmentsWeb.DAL.ImageDetail
+@{
+    ViewBag.Title = "Edit";
+}
+
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+  @Html.ValidationSummary(true)
+    <div class="content aligncenter ">
+            <div class="contant_contactus  grdOuter">
+    <fieldset>
+        <legend>Edit Image Details</legend>
+
+        @Html.HiddenFor(model => model.ImageId)
+
+        <div class="dispBlock">
+            @Html.Label("Title")
+        </div>
+        <div class="dispBlock">           
+            @Html.TextBoxFor(model => model.ImageTitle,null, new { @class = "txtContact" })
+            @Html.ValidationMessageFor(model => model.ImageTitle)
+        </div>
+        <br />
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ImageDescription)
+        </div>
+        <div class="editor-field">           
+             @Html.TextBoxFor(model => model.ImageDescription,null, new { @class = "txtContact" }) 
+            @Html.ValidationMessageFor(model => model.ImageDescription)
+        </div>
+          <br />
+            <div class="editor-label">
+          Price (@System.Configuration.ConfigurationManager.AppSettings["currency_code"])
+        </div>
+        <div class="editor-field">           
+             @Html.TextBoxFor(model => model.Price,null, new { @class = "txtContact" }) 
+            @Html.ValidationMessageFor(model => model.Price)
+        </div>
+          <br />
+        <div class="editor-label">
+              @Html.Label("Active")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IsActive)
+            @Html.ValidationMessageFor(model => model.IsActive)
+        </div>
+          <br />
+         <div class="editor-field">Image  <br /><img src="@Url.Content( "~/Images/RESZIMGS/" + @Model.ImagePath)" width="100" height="100" />  </div>
+         <br />
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CategoryId)  <br />
+        </div>
+         
+        <div class="editor-field">
+       
+    
+            @Html.DropDownListFor(m => m.CategoryId ,new SelectList(ViewBag.Categories, "Value", "Text")) 
+                                  @Html.ValidationMessageFor(m => m.CategoryId)
+        </div>
+         <br />
+         <div class="editor-label">
+            @Html.LabelFor(model => model.ArtistId)
+        </div>
+         
+        <div class="editor-field">
+        
+             @Html.DropDownListFor(m => m.ArtistId ,new SelectList(ViewBag.Artist, "Value", "Text")) 
+            
+        </div>
+        
+         <br />
+
+        <p>
+            <input type="submit" class="btnBlue" value="Save" />
+        </p>
+    </fieldset>
+                <div>
+    @Html.ActionLink("Back to List", "Display")
+</div>
+                </div>
+        </div>
+}
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

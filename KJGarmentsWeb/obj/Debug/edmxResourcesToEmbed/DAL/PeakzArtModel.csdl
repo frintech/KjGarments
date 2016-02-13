@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="peakzartModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="peakzartEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Categories" EntityType="peakzartModel.Category" />
+    <EntitySet Name="Groups" EntityType="peakzartModel.Group" />
+    <EntitySet Name="ImageDetails" EntityType="peakzartModel.ImageDetail" />
+    <EntitySet Name="Users" EntityType="peakzartModel.User" />
+    <EntitySet Name="UserRoles" EntityType="peakzartModel.UserRole" />
+    <EntitySet Name="Artists" EntityType="peakzartModel.Artist" />
+    <EntitySet Name="Carts" EntityType="peakzartModel.Cart" />
+    <AssociationSet Name="FK_Cart_Album" Association="peakzartModel.FK_Cart_Album">
+      <End Role="ImageDetail" EntitySet="ImageDetails" />
+      <End Role="Cart" EntitySet="Carts" />
+    </AssociationSet>
+    <EntitySet Name="PayPalTransactions" EntityType="peakzartModel.PayPalTransaction" />
+    <EntitySet Name="Orders" EntityType="peakzartModel.Order" />
+    <EntitySet Name="OrderDetails" EntityType="peakzartModel.OrderDetail" />
+    <AssociationSet Name="FK_InvoiceLine_Album" Association="peakzartModel.FK_InvoiceLine_Album">
+      <End Role="ImageDetail" EntitySet="ImageDetails" />
+      <End Role="OrderDetail" EntitySet="OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__InvoiceLi__Invoi__2F10007B" Association="peakzartModel.FK__InvoiceLi__Invoi__2F10007B">
+      <End Role="Order" EntitySet="Orders" />
+      <End Role="OrderDetail" EntitySet="OrderDetails" />
+    </AssociationSet>
+    <EntitySet Name="SHIPDETAILS" EntityType="peakzartModel.SHIPDETAIL" />
+  </EntityContainer>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="Int32" Nullable="false" />
+    <Property Name="GroupID" Type="Int32" Nullable="false" />
+    <Property Name="CategoryName" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifieBy" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Group">
+    <Key>
+      <PropertyRef Name="GroupId" />
+    </Key>
+    <Property Name="GroupId" Type="Int32" Nullable="false" />
+    <Property Name="GroupName" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifieBy" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ImageDetail">
+    <Key>
+      <PropertyRef Name="ImageId" />
+    </Key>
+    <Property Name="ImageId" Type="Int32" Nullable="false" />
+    <Property Name="CategoryId" Type="Int32" Nullable="false" />
+    <Property Name="ImageTitle" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="ImageDescription" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+    <Property Name="ImagePath" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifieBy" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Type="Int32" Name="ArtistId" />
+    <NavigationProperty Name="Carts" Relationship="peakzartModel.FK_Cart_Album" FromRole="ImageDetail" ToRole="Cart" />
+    <Property Type="Decimal" Name="Price" Precision="10" Scale="2" />
+    <NavigationProperty Name="OrderDetails" Relationship="peakzartModel.FK_InvoiceLine_Album" FromRole="ImageDetail" ToRole="OrderDetail" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="RoleId" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="UserPassword" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+    <Property Name="EmailID" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+    <Property Name="MobileNo" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifieBy" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="UserRole">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="Int32" Nullable="false" />
+    <Property Name="RoleName" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="RoleDescription" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifieBy" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Artist">
+    <Key>
+      <PropertyRef Name="ArtistsId" />
+    </Key>
+    <Property Type="Int32" Name="ArtistsId" Nullable="false" />
+    <Property Type="String" Name="ArtistsName" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsActive" />
+    <Property Type="Int32" Name="CreatedBy" />
+    <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+    <Property Type="Int32" Name="ModifieBy" />
+    <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+  </EntityType>
+  <EntityType Name="Cart">
+    <Key>
+      <PropertyRef Name="RecordId" />
+    </Key>
+    <Property Type="Int32" Name="RecordId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CartId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ImageId" Nullable="false" />
+    <Property Type="Int32" Name="Count" Nullable="false" />
+    <Property Type="DateTime" Name="DateCreated" Nullable="false" Precision="3" />
+    <NavigationProperty Name="ImageDetail" Relationship="peakzartModel.FK_Cart_Album" FromRole="Cart" ToRole="ImageDetail" />
+  </EntityType>
+  <Association Name="FK_Cart_Album">
+    <End Type="peakzartModel.ImageDetail" Role="ImageDetail" Multiplicity="1" />
+    <End Type="peakzartModel.Cart" Role="Cart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ImageDetail">
+        <PropertyRef Name="ImageId" />
+      </Principal>
+      <Dependent Role="Cart">
+        <PropertyRef Name="ImageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="PayPalTransaction">
+    <Key>
+      <PropertyRef Name="SeqNo" />
+    </Key>
+    <Property Type="Int32" Name="SeqNo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="RequestId" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TrackingReference" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="RequestTime" Precision="3" />
+    <Property Type="String" Name="RequestStatus" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TimeStamp" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RequestError" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Token" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PayerId" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RequestData" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PaymentTransactionId" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PaymentError" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Type="Int32" Name="OrderId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="OrderDate" Nullable="false" Precision="3" />
+    <Property Type="String" Name="Username" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tracking_REF_ID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Currency" MaxLength="160" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Name" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Total" Nullable="false" Precision="10" Scale="2" />
+    <NavigationProperty Name="OrderDetails" Relationship="peakzartModel.FK__InvoiceLi__Invoi__2F10007B" FromRole="Order" ToRole="OrderDetail" />
+  </EntityType>
+  <EntityType Name="OrderDetail">
+    <Key>
+      <PropertyRef Name="OrderDetailId" />
+    </Key>
+    <Property Type="Int32" Name="OrderDetailId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="OrderId" Nullable="false" />
+    <Property Type="Int32" Name="ImageId" Nullable="false" />
+    <Property Type="Int32" Name="Quantity" Nullable="false" />
+    <Property Type="Decimal" Name="UnitPrice" Nullable="false" Precision="10" Scale="2" />
+    <NavigationProperty Name="ImageDetail" Relationship="peakzartModel.FK_InvoiceLine_Album" FromRole="OrderDetail" ToRole="ImageDetail" />
+    <NavigationProperty Name="Order" Relationship="peakzartModel.FK__InvoiceLi__Invoi__2F10007B" FromRole="OrderDetail" ToRole="Order" />
+  </EntityType>
+  <Association Name="FK_InvoiceLine_Album">
+    <End Type="peakzartModel.ImageDetail" Role="ImageDetail" Multiplicity="1" />
+    <End Type="peakzartModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ImageDetail">
+        <PropertyRef Name="ImageId" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="ImageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__InvoiceLi__Invoi__2F10007B">
+    <End Type="peakzartModel.Order" Role="Order" Multiplicity="1" />
+    <End Type="peakzartModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="OrderId" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="SHIPDETAIL">
+    <Key>
+      <PropertyRef Name="SHIPID" />
+    </Key>
+    <Property Type="Int32" Name="SHIPID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="SHIPTONAME" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SHIPTOSTREET" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SHIPTOCITY" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SHIPTOSTATE" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SHIPTOCOUNTRYCODE" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SHIPTOZIP" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SHIPTOCONTACTNO" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NOTESTOSELLER" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TrackingReference" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,32 @@
+﻿@model KJGarmentsWeb.Models.OfferModel
+@foreach (var item in Model.tvlists)
+{ 
+    <ul>
+    @if (item != null)
+    {        
+        <li>
+            
+            <a href="#" class="usr jstree-clicked" >@item.Item_Name @Html.TextBoxFor(model => model.Discountpct, new { id = "itemdiscountId",@class="txtOffer" })   @Html.DropDownListFor(model => model.offer_id ,new SelectList(ViewBag.offers, "Value", "Text"),new { @class = "dropdown dropdown-smaller", id = "itemOfrId" }) 
+                @Html.HiddenFor(model=>item.menu_id, new { id = "itemMnuId" }) 
+                @Html.HiddenFor(model =>item.origin, new { id = "itemOrigin" }) 
+            </a>
+          @*  <a href="#"  class="usr">@item.Item_Name </a>     
+             <a href="#" id="txt" class="usr"> @Html.TextBoxFor(model => model.Discountpct)</a> *@
+                        
+         @*   <div class="col-md-1">
+                &nbsp;
+                  @Html.DropDownListFor(model => model.offer_id ,new SelectList(ViewBag.offers, "Value", "Text"),new { @class = "dropdown dropdown-small" }) 
+           </div>
+           <div class="col-md-3">               
+               @Html.ValidationMessageFor(model => model.offer_id)
+               <div class="validate"  style=visibility:hidden  id="divAT">Please enter the value 1 to 100</div>
+               <div class="validate"  style=visibility:hidden  id="divrs">Please enter the value less than price</div>
+           </div>*@
+        @if (item.tvlists.Count > 0)
+        {         
+            @Html.Partial("Childrens", item)           
+        }
+        </li>
+    }
+    </ul>
+}

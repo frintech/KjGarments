@@ -1,0 +1,48 @@
+﻿@model KJGarmentsWeb.DAL.ImageDetail
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div class="content aligncenter ">
+      <div class="contant_contactus  grdOuter">
+          <h3>Are you sure you want to delete this?</h3>
+          <fieldset>
+    <legend>Delete</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ImageTitle)
+    </div>
+              <br />
+    <div class="display-field">
+      @*  @Html.DisplayFor(model => model.ImageTitle)*@
+          @Html.TextBoxFor(model => model.ImageTitle,null, new { @class = "txtContact",disabled= "disabled" })
+    </div>
+   <br />
+  <div class="display-label">
+         @Html.DisplayNameFor(model => model.ImageDescription)
+    </div>
+               
+    <div class="display-field">
+      @Html.TextBoxFor(model => model.ImageDescription,null, new { @class = "txtContact",disabled= "disabled" })
+    </div>
+                <br />
+      <div class="display-label">
+         @Html.DisplayName("Image")
+      </div>
+    <div class="display-field">
+         <div class="editor-field"><img src="@Url.Content( "~/Images/RESZIMGS/" + Model.ImagePath)" width="100" height="100" />  </div>
+    </div>
+
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete"  class="btnBlue" /> |
+        @Html.ActionLink("Back to List", "Display")
+    </p>
+     
+
+          
+}
+ </div>

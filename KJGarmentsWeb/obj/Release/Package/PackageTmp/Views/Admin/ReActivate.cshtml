@@ -1,0 +1,76 @@
+﻿@model KJGarmentsWeb.Models.deleteProductdetails
+
+@{
+    ViewBag.Title = "ReActivate";
+}
+
+<div class="container">
+
+    <div class="row mrg-top-xs">
+           <div class="col-md-3"> 
+               
+           </div>
+           
+          
+       </div>
+    <div class="row mrg-top-xs">
+        <div class="col-md-1"> 
+               
+           </div>
+        <div class="col-md-2">
+            <div class="row">
+                <div class="col-md-2"> 
+                @*<img src="@Url.Content( "~/Images/RESZIMGS/" + Model.ImagePath)" width="100" height="100" />*@
+                </div>
+                <div class="col-md-2"> 
+                <img src="@Url.Content( "~/Images/RESZIMGS/" + Model.ImagePath)" width="100" height="100" />
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-md-4">
+                    @Html.TextBoxFor(model => model.Product_Code,null, new { @class="pName disable", @data_animation="slide",@data_label="Product Code", @readonly = true })
+                </div> 
+            </div>
+            <div class="row mrg-top-xs">
+                <div class="col-md-4">
+                    @Html.TextBoxFor(model => model.Product_Name,null, new { @class="pName disable", @data_animation="slide",@data_label="Product Name",@data_value="Product Name", @readonly = true })
+                </div>  
+
+            </div>
+        </div>      
+    </div>
+
+
+   
+   
+    @using (Html.BeginForm()) {
+    @Html.AntiForgeryToken(
+    )
+    <div class="row mrg-top-xs">
+           <div class="col-md-3"> 
+               
+           </div>
+           <div class="col-md-2">
+               <button type="submit" class="btnBlue sub-reset" onclick="return confirm('Are you sure to ReActivate?')">ReActivate</button>
+               @*<input type="submit" value="Delete"  class="btnBlue sub-delete" onclick="return confirm('Are you sure to delete?')"/>*@
+           </div>           
+           <div class="col-md-2">
+               <h5 class="btnBlue sub-reset-cancel"> @Html.ActionLink("Back", "Index") </h5>
+           </div>  
+       </div>
+    } 
+
+   @* <div class="row">
+        <div class="col-md-2">
+           <input type="submit" value="Delete"  class="btnBlue" onclick="return confirm('Are you sure to delete?')" />
+        </div>
+        <div class="col-md-2">
+            
+           
+        </div>
+    </div>*@
+
+</div>

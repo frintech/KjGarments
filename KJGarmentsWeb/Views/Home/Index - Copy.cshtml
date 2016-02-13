@@ -1,0 +1,65 @@
+﻿@model IEnumerable<MughapuWeb.Models.CatDetailsViewModel>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@*@section featured {
+    <section class="featured">
+        <div class="content-wrapper">            
+                <h2 class="aboutHeader">Welcome to Peakzart Gallery</h2>
+        </div>
+    </section>
+}*@
+<script>
+    $(document).ready(function () {
+        $(".bxslider").bxSlider({
+            auto: true,
+            slideWidth: 280,
+            minSlides: 2,
+            maxSlides: 4,
+            moveSlides: 1,
+            slideMargin: 2
+        });
+    });
+    </script>   
+ 
+<div class="content aligncenter margintop">
+    <h2 class="aboutHeader">Welcome to MUGHAPU</h2>              
+    <div class="divouterhome">
+        <div class="bxslider">
+            <a class="slide" href="@Url.Action("Index", "CatDetails",new {catID= 1},null)"><img class="imgBox floatleft clsclk" src="~/Images/imghome/Img1.jpg" /></a>
+            <a class="slide" href="@Url.Action("Index","CatDetails",new {catID= 2 },null)"><img class="imgBox floatleft clsclk" src="~/Images/imghome/img2-banner.jpg" /></a>
+            <a class="slide" href="@Url.Action("Index","CatDetails",new {catID= 3},null)"><img class="imgBox floatleft clsclk" src="~/Images/imghome/banner-img4.jpg" /></a>
+            <a class="slide" href="@Url.Action("Index","CatDetails",new {catID= 4 },null)"><img class="imgBox floatleft clsclk" src="~/Images/imghome/img5.jpg" /></a>
+            <a class="slide" href="@Url.Action("Index","CatDetails",new {catID= 5 },null)"><img class="imgBox floatleft clsclk" src="~/Images/imghome/banner-img3.jpg" /></a>
+           @* <a class="slide" href="@Url.Action("Index","CatDetails",new {catID= 6 },null)"><img class="imgBox floatleft clsclk" src="~/Images/imghome/48010.jpg" /></a>*@
+       </div>
+    </div>            
+
+@*</div>*@ 
+<div class="content aligncenter">
+    <div class="floatleft margintop">
+       @foreach (var item in Model) {
+            <a href="@Url.Action("Index", "ImageDetails",new {id= @item.Imgid},null)">
+                @*<div class="wraptocenter boxshadow imgcaption"><img class="indeximgsize" src="@Url.Content( @item.ImagePath)" /><br />
+                    @Html.DisplayFor(modelItem => item.ImageName)<br />
+                     @Html.DisplayFor(modelItem => item.ImageDesc)<br />
+                    @Html.DisplayFor(modelItem => item.Price)
+                @Html.DisplayFor(modelItem => item.ImageName) <br />
+
+                </div>*@
+                 <div class="wraptocenter boxshadow imgcaption"><img class="indeximgsize" src="@Url.Content( @item.ImagePath)" /><br /><br />
+                   <h4> @Html.DisplayFor(modelItem => item.ImageDesc)   <br />      <br />               
+                     Price(@System.Configuration.ConfigurationManager.AppSettings["currency_code"]) :@Html.DisplayFor(modelItem=>item.Price) <br /> 
+                      @*  <a href="@Url.Action("AddToCart","ShoppingCart",new {id= item.Imgid  },null)"> <input type="submit" class="btnBlueAddCart" value="+Cart" /> </a>   *@
+                             </h4>                    
+                                        
+                                  
+                </div> 
+                
+            </a>
+        }    
+               
+        </div>  
+</div>
+    </div>

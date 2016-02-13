@@ -1,0 +1,2 @@
+﻿@Html.ActionLink("(" + ViewData["CartCount"] + " items)", "Index", "ShoppingCart",new { id = "cart-status" }) in your cart
+@Html.ActionLink("("+@System.Configuration.ConfigurationManager.AppSettings["currency_code"]+"" + String.Format("{0:n0}", ViewData["CartTotal"]) + ")", "Index", "ShoppingCart",new { id = "cart-sumtotal" })

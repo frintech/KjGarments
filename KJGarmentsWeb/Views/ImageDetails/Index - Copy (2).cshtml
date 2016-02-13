@@ -1,0 +1,483 @@
+﻿@model MughapuWeb.Models.ProductdetailsView
+
+@{
+    ViewBag.Title = "Image Over View";
+
+}
+<div id="heading">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="heading-content">
+                <h2>Product Detail</h2>
+                @*<span>Home / <a href="contact-us.html">Contact Us</a></span>*@
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+   @using (Html.BeginForm("AddToCart", "ShoppingCart", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+<div id="contact-us">
+    <div class="container">
+        <div class="row">
+    <div class="col-md-12">
+        <div class="heading-section">
+            <h2>Prouct Information</h2>
+            <img src="~/images/under-heading.png" alt="" >
+        </div>
+    </div>
+</div>
+         @{  
+                                               
+                                                System.Globalization.CultureInfo Indian = new System.Globalization.CultureInfo("hi-IN");
+         }
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="@Url.Content("~/Images/Original/" + @Model.Imagepath)" alt="" />
+            <br />
+            <br />
+             @foreach (var item in Model.ImageList) 
+                {          
+                    <img src="@Url.Content("~/Images/RESZIMGS/" +item)" alt="" width="75" height="75">
+                } 
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-2">
+                   <h4><b>Product</b></h4>
+                </div>
+                <div class="col-md-4">
+                   <h5> @Html.DisplayFor(model=>model.Product_Name)</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <h4><b>Code</b></h4>
+                </div>
+                <div class="col-md-2">
+                   <h5> @Html.DisplayFor(model=>model.Product_Code)</h5>
+                </div>
+            </div>
+            <div class="row">
+                @*<div class="col-md-2">
+                   <h4>Price</h4>
+                </div>*@
+                <div class="col-md-3">
+                  <h3 class="price">@System.Configuration.ConfigurationManager.AppSettings["currency_code"]@(String.Format(Indian, "{0:N}", @Model.discount_price))</h3>                  
+                  <h4 class="price strik">@System.Configuration.ConfigurationManager.AppSettings["currency_code"]@(String.Format(Indian, "{0:N}", @Model.Product_Price))</h4>                   
+                </div>
+                <div class="col-md-2">
+                   <div class="circleBase type2"> @Html.DisplayFor(model=>model.Product_offer)%</div>                    
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-2">
+                   <h4><b>Quantity</b></h4>
+                </div>
+                <div class="col-md-5">
+                <h5>  <button class="button-small" id="qtyminus" onclick="return false">-</button>
+                    <input class="txt-small" name="qty" id="qty" type="text" value="1" maxlength="2"/ style="margin-top:0px;">
+                    <button class="button-small" id="qtyplus" onclick="return false">+</button>
+                </h5>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                   <h4><b>Coupon</b></h4>
+                </div>
+                <div class="col-md-3" >
+                    <input type="text" name="CuponCode" id="CuponCode" placeholder="Enter Code" style="margin-top:0px; width:100px;" />
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-md-1">
+                   
+                </div>
+                <div class="col-md-4">
+                    <div class="send">
+                    @*<input type="submit" value="+ Cart"/>*@
+                        <button type="submit" class="btnBlue">+ Cart</button>
+                        <input type="hidden" name="id" value="@Model.Pid"/>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-2">
+                    <h3 class="bold">Specifications</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 heading-color">
+                    <h4 class="bold">General</h4>
+                </div>
+            </div>
+            <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Brand</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model=>model.Brand)</h5>
+                </div>
+            </div>
+            <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Model</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model=>model.Model)</h5>
+                </div>
+            </div>
+            <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Movement</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model=>model.Movement)</h5>
+                </div>
+            </div>
+            <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Features</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model=>model.Features)</h5>
+                </div>
+            </div>
+            <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Water Resistance</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model=>model.Water_Resistance)</h5>
+                </div>
+            </div>
+            <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Box</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model=>model.Box)</h5>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2  heading-color">
+                    <h4 class="bold">Body Features</h4>
+                </div>
+            </div>
+            <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Case Material</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model=>model.Case_Material)</h5>
+                </div>
+            </div>
+            <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Case Back</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model=>model.Case_Back)</h5>
+                </div>
+            </div>
+            <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Case Size</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model=>model.Case_Size)</h5>
+                </div>
+            </div>
+            <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Glass</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model=>model.Glass)</h5>
+                </div>
+            </div>
+            <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Dial Colour</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model=>model.Dial_Colour)</h5>
+                </div>
+            </div>
+            <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Strap Type</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model=>model.Strap_Type)</h5>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2  heading-color">
+                    <h4 class="bold">Warranty</h4>
+                </div>
+            </div>
+            <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Warranty</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model=>model.Warranty)</h5>
+                </div>
+            </div>
+            <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Shipping</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model=>model.Shipping)</h5>
+                </div>
+            </div>
+            <div class="row mrg-xs">
+                <div class="col-md-2">
+                    <h5 class="bold">Payment Method</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>@Html.DisplayFor(model=>model.Payment_Method)</h5>
+                </div>
+            </div>         
+        </div>
+    </div>
+</div>
+
+    
+        <div class="row">
+            <div class="product-item col-md-12">
+                <div class="row">
+                     <div class="col-md-6">
+                         <img src="@Url.Content("~/Images/RESZIMGS/" + @Model.Imagepath)" alt="" />
+                        @*<div class="info">
+                            <p>Sed dignissim, diam id molestie faucibus, purus nisl pretium quam, in pulvinar velit massa id elit. </p>
+                            <ul>
+                                <li><i class="fa fa-phone"></i>010-020-0340</li>
+                                <li><i class="fa fa-globe"></i>123 Dagon Studio, Yakin Street, Digital Estate</li>
+                                <li><i class="fa fa-envelope"></i><a href="#">info@company.com</a></li>
+                            </ul>
+                        </div>*@
+                         
+                        @foreach (var item in Model.ImageList) 
+                        {          
+                          <img src="@Url.Content("~/Images/RESZIMGS/" +item)" alt="" width="75" height="75">
+                          }     
+                        </div>
+                       @*  <img src="@Url.Content("~/Images/RESZIMGS/" + @Model.sideImagepath)" alt="" width="75" height="75">
+                          <img src="@Url.Content("~/Images/RESZIMGS/" + @Model.horizontalImagepath)" alt="" width="75" height="75">
+                          <img src="@Url.Content("~/Images/RESZIMGS/" + @Model.verticalImagepath)" alt="" width="75" height="75">
+                    </div>     *@
+                   <div class="col-md-6">
+                          <div class="row row-space">
+                              <div class="col-md-3">
+                                  <h4>Product Code</h4>
+                              </div>
+                              <div class="col-md-5">
+                                <h5> @Html.DisplayFor(model=>model.Product_Code)</h5>
+                              </div>
+                          </div>
+                          <div class="row row-space">
+                              <div class="col-md-3">
+                                <h4>product Name</h4>
+                              </div>
+                              <div class="col-md-5">
+                                <h5> @Html.DisplayFor(model=>model.Product_Name)</h5>
+                              </div>
+                          </div>
+                       <div class="row row-space">
+                              <div class="col-md-3">
+                                <h4>product Description</h4>
+                              </div>
+                              <div class="col-md-5">
+                                <h5> @Html.DisplayFor(model=>model.Product_Description)</h5>
+                              </div>
+                          </div>
+                          <div class="row row-space">
+                              <div class="col-md-3">
+                                 <h4> Availability </h4>
+                              </div>
+                              <div class="col-md-5">
+                                  <h5>In Stock</h5>
+                              </div>
+                          </div>
+                          <div class="row row-space">
+                              <div class="col-md-3">
+                                 <h4>original Price</h4>
+                              </div>
+                              <div class="col-md-5">
+                                  <h5 class="price">@System.Configuration.ConfigurationManager.AppSettings["currency_code"]@(String.Format(Indian, "{0:N}", @Model.Product_Price))</h5>
+                              </div>
+                          </div>
+                         <div class="row row-space">
+                              <div class="col-md-3">
+                                 <h4>Discount Price</h4>
+                              </div>
+                              <div class="col-md-5">
+                                  <h5 class="price">@System.Configuration.ConfigurationManager.AppSettings["currency_code"]@(String.Format(Indian, "{0:N}", @Model.discount_price))</h5>
+                              </div>
+                          </div>
+                          <div class="row row-space">
+                              <div class="col-md-3">
+                                 <h4> Quantity</h4>
+                              </div>
+                              <div class="col-md-5">
+                                @*<h5>  <button class="button-small" id="qtyminus" onclick="return false">-</button>
+                                  <input class="txt-small" name="qty" id="qty" type="text" value="1" maxlength="2"/ style="margin-top:0px;">
+                                  <button class="button-small" id="qtyplus" onclick="return false">+</button>
+                                 </h5>*@
+                              </div>
+                          </div>
+                          @*<div class="row row-space">
+                              <div class="col-md-3">
+                                 <h4> Cupon Code</h4>
+                              </div>
+                              <div class="col-md-5" >
+                                   <input type="text" name="CuponCode" id="CuponCode" placeholder="Enter Code" style="margin-top:0px; width:100px;" />
+                              </div>
+                          </div>*@
+
+                        @*   Product Description*@
+                      
+                          <div class="name col-md-4">
+                              <h4>General:</h4> 
+                                  @Html.TextBoxFor(model => model.Brand,null, new { @placeholder="Brand" })
+                                  @Html.ValidationMessageFor(model=>model.Brand)<br /><br />
+                           </div>
+                          <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Model,null, new { @placeholder="Model" })
+                                  @Html.ValidationMessageFor(model=>model.Model)<br /><br />
+                           </div>
+                          <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Movement,null, new { @placeholder="Movement" })
+                                  @Html.ValidationMessageFor(model=>model.Movement)<br /><br />
+                           </div>
+                          <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Features,null, new { @placeholder="Features" })
+                                  @Html.ValidationMessageFor(model=>model.Features)<br /><br />
+                           </div>
+                          <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Water_Resistance,null, new { @placeholder="Water Resistance" })
+                                  @Html.ValidationMessageFor(model=>model.Water_Resistance)<br /><br />
+                           </div>
+                          <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Box,null, new { @placeholder="Box" })
+                                  @Html.ValidationMessageFor(model=>model.Box)<br /><br />
+                           </div>
+                      
+                          <div class="name col-md-4">
+                               <h4>Body Features:</h4>
+                                  @Html.TextBoxFor(model => model.Case_Material,null, new { @placeholder="Case Material" })
+                                  @Html.ValidationMessageFor(model=>model.Case_Material)<br /><br />
+                           </div>
+                          <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Case_Back,null, new { @placeholder="Case Back" })
+                                  @Html.ValidationMessageFor(model=>model.Case_Back)<br /><br />
+                           </div>
+                          <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Case_Size,null, new { @placeholder="Case Size" })
+                                  @Html.ValidationMessageFor(model=>model.Case_Size)<br /><br />
+                           </div>
+                          <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Glass,null, new { @placeholder="Glass" })
+                                  @Html.ValidationMessageFor(model=>model.Glass)<br /><br />
+                           </div>
+                          <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Dial_Colour,null, new { @placeholder="Dial Colour" })
+                                  @Html.ValidationMessageFor(model=>model.Dial_Colour)<br /><br />
+                         </div>
+                                <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Strap_Type,null, new { @placeholder="Strap Type" })
+                                  @Html.ValidationMessageFor(model=>model.Strap_Type)<br /><br />
+                             </div>
+                      <h4>Warranty:</h4> 
+                                <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Warranty,null, new { @placeholder="Warranty" })
+                                  @Html.ValidationMessageFor(model=>model.Warranty)<br /><br />
+                           </div>
+                                <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Shipping,null, new { @placeholder="Shipping" })
+                                  @Html.ValidationMessageFor(model=>model.Shipping)<br /><br />
+                            </div>
+                                <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Payment_Method,null, new { @placeholder="Payment Method" })
+                                  @Html.ValidationMessageFor(model=>model.Payment_Method)<br /><br />
+                           </div>
+                              <br /><br /> 
+
+
+
+                          <div class="row row-space">
+                              <div class="col-md-2">
+                                  
+                              </div>
+                              <div class="col-md-4">
+                                 <div class="send">
+                                    @*<input type="submit" value="+ Cart"/>*@
+                                        <button type="submit">+ Cart</button>
+                                     <input type="hidden" name="id" value="@Model.Pid"/>
+                                 </div>
+                              </div>
+                          </div>
+                    </div>    
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+   }
+
+
+
+<script type="text/javascript">
+
+    $(function () {
+        $("#qtyplus").click(function () {
+            $(":text[name='qty']").val(Number($(":text[name='qty']").val()) + 1);
+        });
+        $("#qtyminus").click(function () {
+            if ($(':text[name="qty"]').val() > 1) {
+                $(":text[name='qty']").val(Number($(":text[name='qty']").val()) - 1);
+            }
+        });
+
+    });
+    function RegainFocus() {
+        if ((document.getElementById("qty").value).length == 0 || document.getElementById("qty").value == 0) {
+            document.getElementById("qty").focus();
+            alert("Quantity cannot be empty or zero(0)");
+            document.getElementById("qty").value = document.getElementById("qty").defaultValue;
+            return false;
+        }
+    }
+    $(document).ready(function () {
+        //called when key is pressed in textbox
+        $("#qty").keypress(function (e) {
+            //if the letter is not digit then display error and don't type anything
+            if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                //display error message
+                $("#errmsg").html("Please enter Digits Only").show().fadeOut("slow");
+                return false;
+            }
+        });
+    });
+</script>
+

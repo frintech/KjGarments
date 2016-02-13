@@ -1,0 +1,83 @@
+﻿@model IEnumerable<KJGarmentsWeb.Models.MenuBrandView>
+@*<ul class="third-level-menu"> 
+@foreach (var item in Model)
+{
+        <li> 
+         <img src="@Url.Content("~/Images/" + item.ImagePath)"   width="20" height="20" class="float-left menu-item" />
+        @Html.ActionLink(item.Brandname, "Index", "CatDetails",new {brandid=@item.MnuBrnandId,sub_cat_id=@item.Subcatid},null)
+   </li>      
+}
+ </ul>*@
+
+
+<div class="col-md-12  menu-color">      
+                    
+                                <ul class="top-level-menu">
+                                    <li>
+                                        <a href="@Url.Action("Index","Home",new {catid=1})">JEANS</a>
+                                        <ul class="second-level-menu">
+                                            <li>
+                                                <a href="@Url.Action("Index","Home",new {catid=2,type="S"})">For Men</a>
+                                                <ul class="third-level-menu">                                                    
+                                                        @foreach (var item in Model)
+                                                      {      
+                                                         if(item.Subcatid==2)
+                                                         {
+                                                                 <li> 
+                                                                       <img src="@Url.Content(System.Configuration.ConfigurationManager.AppSettings["Mnu_ImgPath"] + item.ImagePath)"   width="20" height="20" class="float-left menu-item" />
+                                                                       @Html.ActionLink(item.Brandname, "Index", "CatDetails",new {brandid=@item.MnuBrnandId,sub_cat_id=@item.Subcatid},null)
+                                                                  </li> 
+                                                         }
+                                                        }
+                                                        
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("Index","Home",new {catid=3,type="S"})">For Women</a>
+                                               <ul class="third-level-menu"> 
+                                                    @foreach (var item in Model)
+                                                      {
+                                                          if (item.Subcatid == 3)
+                                                         {
+                                                                 <li> 
+                                                                       <img src="@Url.Content(System.Configuration.ConfigurationManager.AppSettings["Mnu_ImgPath"] + item.ImagePath)"   width="15" height="15" class="float-left menu-item" />
+                                                                       @Html.ActionLink(item.Brandname, "Index", "CatDetails",new {brandid=@item.MnuBrnandId,sub_cat_id=@item.Subcatid},null)
+                                                                  </li> 
+                                                         }
+                                                         }
+                                                </ul>
+                                                
+                                                    
+                                                    
+
+                                            </li>                                            
+                                        </ul>
+                                    </li>
+                                    <li><a href="@Url.Action("Index","Home",new {catid=4})" class="has-sub">Sun Glass</a>
+                                         <ul class="second-level-menu">   
+                                                @foreach (var item in Model)
+                                                      {
+                                                          if (item.catid == 4)
+                                                         {
+                                                                 <li> 
+                                                                      @* <img src="@Url.Content("~/Images/Menu/" + item.ImagePath)"   width="20" height="20" class="float-left menu-item" />*@
+                                                                       @Html.ActionLink(item.Brandname, "Index", "CatDetails",new {brandid=@item.MnuBrnandId,sub_cat_id=@item.Subcatid},null)
+                                                                  </li> 
+                                                         }
+                                                         }                                 
+                                                
+								             @* <li> @Html.ActionLink("Rayban", "Index", "CatDetails",new {brandid=5,sub_cat_id=0},null)</li>*@
+                                               
+                                             </ul>
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Cashew Nuts", "Index", "CatDetails",new {brandid=5,sub_cat_id=0,cat_id=5},null)                                        
+                                    </li>   
+                                      <li>
+                                        @Html.ActionLink("View Offers", "Index", "ViewOffer",null,null)                                        
+                                    </li>  
+                                    
+                                                                
+                                </ul>
+
+                            </div> 

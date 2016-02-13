@@ -1,0 +1,78 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@using GridMvc.Html
+@model IPagedList<KJGarmentsWeb.Models.FindresultModel>
+@{
+    ViewBag.Title = "Home Page";
+  //  Layout = null;
+}
+
+
+
+  <div id="products-post">
+                <div class="container">
+                     <div class="row">
+
+  @if (TempData["Emptymsg"] != null)
+{
+                       <table border="1">
+                           <tr>
+                                 <h1><strong><span>No Records found for your search criteria.</span></strong></h1>
+                           </tr>
+
+                       </table>
+                      
+}
+                         else
+                         {
+                    <div class="row" id="Container">
+                         @{  
+                                               
+                                                System.Globalization.CultureInfo Indian = new System.Globalization.CultureInfo("hi-IN");
+                            }
+                        @* Loop start *@
+                        @foreach (var item in Model) {  
+                            
+                            <div class="col-md-3 col-sm-6 mix portfolio-item home-img-panel">       
+                                <div class="portfolio-wrapper  ">         
+                                    <a href="@Url.Action("Index", "ImageDetails",new {id= @item.Pid},null)">       
+                                    <div class="portfolio-thumb">                                      
+                                        
+                                        <img class="img-fixed-size" src="@Url.Content("~/Images/RESZIMGS/" + item.Imagepath)" alt="" />
+                                       
+                                    </div>  
+                                    <div class="label-text">                                      
+                                        <span class="text-category"><h3>@Html.DisplayFor(modelItem => item.Product_Name)</h3>
+                                         @*   Code:@item.Product_Code*@
+                                        </span>
+                                        <span class="text-category">@System.Configuration.ConfigurationManager.AppSettings["currency_code"]@(String.Format(Indian, "{0:N}",@item.Product_Price))
+                                            
+                                        </span>                                        
+                                        <span class="text-category"> @item.Cat_name /@item.Sub_cat_name/@item.brand_name </span>
+                                         @*  <span class="text-category"> Sub Category:@item.Sub_cat_name</span>                                         
+                                        <span class="text-category">Brand: @item.brand_name</span> *@
+                                    </div>
+                                    </a>
+                                </div>          
+                            </div>  
+                            
+                               
+                        }    
+                        @* Loop end *@
+                        
+                    </div>
+                    
+                         <div class="row">
+                @* <div class="col-md-2">*@
+                     @Html.PagedListPager(Model, page => Url.Action("Index", new {query=ViewBag.SearhTerm ,page= page }), PagedListRenderOptions.PageNumbersOnly)
+                 @*</div>*@
+             </div>
+  }
+                    
+                     
+                </div>
+
+            </div>
+      </div>
+
+    

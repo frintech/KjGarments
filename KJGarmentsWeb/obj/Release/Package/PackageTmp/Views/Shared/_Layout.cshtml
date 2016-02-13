@@ -1,0 +1,315 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - KJGarments </title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        
+        @*<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>*@
+        @Styles.Render("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800")
+        @Styles.Render("~/css/bootstrap.css")
+        @Styles.Render("~/css/font-awesome.css")
+        @Styles.Render("~/css/templatemo_style.css")
+        @Styles.Render("~/css/templatemo_misc.css")
+        @Styles.Render("~/css/flexslider.css")
+        @Styles.Render("~/css/testimonails-slider.css")        
+
+        @Scripts.Render("~/Scripts/js/vendor/modernizr-2.6.1-respond-1.1.0.min.js")
+        @Scripts.Render("~/Scripts/js/vendor/jquery-1.11.0.min.js")
+        @Scripts.Render("~/Scripts/js/jquery.gmap3.min.js")
+        @Scripts.Render("~/Scripts/js/plugins.js")
+        @Scripts.Render("~/Scripts/js/main.js")  
+              
+        @*@model KJGarmentsWeb.Models.LoginModel*@
+    </head>
+    <body class="background">
+         <header class="headr">
+                <div id="top-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="cart-info">                                 
+                                  <i class="fa fa-phone"></i>+919176777181/82,+919962844333 
+                                </div>
+                                <div class="cart-info">                                 
+                                   @Html.ActionLink("AdminLogin", "Login", "Account")
+                                </div>
+                            </div>   
+                            <div class="col-md-3">
+                               
+                            </div>
+                          @*   <div class="col-md-2">
+                                          <div class="cart-info">
+                                                @Html.ActionLink("AdminLogin", "Index", "Admin")
+                                        </div>
+                                        </div>*@
+                               
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        <div class="col-md-2">
+                                          <div class="cart-info">
+                                              Welcome @User.Identity.Name
+                                              </div>
+                                        </div>
+                                        <div class="col-md-1">
+                                          <div class="cart-info">
+                                          @*      @using (Html.BeginForm("ChangePassword", "UserInfo"))
+                                            {
+                                                    @Html.AntiForgeryToken()
+                                        <div class="col-md-1">
+                                          <div class="cart-info">
+                                                    <button type="submit"  class="clsLogout">[Change Password]</button>
+                                        </div>
+                                        </div>
+                                            }*@
+                                               @Html.ActionLink("Change Password", "ChangePassword", "UserInfo")
+                                              @using (Html.BeginForm("LogOff", "UserInfo"))
+                                            {
+                                                    @Html.AntiForgeryToken()
+                                        <div class="col-md-2">
+                                          <div class="cart-info">
+                                                    <button type="submit"  class="clsLogout">[Logout]</button>
+                                        </div>
+                                        </div>
+                                            }
+                                            
+                                              </div>
+                                        </div>
+                                            
+                                    }
+                                    else
+                                    {
+                                        <div class="col-md-2">
+                                          <div class="cart-info">
+                                                @Html.ActionLink("Login", "UserLogin", "UserInfo")
+                                        </div>
+                                        </div>
+                                       
+                                    }
+                               
+                            
+                            <div class="col-md-3">
+                                <div class="cart-info">                                   
+                                     <i class="fa fa-shopping-cart"></i>
+                                    @{Html.RenderAction("CartSummary", "ShoppingCart");} 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="main-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="logo">
+                                    <a href="@Url.Action("Index", "Home")"><img src="~/images/logo.png" title="Mughapu" alt="Mughapu" ></a>
+                                </div>
+                            </div>
+                           @* <div class="col-md-6">
+                                <div class="main-menu">
+                                    <ul>
+                                        <li>@Html.ActionLink("HOME", "Index", "Home")</li>
+                                        <li>@Html.ActionLink("WATCHES", "Index", "Home")
+                                            <ul>
+								                <li><img src="~/images/rado.png" />@Html.ActionLink("RADO", "Index", "CatDetails",new {catID=1},null)</li>
+								                <li><img src="~/images/rolex.jpg" />@Html.ActionLink("ROLEX", "Index", "CatDetails",new {catID=2},null)</li>
+								                <li><img src="~/images/diesel.png" />@Html.ActionLink("DIESEL", "Index","CatDetails",new {catID=3},null)</li>
+                                                <li><img src="~/images/tag.png" />@Html.ActionLink("TAG", "Index","CatDetails",new {catID=4},null)</li>                                                
+							                </ul>
+                                        </li>
+                                        <li>@Html.ActionLink("SUN GLASS", "Index", "Home")</li>                                       
+                                    </ul>
+                                </div>
+                            </div>*@
+                            <div class="col-md-4">
+                                <div class="search-box">  
+                                   @* <form name="search_form" method="get" class="search_form">
+                                        <input id="search" type="text" />
+                                        <input type="submit" id="search-button" />
+                                    </form>*@
+
+                                       @{Html.RenderAction("Search", "Home");} 
+                                </div>
+                                 </div>
+                         
+                        </div>
+                         <div class="row">                            
+                           @* <div class="col-md-12  menu-color">                                
+                                <ul class="top-level-menu">
+                                    <li>
+                                        <a href="@Url.Action("Index","Home",new {catid=1})">Watches</a>
+                                        <ul class="second-level-menu">
+                                            <li>
+                                                <a href="@Url.Action("Index","Home",new {catid=2,type="S"})">For Men</a>
+                                                <ul class="third-level-menu">                                                    
+                                                    <li><img src="~/images/rado.png"   width="20" height="20" class="float-left menu-item" />@Html.ActionLink("RADO", "Index", "CatDetails",new {brandid=2,sub_cat_id=2},null)</li>
+								                    <li><img src="~/images/rolex.jpg"  width="20" height="20" class="float-left menu-item" />@Html.ActionLink("ROLEX", "Index", "CatDetails",new {brandid=1,sub_cat_id=2},null)</li>
+								                    <li><img src="~/images/diesel.png" width="20" height="20" class="float-left menu-item" />@Html.ActionLink("DIESEL", "Index", "CatDetails", new { brandid = 3, sub_cat_id = 2 }, null)</li>                                                    
+                                                    <li><img src="~/images/TAG.png" width="20" height="20" class="float-left menu-item" />@Html.ActionLink("TAG", "Index", "CatDetails", new { brandid = 6, sub_cat_id = 2 }, null)</li>
+                                                     <li><img src="~/images/casio.png" width="20" height="20" class="float-left menu-item" />@Html.ActionLink("CASIO", "Index", "CatDetails", new { brandid = 7, sub_cat_id = 2 }, null)</li>
+                                                    <li><img src="~/images/EARMANI.jpg" width="20" height="20" class="float-left menu-item" />@Html.ActionLink("Emporio Armani", "Index", "CatDetails", new { brandid = 8, sub_cat_id = 2 }, null)</li>
+                                                    <li><img src="~/images/ULSYNRDIN.jpg" width="20" height="20" class="float-left menu-item" />@Html.ActionLink("ULYSEE NARDIN", "Index", "CatDetails", new { brandid = 9, sub_cat_id = 2 }, null)</li>
+                                                    <li><img src="~/images/hubolt.png" width="20" height="20" class="float-left menu-item" />@Html.ActionLink("Hublot", "Index", "CatDetails", new { brandid = 10, sub_cat_id = 2 }, null)</li>
+                                                    <li><img src="~/images/Patek.png" width="20" height="20" class="float-left menu-item" />@Html.ActionLink("PATEK PHILIPPE", "Index", "CatDetails", new { brandid = 11, sub_cat_id = 2 }, null)</li>
+                                                    <li><img src="~/images/omega.jpg" width="20" height="20" class="float-left menu-item" />@Html.ActionLink("OMEGA", "Index", "CatDetails", new { brandid = 12, sub_cat_id = 2 }, null)</li>
+                                                     <li><img src="~/images/montblac.jpg" width="20" height="20" class="float-left menu-item" />@Html.ActionLink("Mont Blac", "Index", "CatDetails", new { brandid = 13, sub_cat_id = 2 }, null)</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("Index","Home",new {catid=3,type="S"})">For Women</a>
+                                               <ul class="third-level-menu">                                                    
+                                                    <li><img src="~/images/rado.png"   width="20" height="20" class="float-left menu-item" />@Html.ActionLink("RADO", "Index", "CatDetails",new {brandid=2,sub_cat_id=3},null)</li>
+								                    <li><img src="~/images/rolex.jpg"  width="20" height="20" class="float-left menu-item" />@Html.ActionLink("ROLEX", "Index", "CatDetails",new {brandid=1,sub_cat_id=3},null)</li>
+								                    <li><img src="~/images/diesel.png" width="20" height="20" class="float-left menu-item" />@Html.ActionLink("DIESEL", "Index", "CatDetails", new { brandid = 3, sub_cat_id = 3 }, null)</li> 
+                                                    <li><img src="~/images/TAG.png" width="20" height="20" class="float-left menu-item" />@Html.ActionLink("TAG", "Index", "CatDetails", new { brandid =6, sub_cat_id = 3 }, null)</li>                                                      
+                                                     <li><img src="~/images/casio.png" width="20" height="20" class="float-left menu-item" />@Html.ActionLink("CASIO", "Index", "CatDetails", new { brandid = 7, sub_cat_id = 3 }, null)</li>
+                                                    <li><img src="~/images/EARMANI.jpg" width="20" height="20" class="float-left menu-item" />@Html.ActionLink("Emporio Armani", "Index", "CatDetails", new { brandid = 8, sub_cat_id = 3 }, null)</li>
+                                                    <li><img src="~/images/ULSYNRDIN.jpg" width="20" height="20" class="float-left menu-item" />@Html.ActionLink("ULYSEE NARDIN", "Index", "CatDetails", new { brandid = 9, sub_cat_id = 3 }, null)</li>
+                                                    <li><img src="~/images/hubolt.png" width="20" height="20" class="float-left menu-item" />@Html.ActionLink("Hublot", "Index", "CatDetails", new { brandid = 10, sub_cat_id = 3 }, null)</li>
+                                                   <li><img src="~/images/Patek.png" width="20" height="20" class="float-left menu-item" />@Html.ActionLink("PATEK PHILIPPE", "Index", "CatDetails", new { brandid = 11, sub_cat_id = 3 }, null)</li>
+                                                   <li><img src="~/images/omega.jpg" width="20" height="20" class="float-left menu-item" />@Html.ActionLink("OMEGA", "Index", "CatDetails", new { brandid = 12, sub_cat_id = 3 }, null)</li>
+                                                     <li><img src="~/images/montblac.jpg" width="20" height="20" class="float-left menu-item" />@Html.ActionLink("Mont Blac", "Index", "CatDetails", new { brandid = 13, sub_cat_id = 3 }, null)</li>
+                                                </ul>
+                                                  </li>
+                                                     </ul>
+
+                                           
+                                    </li>
+                                    <li><a href="@Url.Action("Index","Home",new {catid=4})" class="has-sub">Sun Glass</a>
+                                         <ul class="second-level-menu">                                           
+                                                 <li> @Html.ActionLink("Rayban", "Index", "CatDetails",new {brandid=5,sub_cat_id=0},null)</li>
+								              
+                                               
+                                             </ul>
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Luxury Pen", "Index", "CatDetails",new {brandid=5,sub_cat_id=0,cat_id=5},null)                                        
+                                    </li>   
+                                      <li>
+                                        @Html.ActionLink("View Offers", "Index", "ViewOffer",null,null)                                        
+                                    </li>  
+                                    
+                                                                
+                                </ul>
+                            </div>   *@ 
+                              @{Html.RenderAction("Menu","Home");}                        
+                        </div>
+                    </div>
+                </div>
+             
+            </header>
+            
+        
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+
+        
+        
+
+        <footer>
+                <div class="container">
+                   @* <div class="top-footer">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <div class="subscribe-form">
+                                    <span>Get in touch with us</span>
+                                    <form method="get" class="subscribeForm">
+                                        <input id="subscribe" type="text" />
+                                        <input type="submit" id="submitButton" />
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="social-bottom">
+                                    <span>Follow us:</span>
+                                    <ul>
+                                        <li><a href="#" class="fa fa-facebook"></a></li>
+                                        <li><a href="#" class="fa fa-twitter"></a></li>
+                                        <li><a href="#" class="fa fa-rss"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>*@
+                    <div class="main-footer">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <div class="shop-list">
+                                   
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="shop-list">
+                                    <h4 class="footer-title">Information</h4>
+                                    <ul>
+                                        <li><a href="#" class="no-trans"><i class="fa fa-angle-right"></i>About Us</a></li>
+                                        <li><a href="#" class="no-trans"><i class="fa fa-angle-right"></i>Delivery Information</a></li>
+                                        <li><a href="#" class="no-trans"><i class="fa fa-angle-right"></i>Privacy Policy</a></li>
+                                        <li><a href="#" class="no-trans"><i class="fa fa-angle-right"></i>Terms & Conditions</a></li>                                       
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="shop-list">
+                                    <h4 class="footer-title">Cutomer Service</h4>
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i>Contact Us</a></li>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i>Returns</a></li>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i>Site Map</a></li>
+                                        @*<li><a href="#"><i class="fa fa-angle-right"></i>TAG</a></li>*@                                      
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="shop-list">
+                                    <h4 class="footer-title">Extra</h4>
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i>Brands</a></li>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i>Gift Vouchers</a></li>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i>Affiliates</a></li>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i>Specials</a></li> 
+                                    </ul>
+                                </div>
+                            </div>
+                           <div class="col-md-2">
+                                <div class="shop-list">
+                                    <h4 class="footer-title">My Account</h4>
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i>My Account</a></li>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i>Order History</a></li>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i>Wish List</a></li>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i>Newsletter</a></li> 
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="more-info">
+                                    <h4 class="footer-title">Reach Us</h4>
+                                    @*<p>Get in touch with us at the following phone or email.</p>*@
+                                    <ul>
+                                        <li><i class="fa fa-phone"></i>+919962844333</li>
+                                        @*<li><i class="fa fa-globe"></i>123 Dagon Studio, Yakin Street, Digital Estate</li>*@
+                                        <li><i class="fa fa-envelope"></i><a href="#">hi@mughapu.com</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-footer">
+                        <p>Copyright © 2015 <a href="http://www.mughapu.com">Mughapu</a> | Design: FRIN Tech</p>
+                    </div>
+                    
+                </div>
+        </footer>
+
+        
+    
+        @RenderSection("scripts", required: false)
+        
+    </body>
+</html>

@@ -1,0 +1,66 @@
+﻿@model KJGarmentsWeb.Models.deleteBannerImageModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div class="container">
+
+    <div class="row mrg-top-xs">
+           <div class="col-md-3"> 
+               
+           </div>
+           
+          
+       </div>
+    <div class="row mrg-top-xs">
+        <div class="col-md-1"> 
+               
+           </div>
+       
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-md-4">
+                    @Html.TextBoxFor(model => model.BNRImgId,null, new { @class="pName disable", @data_animation="slide",@data_label="BannerImage Id", @readonly = true })
+                </div> 
+            </div>
+            <div class="row mrg-top-xs">
+                <div class="col-md-4">
+                   <img src="@Url.Content(System.Configuration.ConfigurationManager.AppSettings["BNR_IMG_Path"] + Model.Imagepath)" width="200" height="50" class="img-admin-view" />
+                </div>  
+
+            </div>
+        </div>      
+    </div>
+
+
+   
+   
+    @using (Html.BeginForm()) {
+    @Html.AntiForgeryToken(
+    )
+    <div class="row mrg-top-xs">
+           <div class="col-md-3"> 
+               
+           </div>
+           <div class="col-md-2">
+               <button type="submit" class="btnBlue sub-reset" onclick="return confirm('Are you sure to delete?')">Delete</button>
+               @*<input type="submit" value="Delete"  class="btnBlue sub-delete" onclick="return confirm('Are you sure to delete?')"/>*@
+           </div>           
+           <div class="col-md-2">
+               <h5 class="btnBlue sub-reset-cancel"> @Html.ActionLink("Back", "Index") </h5>
+           </div>  
+       </div>
+    } 
+
+   @* <div class="row">
+        <div class="col-md-2">
+           <input type="submit" value="Delete"  class="btnBlue" onclick="return confirm('Are you sure to delete?')" />
+        </div>
+        <div class="col-md-2">
+            
+           
+        </div>
+    </div>*@
+
+</div>

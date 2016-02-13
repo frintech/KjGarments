@@ -1,0 +1,257 @@
+﻿@model IEnumerable<MughapuWeb.Models.CatDetailsViewModel>
+
+@{
+    ViewBag.Title = "Image Over View";
+
+}
+<style>
+    .product-detail {
+  overflow: hidden;
+  margin-bottom: 20px;
+  /*border:1px solid;*/
+}
+    .button {
+  margin-top: 20px;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #f78e21;
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  color: #fff;
+  line-height: 40px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+    .button-small {
+        /*margin-top: 20px;*/
+  text-decoration: none;
+  display: inline-block;
+  background-color: #f78e21;
+  width: 20px;
+  /*height: 40px;*/
+  text-align: center;
+  color: #fff;
+  /*line-height: 40px;*/
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600; 
+  
+}
+.txt-small {
+    width: 30px;
+height: 10px;
+}
+    .pos-abs {
+        position:absolute;
+    }
+    .ht {
+        height:10px;
+    }
+.aligncenter
+{
+    display:block;
+    margin:0 auto;
+    /*width:50%;*/      
+}
+
+.product-detail-img {
+  float: left;
+  margin-right: 20px !important; 
+  width:auto;
+  height: 100%;
+  /*border:1px solid red;*/
+}
+
+/*.product-detail-info {
+  overflow:hidden;
+}*/
+
+/*.product-detail-info h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 0;
+  float:left;
+}*/
+
+/*.posts {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}*/
+
+/*.product-detail-info a {
+  color: #333;
+}
+
+.product-detail-info a:hover {
+  color: #f78e21;
+}
+
+.product-detail-info span {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  color: #f78e21;
+  padding-left:10px;
+  text-transform:none;
+}*/
+   
+.product-detail-left {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align:right;
+    /*margin-top: 0px;*/
+    float:left;
+    width:180px;
+     /*border:1px solid red;*/
+    position:relative;
+    /*width:15%;*/
+    padding:5px;
+    min-height:40px;
+}
+.product-detail-right {
+  /*font-family: 'Open Sans', sans-serif;*/
+  /*font-size: 13px;*/
+  color: #f78e21;
+  border:1px solid blue;
+   /*padding:5px;*/
+   margin-left:2px;
+  min-height:40px;
+  /*float:left;*/
+  /*position:absolute;*/
+}
+
+    .borer {
+        border:1px solid red;
+        position:relative;
+        /*width:100px;*/
+        height:20px;
+        padding:0;
+    }
+
+    .borderred {
+        border:1px solid red;
+       
+    }
+
+
+</style>
+@*<div class="product-detail">
+    <div class="product-detail-img">
+        <img src="~/images/product1.jpg" alt="">
+    </div>
+    <div class="product-detail-info">
+        <h6><a href="#">Delicious and Healthy Menus</a></h6>
+        <span>24/12/2084</span>
+    </div>
+</div>*@
+
+@foreach (var item in Model) { 
+    <div class="product-detail">
+    <div class="product-detail-img">
+        <img src="~/images/product1.jpg" alt="">
+    </div>
+        <div class="subscribe-form borderred">
+            <span>Qty</span>
+            <div class="subscribeForm">
+                thi is sample              
+            </div>
+        </div>
+        <div class="subscribe-form borderred">
+            <span>Qty</span>
+            <div class="subscribeForm">
+                thi is sample              
+            </div>
+        </div>
+        <div class="subscribe-form borderred">
+            <span>Qty</span>
+            <div class="subscribeForm borderred">
+                <button class="button-small" id="qtyminus" onclick="return false">-</button>
+                         
+            
+            </div>
+            <div class="subscribeForm borderred ht">
+                 @*<input class="txt-small" name="qty" id="qty" type="text" value="1" maxlength="2"/>*@
+                 @*<input id="subscribe" type="text" />*@    
+            </div>
+            <div class="subscribeForm borderred ">
+                               <button class="button-small" id="qtyplus" onclick="return false">+</button>          
+            </div>
+        </div>
+    <div>
+     
+        <div>
+            <div class="product-detail-left">Product Name:</div>
+            <div class="product-detail-right">@Html.DisplayFor(modelItem => item.ImageDesc)</div>
+        </div>
+        <div>
+            <div class="product-detail-left">Product Code:</div>
+            <div class="product-detail-right">@Html.DisplayFor(modelItem => item.ImageName)</div>
+        </div>
+        <div>
+            <div class="product-detail-left">Availability:</div>
+            <div class="product-detail-right">In Stock</div>
+        </div>
+        <div>
+            <div class="product-detail-left">Price:</div>
+            <div class="product-detail-right">@Html.DisplayFor(modelItem => item.Price)</div>
+        </div>
+        @*<div class="subscribe-form">
+            <span>Qty</span>
+            <div class="subscribeForm">
+                <input id="subscribe" type="text" />               
+            </div>
+        </div>*@
+        <div>
+            <div class="product-detail-left">Qty:</div>
+            
+                <div class="product-detail-right">
+                          <div class="subscribeForm borderred">
+                <button class="button-small" id="qtyminus" onclick="return false">-</button>
+                         
+            
+            </div>
+            <div class="subscribeForm borderred ht">
+                 @*<input class="txt-small" name="qty" id="qty" type="text" value="1" maxlength="2"/>*@
+                 @*<input id="subscribe" type="text" />*@    
+            </div>
+            <div class="subscribeForm borderred ">
+                               <button class="button-small" id="qtyplus" onclick="return false">+</button>          
+            </div>
+                    </div>
+            
+        </div>
+        @*using (Html.BeginForm("AddToCart", "ShoppingCart", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                     {
+                            <div class="dispBlock"><h3>Qty :  
+                          <input type="hidden" name="id" value="@item.Imgid"/>       
+                          <button class="button" id="qtyminus" onclick="return false">-</button>
+                          <input name="qty" id="qty" type="text" value="1" size="3" maxlength="2"></input>
+                          <button class="button" id="qtyplus" onclick="return false">+</button> <br />  <br /> <br />
+                          <input class="button" type="submit" value="+ Cart"/>
+                                  </h3>
+
+                      </div>
+                       }*@
+
+        <div >     
+            <div class="product-detail-left"></div>
+            <div class="product-detail-right">
+                <a class="button" href="@Url.Action("AddToCart", "ShoppingCart", new { id = item.Imgid }, "")">                             
+                                    +Cart
+                </a>
+            </div>      
+                
+        </div>
+        <input type="hidden" name="id" value="@item.Imgid"/> 
+    </div>
+</div>
+}
+
+
+

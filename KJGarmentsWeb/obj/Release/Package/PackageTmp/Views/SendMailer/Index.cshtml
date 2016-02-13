@@ -1,0 +1,83 @@
+﻿@model KJGarmentsWeb.DAL.MailModel
+@{
+    ViewBag.Title = "ContactUS";
+}
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script>
+        function initialize() {
+            var myLatlng = new google.maps.LatLng(13.060713, 80.244014);
+            var mapOptions = {
+                zoom: 15,
+                center: myLatlng
+            }
+            var map = new google.maps.Map(document.getElementById('map-canvassing'), mapOptions);
+
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: 'Kj Fashions!'
+            });
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+
+        function initializekar() {
+            var myLatlng = new google.maps.LatLng(13.060713, 80.244014);
+            var mapOptions = {
+                zoom: 10,
+                center: myLatlng
+            }
+            var map = new google.maps.Map(document.getElementById('map-canvaskar'), mapOptions);
+
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: 'Kj Fashions!'
+            });
+        }
+
+        google.maps.event.addDomListener(window, 'load', initializekar);
+
+    </script>
+<div class="content aligncenter ">
+            <div class="contant_contactus  grdOuter">
+                <div class="floatleft grditemstyle1"> 
+                     <div class="floatleft grdinneritemstyle2"> 
+                        <figure class="indent-bot floatleft">                                
+                            <div id="map-canvaskar"  style="width:12em; height:12em;"></div>
+                        </figure>  
+                        <br />
+                        <div class="smallHeadingContact dispBlock">Office</div>
+                        <div class="addressContent">
+                            New Street,Nungambakkam<br />
+                            Chennai<br />
+                            TamilNadu<br />                            
+                            Email: <a href="mailto:peakzart@gmail.com">sales@frintech.com</a><br />
+                        </div>
+                    </div>
+                </div>
+                <br />
+                
+@using (Html.BeginForm())
+{
+     <div class="dispBlock">Name</div> @Html.TextBoxFor(m=>m.Name,new { @class = "txtContact"})
+                          @Html.ValidationMessageFor(m=>m.Name)
+                    <div class="dispBlock">Address</div>@Html.TextBoxFor(m=>m.Address,new { @class = "txtContact"})
+      @Html.ValidationMessageFor(m=>m.Address)
+                    <div class="dispBlock">Email</div> @Html.TextBoxFor(m=>m.Email,new { @class = "txtContact"})
+      @Html.ValidationMessageFor(m=>m.Email)
+                    <div class="dispBlock">Mobile No</div> @Html.TextAreaFor(m=>m.Mobile,new { @class = "txtContact"})
+      @Html.ValidationMessageFor(m=>m.Mobile)
+                    <div class="dispBlock">Comments</div>@Html.TextAreaFor(m=>m.Comments,new { @class = "txtContact"})
+                    <input type="submit" class="btnBlue" value="Submit" /> 
+}   
+  @if (ViewBag.result == true)
+                {
+<div class="alert alert-success" >             
+    <strong>Thank you!</strong> Your query has been submitted. 
+</div>
+}                                  
+            </div>
+    </div>
+     
+

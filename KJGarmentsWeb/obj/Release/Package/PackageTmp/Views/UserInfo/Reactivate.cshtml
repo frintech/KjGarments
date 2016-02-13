@@ -1,0 +1,68 @@
+﻿@model KJGarmentsWeb.Models.deleteUserModel
+
+@{
+    ViewBag.Title = "ReActivate";
+}
+
+<div class="container">
+
+    <div class="row mrg-top-xs">
+           <div class="col-md-3"> 
+               
+           </div>
+           
+          
+       </div>
+    <div class="row mrg-top-xs">
+        <div class="col-md-1"> 
+               
+           </div>
+       
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-md-4">
+                    @Html.TextBoxFor(model => model.uidNo,null, new { @class="pName disable", @data_animation="slide",@data_label="User Id", @readonly = true })
+                </div> 
+            </div>
+            <div class="row mrg-top-xs">
+                <div class="col-md-4">
+                    @Html.TextBoxFor(model => model.First_name,null, new { @class="pName disable", @data_animation="slide",@data_label="First Name",@data_value="Product Name", @readonly = true })
+                </div>  
+                  <div class="col-md-4">
+                    @Html.TextBoxFor(model => model.Last_name,null, new { @class="pName disable", @data_animation="slide",@data_label="Last Name",@data_value="Product Name", @readonly = true })
+                </div>  
+            </div>
+        </div>      
+    </div>
+
+
+   
+   
+    @using (Html.BeginForm()) {
+    @Html.AntiForgeryToken(
+    )
+    <div class="row mrg-top-xs">
+           <div class="col-md-3"> 
+               
+           </div>
+           <div class="col-md-2">
+               <button type="submit" class="btnBlue sub-reset" onclick="return confirm('Are you sure to Reactivate?')">ReActivate</button>
+               @*<input type="submit" value="Delete"  class="btnBlue sub-delete" onclick="return confirm('Are you sure to delete?')"/>*@
+           </div>           
+           <div class="col-md-2">
+               <h5 class="btnBlue sub-reset-cancel"> @Html.ActionLink("Back", "Index") </h5>
+           </div>  
+       </div>
+    } 
+
+   @* <div class="row">
+        <div class="col-md-2">
+           <input type="submit" value="Delete"  class="btnBlue" onclick="return confirm('Are you sure to delete?')" />
+        </div>
+        <div class="col-md-2">
+            
+           
+        </div>
+    </div>*@
+
+</div>

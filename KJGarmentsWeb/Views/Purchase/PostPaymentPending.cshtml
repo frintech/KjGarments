@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "Payment Pending!";
+}
+<style>
+    .fontstyl {
+        font-weight:bold;
+        font-size:16px;
+        width:550px;       
+    }
+    .fontstyl2 {
+        font-weight:normal;
+        font-size:14px;
+        margin-left:25px;
+        line-height:25px;
+    }
+    .fontstyl4 {
+        font-weight:bold; 
+        font-size:20px; 
+        color:rgb(0,71,102);
+    }
+    .mrgleft1 {
+        margin-left:19px;
+        font-weight:bold;
+        margin-right: 10px;
+    }
+    .mrgleft2 {
+        margin-left:62px;
+        font-weight:bold;
+        margin-right: 10px;
+    }
+    .mrgleft3 {
+        margin-left:116px;
+        font-weight:bold;
+        margin-right: 10px;
+    }
+    .mrgleft4 {
+        margin-left:103px;
+        font-weight:bold;
+        margin-right: 10px;
+    }
+</style>
+<div class="content aligncenter">
+    <div class="contant_contactus  grdOuter">
+
+        @*<fieldset>
+            <legend>@ViewBag.Title</legend>
+            <div class="dispBlock">Congratulations! Payment has been made successfully. An email has been sent to your Paypal email id.</div>
+            <div class="dispBlock">Please make a note of Tracking Reference Id for future references.</div>
+            <br />
+            <div>Tracking Reference Id  : @ViewBag.TrackingReference</div>
+            <div>Purchase Description   : @ViewBag.Description</div>
+            <div>Currency               : @ViewBag.Currency</div>
+            <div>Total Price            : @ViewBag.TotalCost</div>
+        </fieldset>*@
+
+        <fieldset>
+            <legend class="fontstyl4">@ViewBag.Title</legend>
+             
+                  <div style="font-size:16px; margin-left:25px;"><span style="color:#14692e; font-weight:bold;">Payment is pending!</span> But Order has been confirmed.Once peakzart accept the Paymnet your order will start excution mode. An email has been sent to your Paypal email id.</div>
+                <div style="font-size:12px; color:red; margin-left:140px;">Please make a note of Tracking Reference Id for future references.</div>
+                <br />
+                <div class="fontstyl2"><span class="fontstyl">Tracking Reference Id</span><span class="mrgleft1">:</span>@ViewBag.TrackingReference</div>
+                <div class="fontstyl2"><span class="fontstyl">Purchased From</span><span class="mrgleft2">:</span>@ViewBag.Description</div>
+                <div class="fontstyl2"><span class="fontstyl">Currency</span><span class="mrgleft3">:</span>@ViewBag.Currency</div>
+                <div class="fontstyl2"><span class="fontstyl">Total Price</span><span class="mrgleft4">:</span>$@ViewBag.TotalCost</div>
+                  <div class="fontstyl2"><span class="fontstyl">Reason for Pending</span><span class="mrgleft4">:</span>You payment is pending due to @ViewBag.PendingReason</div>
+              
+           
+        </fieldset>
+        
+    </div>
+</div>

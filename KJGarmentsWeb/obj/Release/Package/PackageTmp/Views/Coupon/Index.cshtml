@@ -1,0 +1,169 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@using GridMvc.Html
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+<link href="~/css/theme.default.css" rel="stylesheet" type="text/css" />
+@model IPagedList<KJGarmentsWeb.Models.ViewCouponModel>
+@{
+    ViewBag.Title = "View Coupons";
+}
+  @{  
+                                               
+      System.Globalization.CultureInfo Indian = new System.Globalization.CultureInfo("hi-IN");
+  }
+  @if (TempData["Coupon_Message"] != null)
+{
+<script>
+    alert('@TempData["Coupon_Message"]');
+       
+ 
+</script>
+}
+@using (Html.BeginForm())
+{
+     
+     <div class="container">
+         @*<div class="admin-container">*@
+             <div class="row">
+                 <div class="col-md-2">
+                     <h5 class="btnBlue btnAddProduct">@Html.ActionLink("Add Coupon", "Create")</h5>
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="col-md-2">
+                     @Html.PagedListPager(Model, page => Url.Action("Index", new { page }), PagedListRenderOptions.PageNumbersOnly)
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="col-md-12">
+                     <div class="datagrid">
+                <table class="tablesorter">
+                    <thead>
+                         <tr>
+                            <th>
+                              Coupon Code                             
+                            </th>
+        
+                            <th>
+                             Coupon Name
+                            </th>                           
+                            <th>
+                               Coupon Description
+                            </th> 
+                              <th>
+                               User/Agent name
+                            </th>                            
+                              <th>
+                               Start Date                          
+                            </th>                           
+                               <th>
+                               End Date                           
+                            </th>  
+                           <th>MinQty</th>
+                           <th>MaxQty</th>
+                             <th></th>
+                           <th></th>
+                        </tr>
+
+                    </thead>
+                  
+                    <tbody>                        
+                        @{        
+    var i = 0;
+    foreach (var item in Model)
+    {
+
+        if (i % 2 == 0)
+        {
+                                    <tr>
+                                        <td>@item.cupn_Code</td>
+                                        <td>@item.cupn_Name</td>
+                                        <td>@item.Description</td> 
+                                         <td>@item.usercode</td>                                         
+                                        <td>@item.StartDate.ToString("dd/MM/yyyy")</td>  
+                                        <td>@item.EndDate.ToString("dd/MM/yyyy")</td> 
+                                         <td>@item.MinQty</td> 
+                                         <td>@item.MaxQty</td> 
+                                         @if (item.Isactive == false)
+                                         {
+                                             <td></td>   
+                                           <td>@Html.ActionLink("ReActivate", "ReActivate", new { id = item.couponid }, new { @class = "reactivate-link" })</td>
+                                         }
+                                         else
+                                         {
+                                            <td>@Html.ActionLink("Edit", "Edit", new { id = item.couponid }, new { @class = "edit-link" })</td>  
+                                            <td>@Html.ActionLink("Delete", "Delete", new { id = item.couponid }, new { @class = "delete-link" })</td>
+                                         }
+                                    </tr>
+        }
+        else
+        {
+                                    <tr class="alt">
+                                       <td>@item.cupn_Code</td>
+                                        <td>@item.cupn_Name</td>
+                                        <td>@item.Description</td>  
+                                         <td>@item.usercode</td>                                        
+                                        <td>@item.StartDate.ToString("dd/MM/yyyy")</td>  
+                                        <td>@item.EndDate.ToString("dd/MM/yyyy")</td> 
+                                         <td>@item.MinQty</td> 
+                                         <td>@item.MaxQty</td> 
+                                         @if (item.Isactive == false)
+                                         {
+                                             <td></td>   
+                                           <td>@Html.ActionLink("ReActivate", "ReActivate", new { id = item.couponid }, new { @class = "reactivate-link" })</td>
+                                         }
+                                         else
+                                         {
+                                            <td>@Html.ActionLink("Edit", "Edit", new { id = item.couponid }, new { @class = "edit-link" })</td>  
+                                            <td>@Html.ActionLink("Delete", "Delete", new { id = item.couponid }, new { @class = "delete-link" })</td>
+                                         }
+                                    </tr>
+        }
+
+        i += 1;
+    }
+                        }
+                    </tbody>
+                </table>
+            </div>
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="col-md-2">
+                     @Html.PagedListPager(Model, page => Url.Action("Index", new { page }), PagedListRenderOptions.PageNumbersOnly)
+                 </div>
+             </div>
+          @*</div>*@
+    </div>
+            
+}
+
+	<script src="~/Scripts/jquery.tablesorter.min.js"></script>
+	<script src="~/Scripts/jquery.tablesorter.widgets.min.js"></script>
+<script>
+    //$(document).ready(function () {
+
+    //});
+
+    $(function () {
+
+        var $table = $('table').tablesorter({
+            theme: 'blue',
+            widgets: ["zebra", "filter"],
+            widgetOptions: {
+                // filter_anyMatch replaced! Instead use the filter_external option
+                // Set to use a jQuery selector (or jQuery object) pointing to the
+                // external filter (column specific or any match)
+                filter_external: '.search',
+                // add a default type search to the first name column
+                filter_defaultFilter: { 1: '~{query}' },
+                // include column filters
+                filter_columnFilters: true,
+                filter_placeholder: { search: 'Search...' },
+                filter_saveFilters: true,
+                filter_reset: '.reset'
+            }
+        });
+
+    });
+</script>

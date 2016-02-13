@@ -1,0 +1,144 @@
+﻿@model MughapuWeb.Models.ShoppingCartViewModel
+@{
+    ViewBag.Title = "Shopping Cart";
+}
+<style>
+    .fontstyl3 {
+        font-size:18px; 
+        margin-left:25px; 
+        font-weight:bold; 
+        color:#006793;
+    }
+    .fontstyl4 {
+        font-weight:bold; 
+        font-size:20px; 
+        color:rgb(0,71,102);
+    }
+</style>
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+<div id="heading">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="heading-content">
+                <h2>Your Cart</h2>
+                @*<span>Home / <a href="contact-us.html">Contact Us</a></span>*@
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="heading-section">
+                <h2>Review Your Cart</h2>
+                <img src="~/images/under-heading.png" alt="" >
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+             <fieldset style="width:600px;">
+            @*<legend class="fontstyl4">@ViewBag.Title</legend>*@
+            @*<div class="fontstyl3">Review Your Cart :</div>*@
+            <div class="CSSTableGenerator" style="margin-left:50px; width:450px; margin-top:10px;">
+                <table >
+                    <tr style="height:40px">
+                        <td>Image Name</td>
+                        <td>Price (@System.Configuration.ConfigurationManager.AppSettings["currency_code"])</td>
+                        <td>Quantity</td>
+                        <td></td>
+                    </tr>    
+                    @{  
+                        foreach (var item in Model.CartItems)
+                        {
+                            <tr id="row-@item.RecordId">
+                                <td>@item.ImageDetail.ImageDescription</td>
+                                <td>@item.ImageDetail.Price</td>
+                                <td id="item-count-@item.RecordId">@item.Count</td>
+                                <td>
+                                    <a href="#" class="RemoveLink"data-id="@item.RecordId">
+                                        <img src="~/Images/Remove_Cart.png" title="Remove from cart" width="40" height="40" />
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+     
+                    <tr style="height:35px">
+                        <td><b>Total (@System.Configuration.ConfigurationManager.AppSettings["currency_code"])</b></td>
+                        <td>        </td>
+                        <td>        </td>
+                        <td id="cart-total"><b>@Model.CartTotal </b></td>
+                    </tr>
+                    }    
+                </table>
+            </div>
+            <p style="margin-left:100px; margin-top:40px;">            
+                    <a href="@Url.Action("AddressAndPayment", "Checkout")">
+                    <img src="~/images/chk_image.jpg" alt="CheckOut" id="RemoveLink" />
+                </a>
+                
+                <a href="@Url.Action("Index", "Home")">
+                    <img src="~/images/shopmore_image.jpg" alt="CheckOut" />
+                </a>
+            </p>
+
+            @*<div class="send" style="margin-left:100px; margin-top:40px;">
+                <button type="submit">Checkout</button>
+            </div>*@
+        </fieldset>
+        </div>
+    </div>
+</div>
+@*<script type="text/javascript">
+    $(function () {
+        // Document.ready -> link up remove event handler
+        $(".RemoveLink").click(function () {
+            // Get the id from the link
+            var recordToDelete = $(this).attr("data-id");
+            if (recordToDelete != '') {
+                // Perform the ajax post
+                $.post("/ShoppingCart/RemoveFromCart", { "id": recordToDelete },
+                    function (data) {
+                        // Successful requests get here
+                        // Update the page elements
+                        if (data.ItemCount == 0) {
+                            $('#row-' + data.DeleteId).fadeOut('slow');
+                        } else {
+                            $('#item-count-' + data.DeleteId).text(data.ItemCount);
+                        }
+                        $('#cart-total').text(data.CartTotal);
+                        $('#update-message').text(data.Message);
+                        $('#cart-status').text('Cart (' + data.CartCount + ')');
+                    });
+            }
+        });
+    });
+</script>*@
+<script type="text/javascript">
+    $(function () {
+        // Document.ready -> link up remove event handler
+        $(".RemoveLink").click(function () {
+            // Get the id from the link
+            var recordToDelete = $(this).attr("data-id");
+            if (recordToDelete != '') {
+                // Perform the ajax post
+                $.post('@Url.Action("RemoveFromCart", "ShoppingCart")', { "id": recordToDelete },
+                    function (data) {
+                        // Successful requests get here
+                        // Update the page elements
+                        if (data.ItemCount == 0) {
+                            $('#row-' + data.DeleteId).fadeOut('slow');
+                        } else {
+                            $('#item-count-' + data.DeleteId).text(data.ItemCount);
+                        }
+                        $('#cart-total').text(data.CartTotal);
+                        $('#update-message').text(data.Message);
+                        $('#cart-status').text('Cart (' + data.CartCount + ')');
+                        $('#cart-sumtotal').text('Total (' + data.CartTotal + ')');
+                    });
+            }
+        });
+    });
+</script>

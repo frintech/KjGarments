@@ -1,0 +1,306 @@
+﻿@model MughapuWeb.DAL.ProductInsert
+@{
+    ViewBag.Title = "Add product";
+}
+
+
+@using (Html.BeginForm("Addproduct", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+   
+    <div class="content aligncenter ">
+            <div class="contant_contactus  grdOuter">
+                <fieldset>
+                    <legend>Add product</legend>
+
+                    <div >
+                       
+                        <div class="dispBlock">Category </div> <div > @Html.DropDownListFor(model => model.Category_id ,new SelectList(ViewBag.Menus, "Value", "Text"),"- Select Category -") 
+                                  @Html.ValidationMessageFor(model => model.Category_id)<br /><br /> </div> 
+
+                      
+                                                 <div class="form-group">
+                                @Html.Label("Select sub category:", new { @class = "col-md-2 control-label" })
+                                <div class="col-md-10">
+                                    <select id="sub_category"></select>
+                                </div>
+                            </div>
+                           <div class="dispBlock">brands </div> <div > @Html.DropDownListFor(model => model.brand_id ,new SelectList(ViewBag.Brands, "Value", "Text"),"- Select brands -") 
+                                  @Html.ValidationMessageFor(model => model.brand_id)<br /><br /> </div> 
+
+                         <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Product_Code,null, new { @placeholder="product Code" })
+                                  @Html.ValidationMessageFor(model=>model.Product_Code)<br /><br />
+                           </div>
+                           <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Product_Name,null, new { @placeholder="Product Name" })
+                                  @Html.ValidationMessageFor(model=>model.Product_Name)<br /><br />
+                           </div>
+                          <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Product_Price,null, new { @placeholder="price" })
+                                  @Html.ValidationMessageFor(model=>model.Product_Price)<br /><br />
+                           </div>
+                               <div class="dispBlock">Offers </div> <div > @Html.DropDownListFor(model => model.offer_id ,new SelectList(ViewBag.offers, "Value", "Text"),"- Select offers -") 
+                                  @Html.ValidationMessageFor(model => model.offer_id)<br /><br /> </div> 
+                          <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Product_Description,null, new { @placeholder="Product description" })
+                                  @Html.ValidationMessageFor(model=>model.Product_Description)<br /><br />
+                           </div>
+                                               
+                        <div class="dispBlock">   @Html.LabelFor(model => model.Imagepath)</div>
+                                                 <div >
+                              @Html.TextBoxFor(model => model.Imagepath, new { type = "file" })
+                                @Html.ValidationMessageFor(model => model.Imagepath, string.Empty, new { id = "validationTxt" })
+                                   @Html.CheckBoxFor(model => model.Homeflag, new { @checked = "false" });
+                                    @Html.CheckBoxFor(model => model.Bannerflag, new { @checked = "false" });  
+                                @Html.CheckBoxFor(model => model.Firstflag, new { @checked = "false" });                                   
+                             <br /><br /><br />
+                         </div>
+                           @* <div class="dispBlock">  Banner Image</div>
+                         <div >
+                              @Html.TextBoxFor(model => model.horizontalImagepath, new { type = "file" })
+                            @Html.ValidationMessageFor(model => model.horizontalImagepath, string.Empty, new { id = "validationTxt" })
+                                @Html.CheckBoxFor(model => model.Homeflag, new { @checked = "false" });
+                                    @Html.CheckBoxFor(model => model.Bannerflag, new { @checked = "false" });  
+                                @Html.CheckBoxFor(model => model.Firstflag, new { @checked = "false" });  
+                             <br /><br /><br />
+                         </div>*@
+                     @*   Product Description*@
+                          <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Brand,null, new { @placeholder="Brand" })
+                                  @Html.ValidationMessageFor(model=>model.Brand)<br /><br />
+                           </div>
+                          <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Model,null, new { @placeholder="Model" })
+                                  @Html.ValidationMessageFor(model=>model.Model)<br /><br />
+                           </div>
+                          <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Movement,null, new { @placeholder="Movement" })
+                                  @Html.ValidationMessageFor(model=>model.Movement)<br /><br />
+                           </div>
+                          <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Features,null, new { @placeholder="Features" })
+                                  @Html.ValidationMessageFor(model=>model.Features)<br /><br />
+                           </div>
+                          <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Water_Resistance,null, new { @placeholder="Water Resistance" })
+                                  @Html.ValidationMessageFor(model=>model.Water_Resistance)<br /><br />
+                           </div>
+                          <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Box,null, new { @placeholder="Box" })
+                                  @Html.ValidationMessageFor(model=>model.Box)<br /><br />
+                           </div>
+                          <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Case_Material,null, new { @placeholder="Case Material" })
+                                  @Html.ValidationMessageFor(model=>model.Case_Material)<br /><br />
+                           </div>
+                          <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Case_Back,null, new { @placeholder="Case Back" })
+                                  @Html.ValidationMessageFor(model=>model.Case_Back)<br /><br />
+                           </div>
+                          <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Case_Size,null, new { @placeholder="Case Size" })
+                                  @Html.ValidationMessageFor(model=>model.Case_Size)<br /><br />
+                           </div>
+                          <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Glass,null, new { @placeholder="Glass" })
+                                  @Html.ValidationMessageFor(model=>model.Glass)<br /><br />
+                           </div>
+                          <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Dial_Colour,null, new { @placeholder="Dial_Colour" })
+                                  @Html.ValidationMessageFor(model=>model.Dial_Colour)<br /><br />
+                         </div>
+                                <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Strap_Type,null, new { @placeholder="Strap_Type" })
+                                  @Html.ValidationMessageFor(model=>model.Strap_Type)<br /><br />
+                             </div>
+                                <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Warranty,null, new { @placeholder="Warranty" })
+                                  @Html.ValidationMessageFor(model=>model.Warranty)<br /><br />
+                           </div>
+                                <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Shipping,null, new { @placeholder="Shipping" })
+                                  @Html.ValidationMessageFor(model=>model.Shipping)<br /><br />
+                            </div>
+                                <div class="name col-md-4">
+                                  @Html.TextBoxFor(model => model.Payment_Method,null, new { @placeholder="Payment_Method" })
+                                  @Html.ValidationMessageFor(model=>model.Payment_Method)<br /><br />
+                           </div>
+                              <br /><br /> 
+                          <div class="send">
+                               
+                                                    <button type="submit">Submit</button>
+                                                   
+                                                        <button type="submit">Cancel</button>
+                                                    
+                                                        <button type="submit">RESET</button>
+                                                    </div>
+
+                           
+                     </div>
+                </fieldset>
+            </div>
+               
+    </div>
+    
+    
+      
+}
+ <script type="text/jscript">
+
+     function randomString() {
+         var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+         var string_length = Math.floor((Math.random() * 5) + 1);
+         var randomstring = '';
+         for (var i = 0; i < string_length; i++) {
+             var rnum = Math.floor(Math.random() * chars.length);
+             randomstring += chars.substring(rnum, rnum + 1);
+         }
+         $('#spnstring').html(randomstring);
+     }
+
+        //get file size
+
+
+        //get file path from client system
+
+        function getNameFromPath(strFilepath) {
+
+            var objRE = new RegExp(/([^\/\\]+)$/);
+
+            var strName = objRE.exec(strFilepath);
+
+ 
+
+            if (strName == null) {
+
+                return null;
+
+            }
+
+            else {
+
+                return strName[0];
+
+            }
+
+        }
+
+ 
+
+        $(function () {
+
+            $("#ImagePhoto").change(function () {
+
+                var file = getNameFromPath($(this).val());
+
+                if (file != null) {
+
+                    var extension = file.substr((file.lastIndexOf('.') + 1));
+                   
+                    switch (extension) {
+
+                        case 'jpg':
+                            flag = true;
+                        case 'jpeg':
+                            flag = true;
+                        case 'JPG':
+                            flag = true;
+                        case 'png':
+                            flag = true;
+                        case 'gif':
+
+                            flag = true;
+
+                            break;
+
+                        default:
+
+                            flag = false;
+
+                    }
+
+                }
+
+                if (flag == false) {
+
+                    $("#validationTxt").text("You can upload only jpg,jpeg,png,gif extension file");
+
+                    return false;
+
+                }
+
+                else {
+
+                    var size =0;
+
+                    if (size > 3) {
+
+                        $("#validationTxt").text("You can upload file up to 1 MB");
+
+                    }
+
+                    else {
+
+                        $("#validationTxt").text("");
+
+                    }
+
+                }
+
+            });
+
+        });
+
+        $(document).ready(function () {
+            $("#sub_category").prop("disabled", true);
+
+            $("#Category_id").change(function () {
+
+                if ($("#Category_id").val() != "") {
+                    var menuid = $("#Category_id").val();
+                    $.post('@Url.Action("LoadSubCategory", "Admin")', { "menuid": menuid },
+                        function (data) {                           
+                            $("#sub_category").empty();                          
+                            $.each(data, function (id, option) {
+                                $("#sub_category").append($('<option></option>').val(option.Mnu_id).html(option.Mnu_Name));
+                            });
+                            $("#sub_category").prop("disabled", false);
+                        });
+                }
+            })
+
+            $("#brand_id").change(function () {
+
+                if ($("#brand_id").val() != "") {
+                   
+                    var text = "";
+                    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+                    for (var i = 0; i < 3; i++) {
+                        text += possible.charAt(Math.floor(Math.random() * possible.length));
+                    }
+
+                    alert(text);
+                  
+                   // var menuid = $("#offer_id").val();
+                    $("#Product_Code").val($("#brand_id option:selected").text().substring(0, 3).toUpperCase() + "-" + text.toUpperCase());
+                    
+
+                   
+                }
+                   })
+
+
+
+        });
+                  
+     
+       
+</script>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

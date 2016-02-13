@@ -1,0 +1,1530 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DB_77377_muphase1Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="DB_77377_muphase1ModelStoreContainer">
+          <EntitySet Name="Banner_Image_Dtl" EntityType="DB_77377_muphase1Model.Store.Banner_Image_Dtl" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Brand" EntityType="DB_77377_muphase1Model.Store.Brand" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Coupon" EntityType="DB_77377_muphase1Model.Store.Coupon" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Coupon_Code" EntityType="DB_77377_muphase1Model.Store.Coupon_Code" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CouponProduct" EntityType="DB_77377_muphase1Model.Store.CouponProduct" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="KEY_Specifications" EntityType="DB_77377_muphase1Model.Store.KEY_Specifications" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Menu" EntityType="DB_77377_muphase1Model.Store.Menu" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="menuTree" EntityType="DB_77377_muphase1Model.Store.menuTree" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="offer" EntityType="DB_77377_muphase1Model.Store.offer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Offer_Mapping" EntityType="DB_77377_muphase1Model.Store.Offer_Mapping" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Offer_type" EntityType="DB_77377_muphase1Model.Store.Offer_type" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="OFFER_VALUE_TYPE" EntityType="DB_77377_muphase1Model.Store.OFFER_VALUE_TYPE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PDT_IMAGE_PATH" EntityType="DB_77377_muphase1Model.Store.PDT_IMAGE_PATH" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PRODUCT" EntityType="DB_77377_muphase1Model.Store.PRODUCT" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProductCart" EntityType="DB_77377_muphase1Model.Store.ProductCart" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProductCouponValue" EntityType="DB_77377_muphase1Model.Store.ProductCouponValue" store:Type="Tables" store:Schema="dbo" store:Name="ProductCouponValue">
+            <DefiningQuery>SELECT 
+      [ProductCouponValue].[Pid] AS [Pid], 
+      [ProductCouponValue].[offer] AS [offer], 
+      [ProductCouponValue].[offervaltype] AS [offervaltype]
+      FROM [dbo].[ProductCouponValue] AS [ProductCouponValue]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ProductOfferValue" EntityType="DB_77377_muphase1Model.Store.ProductOfferValue" store:Type="Tables" store:Schema="dbo" store:Name="ProductOfferValue">
+            <DefiningQuery>SELECT 
+      [ProductOfferValue].[Pid] AS [Pid], 
+      [ProductOfferValue].[offer] AS [offer], 
+      [ProductOfferValue].[OfrValtype] AS [OfrValtype]
+      FROM [dbo].[ProductOfferValue] AS [ProductOfferValue]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ProductOrder" EntityType="DB_77377_muphase1Model.Store.ProductOrder" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProductOrderDetail" EntityType="DB_77377_muphase1Model.Store.ProductOrderDetail" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Spec_category" EntityType="DB_77377_muphase1Model.Store.Spec_category" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SpecialOffer" EntityType="DB_77377_muphase1Model.Store.SpecialOffer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SpecialOfferProduct" EntityType="DB_77377_muphase1Model.Store.SpecialOfferProduct" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TreeviewList" EntityType="DB_77377_muphase1Model.Store.TreeviewList" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="User" EntityType="DB_77377_muphase1Model.Store.User" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="User_Info" EntityType="DB_77377_muphase1Model.Store.User_Info" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Value_Specification" EntityType="DB_77377_muphase1Model.Store.Value_Specification" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK__InvoiceLi__Invoi__2F10007B1" Association="DB_77377_muphase1Model.Store.FK__InvoiceLi__Invoi__2F10007B1">
+            <End Role="ProductOrder" EntitySet="ProductOrder" />
+            <End Role="ProductOrderDetail" EntitySet="ProductOrderDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cart_Album_3" Association="DB_77377_muphase1Model.Store.FK_Cart_Album_3">
+            <End Role="PRODUCT" EntitySet="PRODUCT" />
+            <End Role="ProductCart" EntitySet="ProductCart" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InvoiceLine_Album2" Association="DB_77377_muphase1Model.Store.FK_InvoiceLine_Album2">
+            <End Role="PRODUCT" EntitySet="PRODUCT" />
+            <End Role="ProductOrderDetail" EntitySet="ProductOrderDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_menuTree_Menu" Association="DB_77377_muphase1Model.Store.FK_menuTree_Menu">
+            <End Role="Menu" EntitySet="Menu" />
+            <End Role="menuTree" EntitySet="menuTree" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Offer_Mapping_offer" Association="DB_77377_muphase1Model.Store.FK_Offer_Mapping_offer">
+            <End Role="offer" EntitySet="offer" />
+            <End Role="Offer_Mapping" EntitySet="Offer_Mapping" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Offer_Mapping_Offer_type" Association="DB_77377_muphase1Model.Store.FK_Offer_Mapping_Offer_type">
+            <End Role="Offer_type" EntitySet="Offer_type" />
+            <End Role="Offer_Mapping" EntitySet="Offer_Mapping" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PDT_IMAGE_PATH_PRODUCT" Association="DB_77377_muphase1Model.Store.FK_PDT_IMAGE_PATH_PRODUCT">
+            <End Role="PRODUCT" EntitySet="PRODUCT" />
+            <End Role="PDT_IMAGE_PATH" EntitySet="PDT_IMAGE_PATH" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Value_Specification_KEY_Specifications" Association="DB_77377_muphase1Model.Store.FK_Value_Specification_KEY_Specifications">
+            <End Role="KEY_Specifications" EntitySet="KEY_Specifications" />
+            <End Role="Value_Specification" EntitySet="Value_Specification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Value_Specification_PRODUCT" Association="DB_77377_muphase1Model.Store.FK_Value_Specification_PRODUCT">
+            <End Role="PRODUCT" EntitySet="PRODUCT" />
+            <End Role="Value_Specification" EntitySet="Value_Specification" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Banner_Image_Dtl">
+          <Key>
+            <PropertyRef Name="BNR_Img_Id" />
+          </Key>
+          <Property Name="BNR_Img_Id" Type="bigint" Nullable="false" />
+          <Property Name="BNR_Image_Path" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="Add_user" Type="int" Nullable="false" />
+          <Property Name="Add_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="Mod_User" Type="int" Nullable="false" />
+          <Property Name="Mod_DateTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Brand">
+          <Key>
+            <PropertyRef Name="BRND_id" />
+          </Key>
+          <Property Name="BRND_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BRND_Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="BRND_Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="BRND_Img_Path" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Is_Add_img" Type="bit" Nullable="false" />
+          <Property Name="Add_User_id" Type="int" Nullable="false" />
+          <Property Name="Add_Datetime" Type="datetime" Nullable="false" />
+          <Property Name="Mod_User_Id" Type="int" Nullable="false" />
+          <Property Name="Modify_Datetime" Type="datetime" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="cat_id" Type="int" />
+          <Property Name="sub_cat_id" Type="int" />
+        </EntityType>
+        <EntityType Name="Coupon">
+          <Key>
+            <PropertyRef Name="cupn_id" />
+          </Key>
+          <Property Name="cupn_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="cupn_Code" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="cupn_Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="cupn_value" Type="bigint" Nullable="false" />
+          <Property Name="Add_User_id" Type="int" Nullable="false" />
+          <Property Name="Add_Datetime" Type="datetime" Nullable="false" />
+          <Property Name="Mod_User_Id" Type="int" Nullable="false" />
+          <Property Name="Modify_Datetime" Type="datetime" Nullable="false" />
+          <Property Name="OFR_Value_type" Type="int" />
+        </EntityType>
+        <EntityType Name="Coupon_Code">
+          <Key>
+            <PropertyRef Name="Cupn_Id" />
+          </Key>
+          <Property Name="Cupn_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Cupn_Code" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="Cupn_Name" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="StartDate" Type="datetime" Nullable="false" />
+          <Property Name="EndDate" Type="datetime" Nullable="false" />
+          <Property Name="MinQty" Type="int" Nullable="false" />
+          <Property Name="MaxQty" Type="int" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="Adduser" Type="int" Nullable="false" />
+          <Property Name="AddDatetime" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedUser" Type="int" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CouponProduct">
+          <Key>
+            <PropertyRef Name="cupn_No" />
+          </Key>
+          <Property Name="cupn_No" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CupnID" Type="int" Nullable="false" />
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="PDT_TYPE" Type="varchar" MaxLength="100" />
+          <Property Name="DiscountPct" Type="smallmoney" />
+          <Property Name="OFR_VAL_TYPE" Type="int" />
+          <Property Name="Adduser" Type="int" Nullable="false" />
+          <Property Name="AddDatetime" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedUser" Type="int" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KEY_Specifications">
+          <Key>
+            <PropertyRef Name="spec_col_id" />
+          </Key>
+          <Property Name="spec_col_id" Type="int" Nullable="false" />
+          <Property Name="spec_col_Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="spec_cate_id" Type="int" Nullable="false" />
+          <Property Name="Add_User_id" Type="int" Nullable="false" />
+          <Property Name="Add_Datetime" Type="datetime" Nullable="false" />
+          <Property Name="Mod_User_Id" Type="int" Nullable="false" />
+          <Property Name="Modify_Datetime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Menu">
+          <Key>
+            <PropertyRef Name="Mnu_id" />
+          </Key>
+          <Property Name="Mnu_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Mnu_Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Mnu_Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Add_User_id" Type="int" Nullable="false" />
+          <Property Name="Add_Datetime" Type="datetime" Nullable="false" />
+          <Property Name="Mod_User_Id" Type="int" Nullable="false" />
+          <Property Name="Modify_Datetime" Type="datetime" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="menuTree">
+          <Key>
+            <PropertyRef Name="Tree_id" />
+          </Key>
+          <Property Name="Tree_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Menu_id" Type="int" Nullable="false" />
+          <Property Name="Parent_Menuid" Type="int" Nullable="false" />
+          <Property Name="Comments" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Add_User_id" Type="int" Nullable="false" />
+          <Property Name="Add_Datetime" Type="datetime" Nullable="false" />
+          <Property Name="Mod_User_Id" Type="int" Nullable="false" />
+          <Property Name="Modify_Datetime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="offer">
+          <Key>
+            <PropertyRef Name="offer_id" />
+          </Key>
+          <Property Name="offer_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="offer_Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="offer_Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Add_User_id" Type="int" Nullable="false" />
+          <Property Name="Add_Datetime" Type="datetime" Nullable="false" />
+          <Property Name="Mod_User_Id" Type="int" Nullable="false" />
+          <Property Name="Modify_Datetime" Type="datetime" Nullable="false" />
+          <Property Name="OFR_Value_type" Type="int" />
+        </EntityType>
+        <EntityType Name="Offer_Mapping">
+          <Key>
+            <PropertyRef Name="OMP_id" />
+          </Key>
+          <Property Name="OMP_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Type" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Mappid" Type="int" Nullable="false" />
+          <Property Name="Offer_id" Type="int" Nullable="false" />
+          <Property Name="offer_type_id" Type="int" Nullable="false" />
+          <Property Name="Add_User_id" Type="int" Nullable="false" />
+          <Property Name="Add_Datetime" Type="datetime" Nullable="false" />
+          <Property Name="Mod_User_Id" Type="int" Nullable="false" />
+          <Property Name="Modify_Datetime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Offer_type">
+          <Key>
+            <PropertyRef Name="OFT_id" />
+          </Key>
+          <Property Name="OFT_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OFT_Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="OFT_Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Add_User_id" Type="int" Nullable="false" />
+          <Property Name="Add_Datetime" Type="datetime" Nullable="false" />
+          <Property Name="Mod_User_Id" Type="int" Nullable="false" />
+          <Property Name="Modify_Datetime" Type="datetime" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OFFER_VALUE_TYPE">
+          <Key>
+            <PropertyRef Name="OFR_VAl_Type_Id" />
+          </Key>
+          <Property Name="OFR_VAl_Type_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Ofr_Value_type" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Ofr_Value_description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Add_User_id" Type="int" Nullable="false" />
+          <Property Name="Add_Datetime" Type="datetime" Nullable="false" />
+          <Property Name="Mod_User_Id" Type="int" Nullable="false" />
+          <Property Name="Modify_Datetime" Type="datetime" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PDT_IMAGE_PATH">
+          <Key>
+            <PropertyRef Name="img_id" />
+          </Key>
+          <Property Name="img_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PDT_ID" Type="int" Nullable="false" />
+          <Property Name="Image_Path" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Home_Flag" Type="bit" Nullable="false" />
+          <Property Name="Banner_Flag" Type="bit" Nullable="false" />
+          <Property Name="First_Flag" Type="bit" Nullable="false" />
+          <Property Name="User_id" Type="int" Nullable="false" />
+          <Property Name="His_Datetime" Type="datetime" Nullable="false" />
+          <Property Name="Img_type" Type="varchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="PRODUCT">
+          <Key>
+            <PropertyRef Name="Pid" />
+          </Key>
+          <Property Name="Pid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PDT_CODE" Type="nvarchar" Nullable="false" />
+          <Property Name="PDT_Name" Type="nvarchar" Nullable="false" />
+          <Property Name="PDT_Price" Type="money" Nullable="false" />
+          <Property Name="PDT_Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Category_id" Type="int" Nullable="false" />
+          <Property Name="Sub_Category_id" Type="int" Nullable="false" />
+          <Property Name="Brand_id" Type="int" Nullable="false" />
+          <Property Name="offer_value_type_id" Type="int" Nullable="false" />
+          <Property Name="Add_user_Id" Type="int" Nullable="false" />
+          <Property Name="Add_Datetime" Type="datetime" Nullable="false" />
+          <Property Name="Mod_user_id" Type="int" Nullable="false" />
+          <Property Name="Mod_Datetime" Type="datetime" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="PDT_offer" Type="decimal" Nullable="false" />
+          <Property Name="PDT_Discount_price" Type="decimal" />
+        </EntityType>
+        <EntityType Name="ProductCart">
+          <Key>
+            <PropertyRef Name="RecordId" />
+          </Key>
+          <Property Name="RecordId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CartId" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="PDT_Id" Type="int" Nullable="false" />
+          <Property Name="Count" Type="int" Nullable="false" />
+          <Property Name="DateCreated" Type="datetime" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_77377_muphase1.dbo.ProductCouponValue' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="ProductCouponValue">
+          <Key>
+            <PropertyRef Name="Pid" />
+          </Key>
+          <Property Name="Pid" Type="int" Nullable="false" />
+          <Property Name="offer" Type="int" />
+          <Property Name="offervaltype" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_77377_muphase1.dbo.ProductOfferValue' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="ProductOfferValue">
+          <Key>
+            <PropertyRef Name="Pid" />
+          </Key>
+          <Property Name="Pid" Type="int" Nullable="false" />
+          <Property Name="offer" Type="int" />
+          <Property Name="OfrValtype" Type="int" />
+        </EntityType>
+        <EntityType Name="ProductOrder">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="OrderId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OrderDate" Type="datetime" Nullable="false" />
+          <Property Name="Total" Type="numeric" Nullable="false" Precision="10" Scale="2" />
+          <Property Name="Customer_name" Type="nvarchar(max)" />
+          <Property Name="Customer_Address" Type="nvarchar(max)" />
+          <Property Name="Emailid" Type="nvarchar(max)" />
+          <Property Name="mobileNo" Type="nvarchar(max)" />
+          <Property Name="Currency" Type="nvarchar" MaxLength="160" />
+          <Property Name="Cupn_id" Type="int" />
+        </EntityType>
+        <EntityType Name="ProductOrderDetail">
+          <Key>
+            <PropertyRef Name="OrderDetailId" />
+          </Key>
+          <Property Name="OrderDetailId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OrderId" Type="int" Nullable="false" />
+          <Property Name="PDT_Id" Type="int" Nullable="false" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
+          <Property Name="UnitPrice" Type="numeric" Nullable="false" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="Spec_category">
+          <Key>
+            <PropertyRef Name="spec_cat_id" />
+          </Key>
+          <Property Name="spec_cat_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="spec_cat_Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="spec_cat_Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Add_User_id" Type="int" Nullable="false" />
+          <Property Name="Add_Datetime" Type="datetime" Nullable="false" />
+          <Property Name="Mod_User_Id" Type="int" Nullable="false" />
+          <Property Name="Modify_Datetime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SpecialOffer">
+          <Key>
+            <PropertyRef Name="SpecialOfferID" />
+          </Key>
+          <Property Name="SpecialOfferID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="offer_Code" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="offer_Name" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="Type" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="usr_Category" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="StartDate" Type="datetime" Nullable="false" />
+          <Property Name="EndDate" Type="datetime" Nullable="false" />
+          <Property Name="MinQty" Type="int" Nullable="false" />
+          <Property Name="MaxQty" Type="int" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="Image_Path_Name" Type="nvarchar" MaxLength="1025" />
+          <Property Name="Adduser" Type="int" Nullable="false" />
+          <Property Name="AddDatetime" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedUser" Type="int" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SpecialOfferProduct">
+          <Key>
+            <PropertyRef Name="SeqNo" />
+          </Key>
+          <Property Name="SeqNo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SpecialOfferID" Type="int" Nullable="false" />
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="Adduser" Type="int" Nullable="false" />
+          <Property Name="AddDatetime" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedUser" Type="int" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+          <Property Name="PDT_TYPE" Type="varchar" MaxLength="100" />
+          <Property Name="DiscountPct" Type="smallmoney" />
+          <Property Name="OFR_VAL_TYPE" Type="int" />
+        </EntityType>
+        <EntityType Name="TreeviewList">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="menu_id" Type="int" />
+          <Property Name="Parent_Menuid" Type="int" />
+          <Property Name="origin" Type="varchar" MaxLength="10" />
+          <Property Name="Item_Name" Type="varchar" MaxLength="100" />
+          <Property Name="parent_name" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="RoleId" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="300" />
+          <Property Name="UserPassword" Type="nvarchar" MaxLength="2000" />
+          <Property Name="EmailID" Type="nvarchar" MaxLength="1000" />
+          <Property Name="MobileNo" Type="nvarchar" MaxLength="10" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifieBy" Type="int" />
+          <Property Name="ModifiedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="User_Info">
+          <Key>
+            <PropertyRef Name="UidNo" />
+          </Key>
+          <Property Name="UidNo" Type="int" Nullable="false" />
+          <Property Name="First_name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Last_name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Mobile_number" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="E-mail_id" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="DOB" Type="datetime" Nullable="false" />
+          <Property Name="Address_Communication" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Usr_pwd" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Usr_type" Type="varchar" MaxLength="100" />
+          <Property Name="Gender" Type="varchar" MaxLength="2" />
+          <Property Name="Isactive" Type="bit" />
+        </EntityType>
+        <EntityType Name="Value_Specification">
+          <Key>
+            <PropertyRef Name="Spec_value_id" />
+          </Key>
+          <Property Name="Spec_value_id" Type="int" Nullable="false" />
+          <Property Name="Key_spec_id" Type="int" Nullable="false" />
+          <Property Name="key_Col_Value" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Product_id" Type="int" Nullable="false" />
+          <Property Name="AddUser_id" Type="int" />
+          <Property Name="Add_Datetime" Type="datetime" />
+          <Property Name="mod_user_Id" Type="int" />
+          <Property Name="Mod_Datetime" Type="datetime" />
+        </EntityType>
+        <Association Name="FK__InvoiceLi__Invoi__2F10007B1">
+          <End Role="ProductOrder" Type="DB_77377_muphase1Model.Store.ProductOrder" Multiplicity="1" />
+          <End Role="ProductOrderDetail" Type="DB_77377_muphase1Model.Store.ProductOrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductOrder">
+              <PropertyRef Name="OrderId" />
+            </Principal>
+            <Dependent Role="ProductOrderDetail">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cart_Album_3">
+          <End Role="PRODUCT" Type="DB_77377_muphase1Model.Store.PRODUCT" Multiplicity="1" />
+          <End Role="ProductCart" Type="DB_77377_muphase1Model.Store.ProductCart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCT">
+              <PropertyRef Name="Pid" />
+            </Principal>
+            <Dependent Role="ProductCart">
+              <PropertyRef Name="PDT_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InvoiceLine_Album2">
+          <End Role="PRODUCT" Type="DB_77377_muphase1Model.Store.PRODUCT" Multiplicity="1" />
+          <End Role="ProductOrderDetail" Type="DB_77377_muphase1Model.Store.ProductOrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCT">
+              <PropertyRef Name="Pid" />
+            </Principal>
+            <Dependent Role="ProductOrderDetail">
+              <PropertyRef Name="PDT_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_menuTree_Menu">
+          <End Role="Menu" Type="DB_77377_muphase1Model.Store.Menu" Multiplicity="1" />
+          <End Role="menuTree" Type="DB_77377_muphase1Model.Store.menuTree" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Menu">
+              <PropertyRef Name="Mnu_id" />
+            </Principal>
+            <Dependent Role="menuTree">
+              <PropertyRef Name="Menu_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Offer_Mapping_offer">
+          <End Role="offer" Type="DB_77377_muphase1Model.Store.offer" Multiplicity="1" />
+          <End Role="Offer_Mapping" Type="DB_77377_muphase1Model.Store.Offer_Mapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="offer">
+              <PropertyRef Name="offer_id" />
+            </Principal>
+            <Dependent Role="Offer_Mapping">
+              <PropertyRef Name="Offer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Offer_Mapping_Offer_type">
+          <End Role="Offer_type" Type="DB_77377_muphase1Model.Store.Offer_type" Multiplicity="1" />
+          <End Role="Offer_Mapping" Type="DB_77377_muphase1Model.Store.Offer_Mapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Offer_type">
+              <PropertyRef Name="OFT_id" />
+            </Principal>
+            <Dependent Role="Offer_Mapping">
+              <PropertyRef Name="offer_type_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PDT_IMAGE_PATH_PRODUCT">
+          <End Role="PRODUCT" Type="DB_77377_muphase1Model.Store.PRODUCT" Multiplicity="1" />
+          <End Role="PDT_IMAGE_PATH" Type="DB_77377_muphase1Model.Store.PDT_IMAGE_PATH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCT">
+              <PropertyRef Name="Pid" />
+            </Principal>
+            <Dependent Role="PDT_IMAGE_PATH">
+              <PropertyRef Name="PDT_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Value_Specification_KEY_Specifications">
+          <End Role="KEY_Specifications" Type="DB_77377_muphase1Model.Store.KEY_Specifications" Multiplicity="1" />
+          <End Role="Value_Specification" Type="DB_77377_muphase1Model.Store.Value_Specification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KEY_Specifications">
+              <PropertyRef Name="spec_col_id" />
+            </Principal>
+            <Dependent Role="Value_Specification">
+              <PropertyRef Name="Key_spec_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Value_Specification_PRODUCT">
+          <End Role="PRODUCT" Type="DB_77377_muphase1Model.Store.PRODUCT" Multiplicity="1" />
+          <End Role="Value_Specification" Type="DB_77377_muphase1Model.Store.Value_Specification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCT">
+              <PropertyRef Name="Pid" />
+            </Principal>
+            <Dependent Role="Value_Specification">
+              <PropertyRef Name="Product_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="GetTreeView" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Sp_GetCoupon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cupnCode" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="Sp_GetOffer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MughapuModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="MughapuEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Brands" EntityType="MughapuModel.Brand" />
+          <EntitySet Name="KEY_Specifications" EntityType="MughapuModel.KEY_Specifications" />
+          <EntitySet Name="Menus" EntityType="MughapuModel.Menu" />
+          <EntitySet Name="menuTrees" EntityType="MughapuModel.menuTree" />
+          <EntitySet Name="offers" EntityType="MughapuModel.offer" />
+          <EntitySet Name="Offer_Mapping" EntityType="MughapuModel.Offer_Mapping" />
+          <EntitySet Name="Offer_type" EntityType="MughapuModel.Offer_type" />
+          <EntitySet Name="OFFER_VALUE_TYPE" EntityType="MughapuModel.OFFER_VALUE_TYPE" />
+          <EntitySet Name="PDT_IMAGE_PATH" EntityType="MughapuModel.PDT_IMAGE_PATH" />
+          <EntitySet Name="PRODUCTs" EntityType="MughapuModel.PRODUCT" />
+          <EntitySet Name="Spec_category" EntityType="MughapuModel.Spec_category" />
+          <EntitySet Name="Value_Specification" EntityType="MughapuModel.Value_Specification" />
+          <AssociationSet Name="FK_Value_Specification_KEY_Specifications" Association="MughapuModel.FK_Value_Specification_KEY_Specifications">
+            <End Role="KEY_Specifications" EntitySet="KEY_Specifications" />
+            <End Role="Value_Specification" EntitySet="Value_Specification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_menuTree_Menu" Association="MughapuModel.FK_menuTree_Menu">
+            <End Role="Menu" EntitySet="Menus" />
+            <End Role="menuTree" EntitySet="menuTrees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Offer_Mapping_offer" Association="MughapuModel.FK_Offer_Mapping_offer">
+            <End Role="offer" EntitySet="offers" />
+            <End Role="Offer_Mapping" EntitySet="Offer_Mapping" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Offer_Mapping_Offer_type" Association="MughapuModel.FK_Offer_Mapping_Offer_type">
+            <End Role="Offer_type" EntitySet="Offer_type" />
+            <End Role="Offer_Mapping" EntitySet="Offer_Mapping" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PDT_IMAGE_PATH_PRODUCT" Association="MughapuModel.FK_PDT_IMAGE_PATH_PRODUCT">
+            <End Role="PRODUCT" EntitySet="PRODUCTs" />
+            <End Role="PDT_IMAGE_PATH" EntitySet="PDT_IMAGE_PATH" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Value_Specification_PRODUCT" Association="MughapuModel.FK_Value_Specification_PRODUCT">
+            <End Role="PRODUCT" EntitySet="PRODUCTs" />
+            <End Role="Value_Specification" EntitySet="Value_Specification" />
+          </AssociationSet>
+          <EntitySet Name="ProductCarts" EntityType="MughapuModel.ProductCart" />
+          <EntitySet Name="ProductOrders" EntityType="MughapuModel.ProductOrder" />
+          <EntitySet Name="ProductOrderDetails" EntityType="MughapuModel.ProductOrderDetail" />
+          <AssociationSet Name="FK_Cart_Album_3" Association="MughapuModel.FK_Cart_Album_3">
+            <End Role="PRODUCT" EntitySet="PRODUCTs" />
+            <End Role="ProductCart" EntitySet="ProductCarts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InvoiceLine_Album2" Association="MughapuModel.FK_InvoiceLine_Album2">
+            <End Role="PRODUCT" EntitySet="PRODUCTs" />
+            <End Role="ProductOrderDetail" EntitySet="ProductOrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__InvoiceLi__Invoi__2F10007B1" Association="MughapuModel.FK__InvoiceLi__Invoi__2F10007B1">
+            <End Role="ProductOrder" EntitySet="ProductOrders" />
+            <End Role="ProductOrderDetail" EntitySet="ProductOrderDetails" />
+          </AssociationSet>
+          <EntitySet Name="Coupons" EntityType="MughapuModel.Coupon" />
+          <EntitySet Name="SpecialOffers" EntityType="MughapuModel.SpecialOffer" />
+          <EntitySet Name="SpecialOfferProducts" EntityType="MughapuModel.SpecialOfferProduct" />
+          <FunctionImport Name="GetTreeView" />
+          <EntitySet Name="TreeviewLists" EntityType="MughapuModel.TreeviewList" />
+          <EntitySet Name="Coupon_Code" EntityType="MughapuModel.Coupon_Code" />
+          <EntitySet Name="CouponProducts" EntityType="MughapuModel.CouponProduct" />
+          <EntitySet Name="Users" EntityType="MughapuModel.User" />
+          <EntitySet Name="User_Info" EntityType="MughapuModel.User_Info" />
+          <EntitySet Name="Banner_Image_Dtl" EntityType="MughapuModel.Banner_Image_Dtl" />
+          <FunctionImport Name="Sp_GetOffer" />
+          <EntitySet Name="ProductOfferValues" EntityType="MughapuModel.ProductOfferValue" />
+          <FunctionImport Name="Sp_GetCoupon">
+          <Parameter Name="cupnCode" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="ProductCouponValues" EntityType="MughapuModel.ProductCouponValue" />
+        </EntityContainer>
+        <EntityType Name="Brand">
+          <Key>
+            <PropertyRef Name="BRND_id" />
+          </Key>
+          <Property Name="BRND_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="BRND_Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="BRND_Description" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="BRND_Img_Path" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Is_Add_img" Type="Boolean" Nullable="false" />
+          <Property Name="Add_User_id" Type="Int32" Nullable="false" />
+          <Property Name="Add_Datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Mod_User_Id" Type="Int32" Nullable="false" />
+          <Property Name="Modify_Datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="Int32" Name="cat_id" />
+          <Property Type="Int32" Name="sub_cat_id" />
+        </EntityType>
+        <EntityType Name="KEY_Specifications">
+          <Key>
+            <PropertyRef Name="spec_col_id" />
+          </Key>
+          <Property Name="spec_col_id" Type="Int32" Nullable="false" />
+          <Property Name="spec_col_Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="spec_cate_id" Type="Int32" Nullable="false" />
+          <Property Name="Add_User_id" Type="Int32" Nullable="false" />
+          <Property Name="Add_Datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Mod_User_Id" Type="Int32" Nullable="false" />
+          <Property Name="Modify_Datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Value_Specification" Relationship="MughapuModel.FK_Value_Specification_KEY_Specifications" FromRole="KEY_Specifications" ToRole="Value_Specification" />
+        </EntityType>
+        <EntityType Name="Menu">
+          <Key>
+            <PropertyRef Name="Mnu_id" />
+          </Key>
+          <Property Name="Mnu_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Mnu_Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Mnu_Description" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Add_User_id" Type="Int32" Nullable="false" />
+          <Property Name="Add_Datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Mod_User_Id" Type="Int32" Nullable="false" />
+          <Property Name="Modify_Datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="menuTrees" Relationship="MughapuModel.FK_menuTree_Menu" FromRole="Menu" ToRole="menuTree" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+        </EntityType>
+        <EntityType Name="menuTree">
+          <Key>
+            <PropertyRef Name="Tree_id" />
+          </Key>
+          <Property Name="Tree_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Menu_id" Type="Int32" Nullable="false" />
+          <Property Name="Parent_Menuid" Type="Int32" Nullable="false" />
+          <Property Name="Comments" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Add_User_id" Type="Int32" Nullable="false" />
+          <Property Name="Add_Datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Mod_User_Id" Type="Int32" Nullable="false" />
+          <Property Name="Modify_Datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Menu" Relationship="MughapuModel.FK_menuTree_Menu" FromRole="menuTree" ToRole="Menu" />
+        </EntityType>
+        <EntityType Name="offer">
+          <Key>
+            <PropertyRef Name="offer_id" />
+          </Key>
+          <Property Name="offer_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="offer_Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="offer_Description" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Add_User_id" Type="Int32" Nullable="false" />
+          <Property Name="Add_Datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Mod_User_Id" Type="Int32" Nullable="false" />
+          <Property Name="Modify_Datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="OFR_Value_type" Type="Int32" />
+          <NavigationProperty Name="Offer_Mapping" Relationship="MughapuModel.FK_Offer_Mapping_offer" FromRole="offer" ToRole="Offer_Mapping" />
+        </EntityType>
+        <EntityType Name="Offer_Mapping">
+          <Key>
+            <PropertyRef Name="OMP_id" />
+          </Key>
+          <Property Name="OMP_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Mappid" Type="Int32" Nullable="false" />
+          <Property Name="Offer_id" Type="Int32" Nullable="false" />
+          <Property Name="offer_type_id" Type="Int32" Nullable="false" />
+          <Property Name="Add_User_id" Type="Int32" Nullable="false" />
+          <Property Name="Add_Datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Mod_User_Id" Type="Int32" Nullable="false" />
+          <Property Name="Modify_Datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="offer" Relationship="MughapuModel.FK_Offer_Mapping_offer" FromRole="Offer_Mapping" ToRole="offer" />
+          <NavigationProperty Name="Offer_type" Relationship="MughapuModel.FK_Offer_Mapping_Offer_type" FromRole="Offer_Mapping" ToRole="Offer_type" />
+        </EntityType>
+        <EntityType Name="Offer_type">
+          <Key>
+            <PropertyRef Name="OFT_id" />
+          </Key>
+          <Property Name="OFT_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="OFT_Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="OFT_Description" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Add_User_id" Type="Int32" Nullable="false" />
+          <Property Name="Add_Datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Mod_User_Id" Type="Int32" Nullable="false" />
+          <Property Name="Modify_Datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Offer_Mapping" Relationship="MughapuModel.FK_Offer_Mapping_Offer_type" FromRole="Offer_type" ToRole="Offer_Mapping" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OFFER_VALUE_TYPE">
+          <Key>
+            <PropertyRef Name="OFR_VAl_Type_Id" />
+          </Key>
+          <Property Name="OFR_VAl_Type_Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Ofr_Value_type" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Ofr_Value_description" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Add_User_id" Type="Int32" Nullable="false" />
+          <Property Name="Add_Datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Mod_User_Id" Type="Int32" Nullable="false" />
+          <Property Name="Modify_Datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PDT_IMAGE_PATH">
+          <Key>
+            <PropertyRef Name="img_id" />
+          </Key>
+          <Property Name="img_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="PDT_ID" Type="Int32" Nullable="false" />
+          <Property Name="Image_Path" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Home_Flag" Type="Boolean" Nullable="false" />
+          <Property Name="Banner_Flag" Type="Boolean" Nullable="false" />
+          <Property Name="First_Flag" Type="Boolean" Nullable="false" />
+          <Property Name="User_id" Type="Int32" Nullable="false" />
+          <Property Name="His_Datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="PRODUCT" Relationship="MughapuModel.FK_PDT_IMAGE_PATH_PRODUCT" FromRole="PDT_IMAGE_PATH" ToRole="PRODUCT" />
+          <Property Type="String" Name="Img_type" MaxLength="2" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="PRODUCT">
+          <Key>
+            <PropertyRef Name="Pid" />
+          </Key>
+          <Property Name="Pid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="PDT_CODE" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="PDT_Name" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="PDT_Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="PDT_Description" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Category_id" Type="Int32" Nullable="false" />
+          <Property Name="Sub_Category_id" Type="Int32" Nullable="false" />
+          <Property Name="Brand_id" Type="Int32" Nullable="false" />
+          <Property Name="Add_user_Id" Type="Int32" Nullable="false" />
+          <Property Name="Add_Datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Mod_user_id" Type="Int32" Nullable="false" />
+          <Property Name="Mod_Datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="PDT_IMAGE_PATH" Relationship="MughapuModel.FK_PDT_IMAGE_PATH_PRODUCT" FromRole="PRODUCT" ToRole="PDT_IMAGE_PATH" />
+          <NavigationProperty Name="Value_Specification" Relationship="MughapuModel.FK_Value_Specification_PRODUCT" FromRole="PRODUCT" ToRole="Value_Specification" />
+          <Property Type="Int32" Name="offer_value_type_id" Nullable="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="Decimal" Name="PDT_offer" Nullable="false" Precision="18" Scale="0" />
+          <NavigationProperty Name="ProductCarts" Relationship="MughapuModel.FK_Cart_Album_3" FromRole="PRODUCT" ToRole="ProductCart" />
+          <NavigationProperty Name="ProductOrderDetails" Relationship="MughapuModel.FK_InvoiceLine_Album2" FromRole="PRODUCT" ToRole="ProductOrderDetail" />
+          <Property Type="Decimal" Name="PDT_Discount_price" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="Spec_category">
+          <Key>
+            <PropertyRef Name="spec_cat_id" />
+          </Key>
+          <Property Name="spec_cat_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="spec_cat_Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="spec_cat_Description" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Add_User_id" Type="Int32" Nullable="false" />
+          <Property Name="Add_Datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Mod_User_Id" Type="Int32" Nullable="false" />
+          <Property Name="Modify_Datetime" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="Value_Specification">
+          <Key>
+            <PropertyRef Name="Spec_value_id" />
+          </Key>
+          <Property Name="Spec_value_id" Type="Int32" Nullable="false" />
+          <Property Name="Key_spec_id" Type="Int32" Nullable="false" />
+          <Property Name="key_Col_Value" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Product_id" Type="Int32" Nullable="false" />
+          <Property Name="AddUser_id" Type="Int32" />
+          <Property Name="Add_Datetime" Type="DateTime" Precision="3" />
+          <Property Name="mod_user_Id" Type="Int32" />
+          <Property Name="Mod_Datetime" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="KEY_Specifications" Relationship="MughapuModel.FK_Value_Specification_KEY_Specifications" FromRole="Value_Specification" ToRole="KEY_Specifications" />
+          <NavigationProperty Name="PRODUCT" Relationship="MughapuModel.FK_Value_Specification_PRODUCT" FromRole="Value_Specification" ToRole="PRODUCT" />
+        </EntityType>
+        <Association Name="FK_Value_Specification_KEY_Specifications">
+          <End Role="KEY_Specifications" Type="MughapuModel.KEY_Specifications" Multiplicity="1" />
+          <End Role="Value_Specification" Type="MughapuModel.Value_Specification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KEY_Specifications">
+              <PropertyRef Name="spec_col_id" />
+            </Principal>
+            <Dependent Role="Value_Specification">
+              <PropertyRef Name="Key_spec_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_menuTree_Menu">
+          <End Role="Menu" Type="MughapuModel.Menu" Multiplicity="1" />
+          <End Role="menuTree" Type="MughapuModel.menuTree" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Menu">
+              <PropertyRef Name="Mnu_id" />
+            </Principal>
+            <Dependent Role="menuTree">
+              <PropertyRef Name="Menu_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Offer_Mapping_offer">
+          <End Role="offer" Type="MughapuModel.offer" Multiplicity="1" />
+          <End Role="Offer_Mapping" Type="MughapuModel.Offer_Mapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="offer">
+              <PropertyRef Name="offer_id" />
+            </Principal>
+            <Dependent Role="Offer_Mapping">
+              <PropertyRef Name="Offer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Offer_Mapping_Offer_type">
+          <End Role="Offer_type" Type="MughapuModel.Offer_type" Multiplicity="1" />
+          <End Role="Offer_Mapping" Type="MughapuModel.Offer_Mapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Offer_type">
+              <PropertyRef Name="OFT_id" />
+            </Principal>
+            <Dependent Role="Offer_Mapping">
+              <PropertyRef Name="offer_type_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PDT_IMAGE_PATH_PRODUCT">
+          <End Role="PRODUCT" Type="MughapuModel.PRODUCT" Multiplicity="1" />
+          <End Role="PDT_IMAGE_PATH" Type="MughapuModel.PDT_IMAGE_PATH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCT">
+              <PropertyRef Name="Pid" />
+            </Principal>
+            <Dependent Role="PDT_IMAGE_PATH">
+              <PropertyRef Name="PDT_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Value_Specification_PRODUCT">
+          <End Role="PRODUCT" Type="MughapuModel.PRODUCT" Multiplicity="1" />
+          <End Role="Value_Specification" Type="MughapuModel.Value_Specification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCT">
+              <PropertyRef Name="Pid" />
+            </Principal>
+            <Dependent Role="Value_Specification">
+              <PropertyRef Name="Product_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ProductCart">
+          <Key>
+            <PropertyRef Name="RecordId" />
+          </Key>
+          <Property Type="Int32" Name="RecordId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="CartId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="PDT_Id" Nullable="false" />
+          <Property Type="Int32" Name="Count" Nullable="false" />
+          <Property Type="DateTime" Name="DateCreated" Nullable="false" Precision="3" />
+          <NavigationProperty Name="PRODUCT" Relationship="MughapuModel.FK_Cart_Album_3" FromRole="ProductCart" ToRole="PRODUCT" />
+        </EntityType>
+        <EntityType Name="ProductOrder">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Type="Int32" Name="OrderId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="OrderDate" Nullable="false" Precision="3" />
+          <Property Type="Decimal" Name="Total" Nullable="false" Precision="10" Scale="2" />
+          <Property Type="String" Name="Customer_name" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Customer_Address" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Emailid" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="mobileNo" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Currency" MaxLength="160" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ProductOrderDetails" Relationship="MughapuModel.FK__InvoiceLi__Invoi__2F10007B1" FromRole="ProductOrder" ToRole="ProductOrderDetail" />
+          <Property Type="Int32" Name="Cupn_id" />
+        </EntityType>
+        <EntityType Name="ProductOrderDetail">
+          <Key>
+            <PropertyRef Name="OrderDetailId" />
+          </Key>
+          <Property Type="Int32" Name="OrderDetailId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="OrderId" Nullable="false" />
+          <Property Type="Int32" Name="PDT_Id" Nullable="false" />
+          <Property Type="Int32" Name="Quantity" Nullable="false" />
+          <Property Type="Decimal" Name="UnitPrice" Nullable="false" Precision="10" Scale="2" />
+          <NavigationProperty Name="PRODUCT" Relationship="MughapuModel.FK_InvoiceLine_Album2" FromRole="ProductOrderDetail" ToRole="PRODUCT" />
+          <NavigationProperty Name="ProductOrder" Relationship="MughapuModel.FK__InvoiceLi__Invoi__2F10007B1" FromRole="ProductOrderDetail" ToRole="ProductOrder" />
+        </EntityType>
+        <Association Name="FK_Cart_Album_3">
+          <End Type="MughapuModel.PRODUCT" Role="PRODUCT" Multiplicity="1" />
+          <End Type="MughapuModel.ProductCart" Role="ProductCart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCT">
+              <PropertyRef Name="Pid" />
+            </Principal>
+            <Dependent Role="ProductCart">
+              <PropertyRef Name="PDT_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InvoiceLine_Album2">
+          <End Type="MughapuModel.PRODUCT" Role="PRODUCT" Multiplicity="1" />
+          <End Type="MughapuModel.ProductOrderDetail" Role="ProductOrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCT">
+              <PropertyRef Name="Pid" />
+            </Principal>
+            <Dependent Role="ProductOrderDetail">
+              <PropertyRef Name="PDT_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__InvoiceLi__Invoi__2F10007B1">
+          <End Type="MughapuModel.ProductOrder" Role="ProductOrder" Multiplicity="1" />
+          <End Type="MughapuModel.ProductOrderDetail" Role="ProductOrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductOrder">
+              <PropertyRef Name="OrderId" />
+            </Principal>
+            <Dependent Role="ProductOrderDetail">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Coupon">
+          <Key>
+            <PropertyRef Name="cupn_id" />
+          </Key>
+          <Property Type="Int32" Name="cupn_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="cupn_Code" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="cupn_Description" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int64" Name="cupn_value" Nullable="false" />
+          <Property Type="Int32" Name="Add_User_id" Nullable="false" />
+          <Property Type="DateTime" Name="Add_Datetime" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="Mod_User_Id" Nullable="false" />
+          <Property Type="DateTime" Name="Modify_Datetime" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="OFR_Value_type" />
+        </EntityType>
+        <EntityType Name="SpecialOffer">
+          <Key>
+            <PropertyRef Name="SpecialOfferID" />
+          </Key>
+          <Property Type="Int32" Name="SpecialOfferID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Type" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="usr_Category" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="StartDate" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="EndDate" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="MinQty" Nullable="false" />
+          <Property Type="Int32" Name="MaxQty" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="false" Precision="3" />
+          <Property Type="String" Name="offer_Code" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="offer_Name" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Active" />
+          <Property Type="String" Name="Image_Path_Name" MaxLength="1025" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Adduser" Nullable="false" />
+          <Property Type="DateTime" Name="AddDatetime" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="ModifiedUser" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SpecialOfferProduct">
+          <Key>
+            <PropertyRef Name="SeqNo" />
+          </Key>
+          <Property Type="Int32" Name="SeqNo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="SpecialOfferID" Nullable="false" />
+          <Property Type="Int32" Name="ProductID" Nullable="false" />
+          <Property Type="Int32" Name="Adduser" Nullable="false" />
+          <Property Type="DateTime" Name="AddDatetime" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="ModifiedUser" Nullable="false" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="false" Precision="3" />
+          <Property Type="String" Name="PDT_TYPE" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="DiscountPct" Precision="10" Scale="4" />
+          <Property Type="Int32" Name="OFR_VAL_TYPE" />
+        </EntityType>
+        <EntityType Name="TreeviewList">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="menu_id" />
+          <Property Type="Int32" Name="Parent_Menuid" />
+          <Property Type="String" Name="origin" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Item_Name" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="parent_name" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Coupon_Code">
+          <Key>
+            <PropertyRef Name="Cupn_Id" />
+          </Key>
+          <Property Type="Int32" Name="Cupn_Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Cupn_Code" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Cupn_Name" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="StartDate" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="EndDate" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="MinQty" Nullable="false" />
+          <Property Type="Int32" Name="MaxQty" />
+          <Property Type="Boolean" Name="Active" />
+          <Property Type="Int32" Name="user_id" Nullable="false" />
+          <Property Type="Int32" Name="Adduser" Nullable="false" />
+          <Property Type="DateTime" Name="AddDatetime" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="ModifiedUser" Nullable="false" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="CouponProduct">
+          <Key>
+            <PropertyRef Name="cupn_No" />
+          </Key>
+          <Property Type="Int32" Name="cupn_No" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="CupnID" Nullable="false" />
+          <Property Type="Int32" Name="ProductID" Nullable="false" />
+          <Property Type="String" Name="PDT_TYPE" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="DiscountPct" Precision="10" Scale="4" />
+          <Property Type="Int32" Name="OFR_VAL_TYPE" />
+          <Property Type="Int32" Name="Adduser" Nullable="false" />
+          <Property Type="DateTime" Name="AddDatetime" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="ModifiedUser" Nullable="false" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Type="Int32" Name="UserId" Nullable="false" />
+          <Property Type="Int32" Name="RoleId" Nullable="false" />
+          <Property Type="String" Name="UserName" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UserPassword" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EmailID" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MobileNo" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsActive" />
+          <Property Type="Int32" Name="CreatedBy" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+          <Property Type="Int32" Name="ModifieBy" />
+          <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+        </EntityType>
+        <EntityType Name="User_Info">
+          <Key>
+            <PropertyRef Name="UidNo" />
+          </Key>
+          <Property Type="Int32" Name="UidNo" Nullable="false" />
+          <Property Type="String" Name="First_name" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Last_name" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Mobile_number" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="E_mail_id" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="DOB" Nullable="false" Precision="3" />
+          <Property Type="String" Name="Address_Communication" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Usr_pwd" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Usr_type" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Gender" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Isactive" />
+        </EntityType>
+        <EntityType Name="Banner_Image_Dtl">
+          <Key>
+            <PropertyRef Name="BNR_Img_Id" />
+          </Key>
+          <Property Type="Int64" Name="BNR_Img_Id" Nullable="false" />
+          <Property Type="String" Name="BNR_Image_Path" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="Int32" Name="Add_user" Nullable="false" />
+          <Property Type="DateTime" Name="Add_DateTime" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="Mod_User" Nullable="false" />
+          <Property Type="DateTime" Name="Mod_DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="ProductOfferValue">
+          <Key>
+            <PropertyRef Name="Pid" />
+          </Key>
+          <Property Type="Int32" Name="Pid" Nullable="false" />
+          <Property Type="Int32" Name="offer" />
+          <Property Type="Int32" Name="OfrValtype" />
+        </EntityType>
+        <EntityType Name="ProductCouponValue">
+          <Key>
+            <PropertyRef Name="Pid" />
+          </Key>
+          <Property Type="Int32" Name="Pid" Nullable="false" />
+          <Property Type="Int32" Name="offer" />
+          <Property Type="Int32" Name="offervaltype" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_77377_muphase1ModelStoreContainer" CdmEntityContainer="MughapuEntities">
+          <EntitySetMapping Name="Brands">
+            <EntityTypeMapping TypeName="MughapuModel.Brand">
+              <MappingFragment StoreEntitySet="Brand">
+                <ScalarProperty Name="sub_cat_id" ColumnName="sub_cat_id" />
+                <ScalarProperty Name="cat_id" ColumnName="cat_id" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="BRND_id" ColumnName="BRND_id" />
+                <ScalarProperty Name="BRND_Name" ColumnName="BRND_Name" />
+                <ScalarProperty Name="BRND_Description" ColumnName="BRND_Description" />
+                <ScalarProperty Name="BRND_Img_Path" ColumnName="BRND_Img_Path" />
+                <ScalarProperty Name="Is_Add_img" ColumnName="Is_Add_img" />
+                <ScalarProperty Name="Add_User_id" ColumnName="Add_User_id" />
+                <ScalarProperty Name="Add_Datetime" ColumnName="Add_Datetime" />
+                <ScalarProperty Name="Mod_User_Id" ColumnName="Mod_User_Id" />
+                <ScalarProperty Name="Modify_Datetime" ColumnName="Modify_Datetime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KEY_Specifications">
+            <EntityTypeMapping TypeName="MughapuModel.KEY_Specifications">
+              <MappingFragment StoreEntitySet="KEY_Specifications">
+                <ScalarProperty Name="spec_col_id" ColumnName="spec_col_id" />
+                <ScalarProperty Name="spec_col_Name" ColumnName="spec_col_Name" />
+                <ScalarProperty Name="spec_cate_id" ColumnName="spec_cate_id" />
+                <ScalarProperty Name="Add_User_id" ColumnName="Add_User_id" />
+                <ScalarProperty Name="Add_Datetime" ColumnName="Add_Datetime" />
+                <ScalarProperty Name="Mod_User_Id" ColumnName="Mod_User_Id" />
+                <ScalarProperty Name="Modify_Datetime" ColumnName="Modify_Datetime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Menus">
+            <EntityTypeMapping TypeName="MughapuModel.Menu">
+              <MappingFragment StoreEntitySet="Menu">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Mnu_id" ColumnName="Mnu_id" />
+                <ScalarProperty Name="Mnu_Name" ColumnName="Mnu_Name" />
+                <ScalarProperty Name="Mnu_Description" ColumnName="Mnu_Description" />
+                <ScalarProperty Name="Add_User_id" ColumnName="Add_User_id" />
+                <ScalarProperty Name="Add_Datetime" ColumnName="Add_Datetime" />
+                <ScalarProperty Name="Mod_User_Id" ColumnName="Mod_User_Id" />
+                <ScalarProperty Name="Modify_Datetime" ColumnName="Modify_Datetime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="menuTrees">
+            <EntityTypeMapping TypeName="MughapuModel.menuTree">
+              <MappingFragment StoreEntitySet="menuTree">
+                <ScalarProperty Name="Tree_id" ColumnName="Tree_id" />
+                <ScalarProperty Name="Menu_id" ColumnName="Menu_id" />
+                <ScalarProperty Name="Parent_Menuid" ColumnName="Parent_Menuid" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Add_User_id" ColumnName="Add_User_id" />
+                <ScalarProperty Name="Add_Datetime" ColumnName="Add_Datetime" />
+                <ScalarProperty Name="Mod_User_Id" ColumnName="Mod_User_Id" />
+                <ScalarProperty Name="Modify_Datetime" ColumnName="Modify_Datetime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="offers">
+            <EntityTypeMapping TypeName="MughapuModel.offer">
+              <MappingFragment StoreEntitySet="offer">
+                <ScalarProperty Name="offer_id" ColumnName="offer_id" />
+                <ScalarProperty Name="offer_Name" ColumnName="offer_Name" />
+                <ScalarProperty Name="offer_Description" ColumnName="offer_Description" />
+                <ScalarProperty Name="Add_User_id" ColumnName="Add_User_id" />
+                <ScalarProperty Name="Add_Datetime" ColumnName="Add_Datetime" />
+                <ScalarProperty Name="Mod_User_Id" ColumnName="Mod_User_Id" />
+                <ScalarProperty Name="Modify_Datetime" ColumnName="Modify_Datetime" />
+                <ScalarProperty Name="OFR_Value_type" ColumnName="OFR_Value_type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Offer_Mapping">
+            <EntityTypeMapping TypeName="MughapuModel.Offer_Mapping">
+              <MappingFragment StoreEntitySet="Offer_Mapping">
+                <ScalarProperty Name="OMP_id" ColumnName="OMP_id" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Mappid" ColumnName="Mappid" />
+                <ScalarProperty Name="Offer_id" ColumnName="Offer_id" />
+                <ScalarProperty Name="offer_type_id" ColumnName="offer_type_id" />
+                <ScalarProperty Name="Add_User_id" ColumnName="Add_User_id" />
+                <ScalarProperty Name="Add_Datetime" ColumnName="Add_Datetime" />
+                <ScalarProperty Name="Mod_User_Id" ColumnName="Mod_User_Id" />
+                <ScalarProperty Name="Modify_Datetime" ColumnName="Modify_Datetime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Offer_type">
+            <EntityTypeMapping TypeName="MughapuModel.Offer_type">
+              <MappingFragment StoreEntitySet="Offer_type">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="OFT_id" ColumnName="OFT_id" />
+                <ScalarProperty Name="OFT_Name" ColumnName="OFT_Name" />
+                <ScalarProperty Name="OFT_Description" ColumnName="OFT_Description" />
+                <ScalarProperty Name="Add_User_id" ColumnName="Add_User_id" />
+                <ScalarProperty Name="Add_Datetime" ColumnName="Add_Datetime" />
+                <ScalarProperty Name="Mod_User_Id" ColumnName="Mod_User_Id" />
+                <ScalarProperty Name="Modify_Datetime" ColumnName="Modify_Datetime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OFFER_VALUE_TYPE">
+            <EntityTypeMapping TypeName="MughapuModel.OFFER_VALUE_TYPE">
+              <MappingFragment StoreEntitySet="OFFER_VALUE_TYPE">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="OFR_VAl_Type_Id" ColumnName="OFR_VAl_Type_Id" />
+                <ScalarProperty Name="Ofr_Value_type" ColumnName="Ofr_Value_type" />
+                <ScalarProperty Name="Ofr_Value_description" ColumnName="Ofr_Value_description" />
+                <ScalarProperty Name="Add_User_id" ColumnName="Add_User_id" />
+                <ScalarProperty Name="Add_Datetime" ColumnName="Add_Datetime" />
+                <ScalarProperty Name="Mod_User_Id" ColumnName="Mod_User_Id" />
+                <ScalarProperty Name="Modify_Datetime" ColumnName="Modify_Datetime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PDT_IMAGE_PATH">
+            <EntityTypeMapping TypeName="MughapuModel.PDT_IMAGE_PATH">
+              <MappingFragment StoreEntitySet="PDT_IMAGE_PATH">
+                <ScalarProperty Name="Img_type" ColumnName="Img_type" />
+                <ScalarProperty Name="img_id" ColumnName="img_id" />
+                <ScalarProperty Name="PDT_ID" ColumnName="PDT_ID" />
+                <ScalarProperty Name="Image_Path" ColumnName="Image_Path" />
+                <ScalarProperty Name="Home_Flag" ColumnName="Home_Flag" />
+                <ScalarProperty Name="Banner_Flag" ColumnName="Banner_Flag" />
+                <ScalarProperty Name="First_Flag" ColumnName="First_Flag" />
+                <ScalarProperty Name="User_id" ColumnName="User_id" />
+                <ScalarProperty Name="His_Datetime" ColumnName="His_Datetime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PRODUCTs">
+            <EntityTypeMapping TypeName="MughapuModel.PRODUCT">
+              <MappingFragment StoreEntitySet="PRODUCT">
+                <ScalarProperty Name="PDT_Discount_price" ColumnName="PDT_Discount_price" />
+                <ScalarProperty Name="PDT_offer" ColumnName="PDT_offer" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="offer_value_type_id" ColumnName="offer_value_type_id" />
+                <ScalarProperty Name="Pid" ColumnName="Pid" />
+                <ScalarProperty Name="PDT_CODE" ColumnName="PDT_CODE" />
+                <ScalarProperty Name="PDT_Name" ColumnName="PDT_Name" />
+                <ScalarProperty Name="PDT_Price" ColumnName="PDT_Price" />
+                <ScalarProperty Name="PDT_Description" ColumnName="PDT_Description" />
+                <ScalarProperty Name="Category_id" ColumnName="Category_id" />
+                <ScalarProperty Name="Sub_Category_id" ColumnName="Sub_Category_id" />
+                <ScalarProperty Name="Brand_id" ColumnName="Brand_id" />
+                <ScalarProperty Name="Add_user_Id" ColumnName="Add_user_Id" />
+                <ScalarProperty Name="Add_Datetime" ColumnName="Add_Datetime" />
+                <ScalarProperty Name="Mod_user_id" ColumnName="Mod_user_id" />
+                <ScalarProperty Name="Mod_Datetime" ColumnName="Mod_Datetime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Spec_category">
+            <EntityTypeMapping TypeName="MughapuModel.Spec_category">
+              <MappingFragment StoreEntitySet="Spec_category">
+                <ScalarProperty Name="spec_cat_id" ColumnName="spec_cat_id" />
+                <ScalarProperty Name="spec_cat_Name" ColumnName="spec_cat_Name" />
+                <ScalarProperty Name="spec_cat_Description" ColumnName="spec_cat_Description" />
+                <ScalarProperty Name="Add_User_id" ColumnName="Add_User_id" />
+                <ScalarProperty Name="Add_Datetime" ColumnName="Add_Datetime" />
+                <ScalarProperty Name="Mod_User_Id" ColumnName="Mod_User_Id" />
+                <ScalarProperty Name="Modify_Datetime" ColumnName="Modify_Datetime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Value_Specification">
+            <EntityTypeMapping TypeName="MughapuModel.Value_Specification">
+              <MappingFragment StoreEntitySet="Value_Specification">
+                <ScalarProperty Name="Spec_value_id" ColumnName="Spec_value_id" />
+                <ScalarProperty Name="Key_spec_id" ColumnName="Key_spec_id" />
+                <ScalarProperty Name="key_Col_Value" ColumnName="key_Col_Value" />
+                <ScalarProperty Name="Product_id" ColumnName="Product_id" />
+                <ScalarProperty Name="AddUser_id" ColumnName="AddUser_id" />
+                <ScalarProperty Name="Add_Datetime" ColumnName="Add_Datetime" />
+                <ScalarProperty Name="mod_user_Id" ColumnName="mod_user_Id" />
+                <ScalarProperty Name="Mod_Datetime" ColumnName="Mod_Datetime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductCarts">
+            <EntityTypeMapping TypeName="MughapuModel.ProductCart">
+              <MappingFragment StoreEntitySet="ProductCart">
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="PDT_Id" ColumnName="PDT_Id" />
+                <ScalarProperty Name="CartId" ColumnName="CartId" />
+                <ScalarProperty Name="RecordId" ColumnName="RecordId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductOrders">
+            <EntityTypeMapping TypeName="MughapuModel.ProductOrder">
+              <MappingFragment StoreEntitySet="ProductOrder">
+                <ScalarProperty Name="Cupn_id" ColumnName="Cupn_id" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="mobileNo" ColumnName="mobileNo" />
+                <ScalarProperty Name="Emailid" ColumnName="Emailid" />
+                <ScalarProperty Name="Customer_Address" ColumnName="Customer_Address" />
+                <ScalarProperty Name="Customer_name" ColumnName="Customer_name" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductOrderDetails">
+            <EntityTypeMapping TypeName="MughapuModel.ProductOrderDetail">
+              <MappingFragment StoreEntitySet="ProductOrderDetail">
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="PDT_Id" ColumnName="PDT_Id" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+                <ScalarProperty Name="OrderDetailId" ColumnName="OrderDetailId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Coupons">
+            <EntityTypeMapping TypeName="MughapuModel.Coupon">
+              <MappingFragment StoreEntitySet="Coupon">
+                <ScalarProperty Name="OFR_Value_type" ColumnName="OFR_Value_type" />
+                <ScalarProperty Name="Modify_Datetime" ColumnName="Modify_Datetime" />
+                <ScalarProperty Name="Mod_User_Id" ColumnName="Mod_User_Id" />
+                <ScalarProperty Name="Add_Datetime" ColumnName="Add_Datetime" />
+                <ScalarProperty Name="Add_User_id" ColumnName="Add_User_id" />
+                <ScalarProperty Name="cupn_value" ColumnName="cupn_value" />
+                <ScalarProperty Name="cupn_Description" ColumnName="cupn_Description" />
+                <ScalarProperty Name="cupn_Code" ColumnName="cupn_Code" />
+                <ScalarProperty Name="cupn_id" ColumnName="cupn_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SpecialOffers">
+            <EntityTypeMapping TypeName="MughapuModel.SpecialOffer">
+              <MappingFragment StoreEntitySet="SpecialOffer">
+                <ScalarProperty Name="ModifiedUser" ColumnName="ModifiedUser" />
+                <ScalarProperty Name="AddDatetime" ColumnName="AddDatetime" />
+                <ScalarProperty Name="Adduser" ColumnName="Adduser" />
+                <ScalarProperty Name="Image_Path_Name" ColumnName="Image_Path_Name" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="offer_Name" ColumnName="offer_Name" />
+                <ScalarProperty Name="offer_Code" ColumnName="offer_Code" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="MaxQty" ColumnName="MaxQty" />
+                <ScalarProperty Name="MinQty" ColumnName="MinQty" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="usr_Category" ColumnName="usr_Category" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="SpecialOfferID" ColumnName="SpecialOfferID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SpecialOfferProducts">
+            <EntityTypeMapping TypeName="MughapuModel.SpecialOfferProduct">
+              <MappingFragment StoreEntitySet="SpecialOfferProduct">
+                <ScalarProperty Name="OFR_VAL_TYPE" ColumnName="OFR_VAL_TYPE" />
+                <ScalarProperty Name="DiscountPct" ColumnName="DiscountPct" />
+                <ScalarProperty Name="PDT_TYPE" ColumnName="PDT_TYPE" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedUser" ColumnName="ModifiedUser" />
+                <ScalarProperty Name="AddDatetime" ColumnName="AddDatetime" />
+                <ScalarProperty Name="Adduser" ColumnName="Adduser" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="SpecialOfferID" ColumnName="SpecialOfferID" />
+                <ScalarProperty Name="SeqNo" ColumnName="SeqNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetTreeView" FunctionName="DB_77377_muphase1Model.Store.GetTreeView" />
+          <EntitySetMapping Name="TreeviewLists">
+            <EntityTypeMapping TypeName="MughapuModel.TreeviewList">
+              <MappingFragment StoreEntitySet="TreeviewList">
+                <ScalarProperty Name="parent_name" ColumnName="parent_name" />
+                <ScalarProperty Name="Item_Name" ColumnName="Item_Name" />
+                <ScalarProperty Name="origin" ColumnName="origin" />
+                <ScalarProperty Name="Parent_Menuid" ColumnName="Parent_Menuid" />
+                <ScalarProperty Name="menu_id" ColumnName="menu_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Coupon_Code">
+            <EntityTypeMapping TypeName="MughapuModel.Coupon_Code">
+              <MappingFragment StoreEntitySet="Coupon_Code">
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedUser" ColumnName="ModifiedUser" />
+                <ScalarProperty Name="AddDatetime" ColumnName="AddDatetime" />
+                <ScalarProperty Name="Adduser" ColumnName="Adduser" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="MaxQty" ColumnName="MaxQty" />
+                <ScalarProperty Name="MinQty" ColumnName="MinQty" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Cupn_Name" ColumnName="Cupn_Name" />
+                <ScalarProperty Name="Cupn_Code" ColumnName="Cupn_Code" />
+                <ScalarProperty Name="Cupn_Id" ColumnName="Cupn_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CouponProducts">
+            <EntityTypeMapping TypeName="MughapuModel.CouponProduct">
+              <MappingFragment StoreEntitySet="CouponProduct">
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedUser" ColumnName="ModifiedUser" />
+                <ScalarProperty Name="AddDatetime" ColumnName="AddDatetime" />
+                <ScalarProperty Name="Adduser" ColumnName="Adduser" />
+                <ScalarProperty Name="OFR_VAL_TYPE" ColumnName="OFR_VAL_TYPE" />
+                <ScalarProperty Name="DiscountPct" ColumnName="DiscountPct" />
+                <ScalarProperty Name="PDT_TYPE" ColumnName="PDT_TYPE" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="CupnID" ColumnName="CupnID" />
+                <ScalarProperty Name="cupn_No" ColumnName="cupn_No" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="MughapuModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifieBy" ColumnName="ModifieBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+                <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User_Info">
+            <EntityTypeMapping TypeName="MughapuModel.User_Info">
+              <MappingFragment StoreEntitySet="User_Info">
+                <ScalarProperty Name="Isactive" ColumnName="Isactive" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Usr_type" ColumnName="Usr_type" />
+                <ScalarProperty Name="Usr_pwd" ColumnName="Usr_pwd" />
+                <ScalarProperty Name="Address_Communication" ColumnName="Address_Communication" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="E_mail_id" ColumnName="E-mail_id" />
+                <ScalarProperty Name="Mobile_number" ColumnName="Mobile_number" />
+                <ScalarProperty Name="Last_name" ColumnName="Last_name" />
+                <ScalarProperty Name="First_name" ColumnName="First_name" />
+                <ScalarProperty Name="UidNo" ColumnName="UidNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Banner_Image_Dtl">
+            <EntityTypeMapping TypeName="MughapuModel.Banner_Image_Dtl">
+              <MappingFragment StoreEntitySet="Banner_Image_Dtl">
+                <ScalarProperty Name="Mod_DateTime" ColumnName="Mod_DateTime" />
+                <ScalarProperty Name="Mod_User" ColumnName="Mod_User" />
+                <ScalarProperty Name="Add_DateTime" ColumnName="Add_DateTime" />
+                <ScalarProperty Name="Add_user" ColumnName="Add_user" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="BNR_Image_Path" ColumnName="BNR_Image_Path" />
+                <ScalarProperty Name="BNR_Img_Id" ColumnName="BNR_Img_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="Sp_GetOffer" FunctionName="DB_77377_muphase1Model.Store.Sp_GetOffer" />
+          <EntitySetMapping Name="ProductOfferValues">
+            <EntityTypeMapping TypeName="MughapuModel.ProductOfferValue">
+              <MappingFragment StoreEntitySet="ProductOfferValue">
+                <ScalarProperty Name="OfrValtype" ColumnName="OfrValtype" />
+                <ScalarProperty Name="offer" ColumnName="offer" />
+                <ScalarProperty Name="Pid" ColumnName="Pid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="Sp_GetCoupon" FunctionName="DB_77377_muphase1Model.Store.Sp_GetCoupon" />
+          <EntitySetMapping Name="ProductCouponValues">
+            <EntityTypeMapping TypeName="MughapuModel.ProductCouponValue">
+              <MappingFragment StoreEntitySet="ProductCouponValue">
+                <ScalarProperty Name="offervaltype" ColumnName="offervaltype" />
+                <ScalarProperty Name="offer" ColumnName="offer" />
+                <ScalarProperty Name="Pid" ColumnName="Pid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

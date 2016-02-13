@@ -1,0 +1,50 @@
+﻿@model int
+@{
+    ViewBag.Title = "Checkout Complete";
+}
+
+<div id="heading">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="heading-content">
+                <h2>Checkout Successful</h2>
+                @*<span>Home / <a href="contact-us.html">Contact Us</a></span>*@
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+    <div class="heading-section">
+        <h2>Order Placed successfully</h2>
+        <img src="~/images/under-heading.png" alt="" >
+    </div>
+    <div class="info blackparam order-success">
+          
+        @{
+            Random r = new Random();
+            int lint = r.Next(1, 21);
+            string imgname="img"+lint.ToString()+ ".jpg";
+           
+              <img src="@Url.Content("~/images/" + imgname)" alt="" />
+        }
+      
+        <p>Thanks for your order! Your order number is:@Model</p>
+        <p>You will get call from our Customer Support soon.</p>
+<p>How about shopping for some more products 
+    @Html.ActionLink("here", "Index", "Home",null, new {@class="cart-link" })
+</p>
+        @*<ul>
+            <li><i class="fa fa-phone"></i>010-020-0340</li>
+            <li><i class="fa fa-globe"></i>123 Dagon Studio, Yakin Street, Digital Estate</li>
+            <li><i class="fa fa-envelope"></i><a href="#">info@company.com</a></li>
+        </ul>*@
+    </div>
+</div>
+    
+</div>
+</div>
+

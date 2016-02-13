@@ -1,0 +1,746 @@
+F:\Delete\MughapuWeb\MughapuWeb\bin\MughapuWeb.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\MughapuWeb.pdb
+F:\Delete\MughapuWeb\MughapuWeb\bin\Antlr3.Runtime.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.AspNet.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.Core.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.Consumer.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\EntityFramework.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\Microsoft.Data.Edm.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\Microsoft.Data.OData.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\Microsoft.Web.Infrastructure.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\Microsoft.Web.WebPages.OAuth.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\Newtonsoft.Json.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\PagedList.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\PagedList.Mvc.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\PayPalMvc.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\System.Net.Http.Formatting.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\System.Spatial.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\System.Web.Helpers.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\System.Web.Http.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\System.Web.Http.OData.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\System.Web.Http.WebHost.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\System.Web.Mvc.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\System.Web.Optimization.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\System.Web.Razor.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Deployment.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Razor.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\WebGrease.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\WebMatrix.Data.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\WebMatrix.WebData.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\PagedList.xml
+F:\Delete\MughapuWeb\MughapuWeb\bin\PagedList.Mvc.xml
+F:\Delete\MughapuWeb\MughapuWeb\bin\PayPalMvc.pdb
+F:\Delete\MughapuWeb\MughapuWeb\bin\EntityFramework.xml
+F:\Delete\MughapuWeb\MughapuWeb\bin\Newtonsoft.Json.xml
+F:\Delete\MughapuWeb\MughapuWeb\bin\System.Net.Http.Formatting.xml
+F:\Delete\MughapuWeb\MughapuWeb\bin\System.Web.Helpers.xml
+F:\Delete\MughapuWeb\MughapuWeb\bin\System.Web.Http.xml
+F:\Delete\MughapuWeb\MughapuWeb\bin\System.Web.Http.WebHost.xml
+F:\Delete\MughapuWeb\MughapuWeb\bin\System.Web.Mvc.xml
+F:\Delete\MughapuWeb\MughapuWeb\bin\System.Web.Razor.xml
+F:\Delete\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.xml
+F:\Delete\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Deployment.xml
+F:\Delete\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Razor.xml
+F:\Delete\MughapuWeb\MughapuWeb\bin\WebMatrix.Data.xml
+F:\Delete\MughapuWeb\MughapuWeb\bin\Microsoft.Web.WebPages.OAuth.xml
+F:\Delete\MughapuWeb\MughapuWeb\bin\WebMatrix.WebData.xml
+F:\Delete\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.AspNet.xml
+F:\Delete\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.Core.xml
+F:\Delete\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.Consumer.xml
+F:\Delete\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.xml
+F:\Delete\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.xml
+F:\Delete\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+F:\Delete\MughapuWeb\MughapuWeb\bin\System.Web.Http.OData.xml
+F:\Delete\MughapuWeb\MughapuWeb\bin\Microsoft.Data.Edm.xml
+F:\Delete\MughapuWeb\MughapuWeb\bin\Microsoft.Data.OData.xml
+F:\Delete\MughapuWeb\MughapuWeb\bin\System.Spatial.xml
+F:\Delete\MughapuWeb\MughapuWeb\bin\de\Microsoft.Data.Edm.resources.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\es\Microsoft.Data.Edm.resources.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\fr\Microsoft.Data.Edm.resources.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\it\Microsoft.Data.Edm.resources.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\ja\Microsoft.Data.Edm.resources.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\ko\Microsoft.Data.Edm.resources.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\ru\Microsoft.Data.Edm.resources.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\de\Microsoft.Data.OData.resources.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\es\Microsoft.Data.OData.resources.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\fr\Microsoft.Data.OData.resources.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\it\Microsoft.Data.OData.resources.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\ja\Microsoft.Data.OData.resources.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\ko\Microsoft.Data.OData.resources.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\ru\Microsoft.Data.OData.resources.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\de\System.Spatial.resources.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\es\System.Spatial.resources.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\fr\System.Spatial.resources.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\it\System.Spatial.resources.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\ja\System.Spatial.resources.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\ko\System.Spatial.resources.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\ru\System.Spatial.resources.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\zh-Hans\System.Spatial.resources.dll
+F:\Delete\MughapuWeb\MughapuWeb\bin\zh-Hant\System.Spatial.resources.dll
+F:\Delete\MughapuWeb\MughapuWeb\obj\Debug\MughapuWeb.dll
+F:\Delete\MughapuWeb\MughapuWeb\obj\Debug\MughapuWeb.pdb
+F:\Delete\MughapuWeb\MughapuWeb\obj\Debug\MughapuWeb.csprojResolveAssemblyReference.cache
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\MughapuWeb.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\MughapuWeb.pdb
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\Antlr3.Runtime.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.AspNet.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.Core.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\EntityFramework.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\Microsoft.Data.Edm.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\Microsoft.Data.OData.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\Microsoft.Web.Infrastructure.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\Newtonsoft.Json.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\PayPalMvc.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\System.Net.Http.Formatting.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\System.Spatial.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\System.Web.Helpers.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\System.Web.Http.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\System.Web.Http.OData.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\System.Web.Http.WebHost.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\System.Web.Mvc.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\System.Web.Optimization.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\System.Web.Razor.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Deployment.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Razor.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\WebGrease.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\WebMatrix.Data.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\WebMatrix.WebData.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\PayPalMvc.pdb
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\EntityFramework.xml
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\Newtonsoft.Json.xml
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\System.Net.Http.Formatting.xml
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\System.Web.Helpers.xml
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\System.Web.Http.xml
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\System.Web.Http.WebHost.xml
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\System.Web.Mvc.xml
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\System.Web.Razor.xml
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.xml
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Deployment.xml
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Razor.xml
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\WebMatrix.Data.xml
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\WebMatrix.WebData.xml
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.AspNet.xml
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.Core.xml
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.xml
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.xml
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\System.Web.Http.OData.xml
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\Microsoft.Data.Edm.xml
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\Microsoft.Data.OData.xml
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\System.Spatial.xml
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\de\Microsoft.Data.Edm.resources.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\es\Microsoft.Data.Edm.resources.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\it\Microsoft.Data.Edm.resources.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\de\Microsoft.Data.OData.resources.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\es\Microsoft.Data.OData.resources.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\fr\Microsoft.Data.OData.resources.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\it\Microsoft.Data.OData.resources.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\ja\Microsoft.Data.OData.resources.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\ko\Microsoft.Data.OData.resources.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\ru\Microsoft.Data.OData.resources.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\de\System.Spatial.resources.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\es\System.Spatial.resources.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\fr\System.Spatial.resources.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\it\System.Spatial.resources.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\ja\System.Spatial.resources.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\ko\System.Spatial.resources.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\ru\System.Spatial.resources.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\zh-Hans\System.Spatial.resources.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\bin\zh-Hant\System.Spatial.resources.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\obj\Debug\MughapuWeb.csprojResolveAssemblyReference.cache
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\obj\Debug\MughapuWeb.dll
+D:\KJInc\garment\MughapuWeb_10PM_IST_10JAN2015-First REL_Copy\MughapuWeb\MughapuWeb\obj\Debug\MughapuWeb.pdb
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\MughapuWeb.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\MughapuWeb.pdb
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\Antlr3.Runtime.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.AspNet.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.Core.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.Consumer.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\EntityFramework.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\Microsoft.Data.Edm.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\Microsoft.Data.OData.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\Microsoft.Web.Infrastructure.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\Microsoft.Web.WebPages.OAuth.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\Newtonsoft.Json.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\PagedList.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\PagedList.Mvc.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\PayPalMvc.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\System.Net.Http.Formatting.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\System.Spatial.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\System.Web.Helpers.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\System.Web.Http.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\System.Web.Http.OData.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\System.Web.Http.WebHost.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\System.Web.Mvc.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\System.Web.Optimization.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\System.Web.Razor.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Deployment.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Razor.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\WebGrease.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\WebMatrix.Data.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\WebMatrix.WebData.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\EntityFramework.xml
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\PagedList.xml
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\PagedList.Mvc.xml
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\PayPalMvc.pdb
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\Newtonsoft.Json.xml
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\System.Net.Http.Formatting.xml
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\System.Web.Helpers.xml
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\System.Web.Http.xml
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\System.Web.Http.WebHost.xml
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\System.Web.Mvc.xml
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\System.Web.Razor.xml
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.xml
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Deployment.xml
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Razor.xml
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\WebMatrix.Data.xml
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\Microsoft.Web.WebPages.OAuth.xml
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\WebMatrix.WebData.xml
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.AspNet.xml
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.Core.xml
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.Consumer.xml
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.xml
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.xml
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\System.Web.Http.OData.xml
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\Microsoft.Data.Edm.xml
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\Microsoft.Data.OData.xml
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\System.Spatial.xml
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\de\Microsoft.Data.Edm.resources.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\es\Microsoft.Data.Edm.resources.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\fr\Microsoft.Data.Edm.resources.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\it\Microsoft.Data.Edm.resources.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\ja\Microsoft.Data.Edm.resources.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\ko\Microsoft.Data.Edm.resources.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\ru\Microsoft.Data.Edm.resources.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\de\Microsoft.Data.OData.resources.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\es\Microsoft.Data.OData.resources.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\fr\Microsoft.Data.OData.resources.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\it\Microsoft.Data.OData.resources.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\ja\Microsoft.Data.OData.resources.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\ko\Microsoft.Data.OData.resources.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\ru\Microsoft.Data.OData.resources.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\de\System.Spatial.resources.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\es\System.Spatial.resources.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\fr\System.Spatial.resources.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\it\System.Spatial.resources.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\ja\System.Spatial.resources.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\ko\System.Spatial.resources.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\ru\System.Spatial.resources.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\zh-Hans\System.Spatial.resources.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\bin\zh-Hant\System.Spatial.resources.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\obj\Debug\MughapuWeb.dll
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\obj\Debug\MughapuWeb.pdb
+F:\Web-Mughapu\Lattest_Source_Code\MughapuWeb\MughapuWeb\obj\Debug\MughapuWeb.csprojResolveAssemblyReference.cache
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\MughapuWeb.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\MughapuWeb.pdb
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\Antlr3.Runtime.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.AspNet.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.Core.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\EntityFramework.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\Microsoft.Data.Edm.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\Microsoft.Data.OData.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\Microsoft.Web.Infrastructure.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\Newtonsoft.Json.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\PayPalMvc.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\System.Net.Http.Formatting.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\System.Spatial.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\System.Web.Helpers.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\System.Web.Http.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\System.Web.Http.OData.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\System.Web.Http.WebHost.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\System.Web.Mvc.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\System.Web.Optimization.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\System.Web.Razor.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Deployment.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Razor.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\WebGrease.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\WebMatrix.Data.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\WebMatrix.WebData.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\EntityFramework.xml
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\PayPalMvc.pdb
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\Newtonsoft.Json.xml
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\System.Net.Http.Formatting.xml
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\System.Web.Helpers.xml
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\System.Web.Http.xml
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\System.Web.Http.WebHost.xml
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\System.Web.Mvc.xml
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\System.Web.Razor.xml
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.xml
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Deployment.xml
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Razor.xml
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\WebMatrix.Data.xml
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\WebMatrix.WebData.xml
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.AspNet.xml
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.Core.xml
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.xml
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.xml
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\System.Web.Http.OData.xml
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\Microsoft.Data.Edm.xml
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\Microsoft.Data.OData.xml
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\System.Spatial.xml
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\de\Microsoft.Data.Edm.resources.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\es\Microsoft.Data.Edm.resources.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\it\Microsoft.Data.Edm.resources.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\de\Microsoft.Data.OData.resources.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\es\Microsoft.Data.OData.resources.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\fr\Microsoft.Data.OData.resources.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\it\Microsoft.Data.OData.resources.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\ja\Microsoft.Data.OData.resources.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\ko\Microsoft.Data.OData.resources.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\ru\Microsoft.Data.OData.resources.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\de\System.Spatial.resources.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\es\System.Spatial.resources.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\fr\System.Spatial.resources.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\it\System.Spatial.resources.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\ja\System.Spatial.resources.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\ko\System.Spatial.resources.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\ru\System.Spatial.resources.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\zh-Hans\System.Spatial.resources.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\bin\zh-Hant\System.Spatial.resources.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\obj\Debug\MughapuWeb.dll
+D:\KJInc\garment\MughapuWeb_28Jan2015_2310PMIST\MughapuWeb\MughapuWeb\obj\Debug\MughapuWeb.pdb
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\MughapuWeb.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\MughapuWeb.pdb
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\Antlr3.Runtime.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.AspNet.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.Core.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.Consumer.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\EntityFramework.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\Microsoft.Data.Edm.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\Microsoft.Data.OData.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\Microsoft.Web.Infrastructure.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\Microsoft.Web.WebPages.OAuth.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\Newtonsoft.Json.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\PagedList.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\PagedList.Mvc.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\PayPalMvc.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\System.Net.Http.Formatting.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\System.Spatial.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\System.Web.Helpers.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\System.Web.Http.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\System.Web.Http.OData.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\System.Web.Http.WebHost.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\System.Web.Mvc.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\System.Web.Optimization.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\System.Web.Razor.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Deployment.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Razor.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\WebGrease.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\WebMatrix.Data.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\WebMatrix.WebData.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\EntityFramework.xml
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\PagedList.xml
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\PagedList.Mvc.xml
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\PayPalMvc.pdb
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\Newtonsoft.Json.xml
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\System.Net.Http.Formatting.xml
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\System.Web.Helpers.xml
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\System.Web.Http.xml
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\System.Web.Http.WebHost.xml
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\System.Web.Mvc.xml
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\System.Web.Razor.xml
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.xml
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Deployment.xml
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Razor.xml
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\WebMatrix.Data.xml
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\Microsoft.Web.WebPages.OAuth.xml
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\WebMatrix.WebData.xml
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.AspNet.xml
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.Core.xml
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.Consumer.xml
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.xml
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.xml
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\System.Web.Http.OData.xml
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\Microsoft.Data.Edm.xml
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\Microsoft.Data.OData.xml
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\System.Spatial.xml
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\de\Microsoft.Data.Edm.resources.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\es\Microsoft.Data.Edm.resources.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\fr\Microsoft.Data.Edm.resources.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\it\Microsoft.Data.Edm.resources.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\ja\Microsoft.Data.Edm.resources.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\ko\Microsoft.Data.Edm.resources.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\ru\Microsoft.Data.Edm.resources.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\de\Microsoft.Data.OData.resources.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\es\Microsoft.Data.OData.resources.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\fr\Microsoft.Data.OData.resources.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\it\Microsoft.Data.OData.resources.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\ja\Microsoft.Data.OData.resources.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\ko\Microsoft.Data.OData.resources.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\ru\Microsoft.Data.OData.resources.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\de\System.Spatial.resources.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\es\System.Spatial.resources.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\fr\System.Spatial.resources.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\it\System.Spatial.resources.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\ja\System.Spatial.resources.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\ko\System.Spatial.resources.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\ru\System.Spatial.resources.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\zh-Hans\System.Spatial.resources.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\bin\zh-Hant\System.Spatial.resources.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\obj\Debug\MughapuWeb.dll
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\obj\Debug\MughapuWeb.pdb
+F:\Sunday Mughapu REL\MughapuWeb\MughapuWeb\obj\Debug\MughapuWeb.csprojResolveAssemblyReference.cache
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\MughapuWeb.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\MughapuWeb.pdb
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\Antlr3.Runtime.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.AspNet.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.Core.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\EntityFramework.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\Microsoft.Data.Edm.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\Microsoft.Data.OData.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\Microsoft.Web.Infrastructure.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\Newtonsoft.Json.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\PayPalMvc.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\System.Net.Http.Formatting.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\System.Spatial.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\System.Web.Helpers.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\System.Web.Http.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\System.Web.Http.OData.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\System.Web.Http.WebHost.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\System.Web.Mvc.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\System.Web.Optimization.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\System.Web.Razor.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Deployment.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Razor.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\WebGrease.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\WebMatrix.Data.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\WebMatrix.WebData.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\EntityFramework.xml
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\PagedList.xml
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\PagedList.Mvc.xml
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\PayPalMvc.pdb
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\Newtonsoft.Json.xml
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\System.Net.Http.Formatting.xml
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\System.Web.Helpers.xml
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\System.Web.Http.xml
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\System.Web.Http.WebHost.xml
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\System.Web.Mvc.xml
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\System.Web.Razor.xml
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.xml
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Deployment.xml
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Razor.xml
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\WebMatrix.Data.xml
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\WebMatrix.WebData.xml
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.AspNet.xml
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.Core.xml
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.xml
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.xml
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\System.Web.Http.OData.xml
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\Microsoft.Data.Edm.xml
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\Microsoft.Data.OData.xml
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\System.Spatial.xml
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\de\Microsoft.Data.Edm.resources.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\es\Microsoft.Data.Edm.resources.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\it\Microsoft.Data.Edm.resources.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\de\Microsoft.Data.OData.resources.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\es\Microsoft.Data.OData.resources.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\fr\Microsoft.Data.OData.resources.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\it\Microsoft.Data.OData.resources.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\ja\Microsoft.Data.OData.resources.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\ko\Microsoft.Data.OData.resources.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\ru\Microsoft.Data.OData.resources.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\de\System.Spatial.resources.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\es\System.Spatial.resources.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\fr\System.Spatial.resources.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\it\System.Spatial.resources.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\ja\System.Spatial.resources.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\ko\System.Spatial.resources.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\ru\System.Spatial.resources.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\zh-Hans\System.Spatial.resources.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\bin\zh-Hant\System.Spatial.resources.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\obj\Debug\MughapuWeb.csprojResolveAssemblyReference.cache
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\obj\Debug\MughapuWeb.dll
+D:\KJInc\garment\MughapuWeb_20Feb_8AMIST\MughapuWeb\MughapuWeb\obj\Debug\MughapuWeb.pdb
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\MughapuWeb.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\MughapuWeb.pdb
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\Antlr3.Runtime.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.AspNet.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.Core.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.Consumer.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\EntityFramework.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\Microsoft.Data.Edm.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\Microsoft.Data.OData.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\Microsoft.Web.Infrastructure.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\Microsoft.Web.WebPages.OAuth.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\Newtonsoft.Json.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\PagedList.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\PagedList.Mvc.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\PayPalMvc.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\System.Net.Http.Formatting.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\System.Spatial.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\System.Web.Helpers.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\System.Web.Http.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\System.Web.Http.OData.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\System.Web.Http.WebHost.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\System.Web.Mvc.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\System.Web.Optimization.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\System.Web.Razor.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Deployment.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Razor.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\WebGrease.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\WebMatrix.Data.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\WebMatrix.WebData.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\EntityFramework.xml
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\PagedList.xml
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\PagedList.Mvc.xml
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\PayPalMvc.pdb
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\Newtonsoft.Json.xml
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\System.Net.Http.Formatting.xml
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\System.Web.Helpers.xml
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\System.Web.Http.xml
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\System.Web.Http.WebHost.xml
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\System.Web.Mvc.xml
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\System.Web.Razor.xml
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.xml
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Deployment.xml
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Razor.xml
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\WebMatrix.Data.xml
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\Microsoft.Web.WebPages.OAuth.xml
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\WebMatrix.WebData.xml
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.AspNet.xml
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.Core.xml
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.Consumer.xml
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.xml
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.xml
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\System.Web.Http.OData.xml
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\Microsoft.Data.Edm.xml
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\Microsoft.Data.OData.xml
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\System.Spatial.xml
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\de\Microsoft.Data.Edm.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\es\Microsoft.Data.Edm.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\fr\Microsoft.Data.Edm.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\it\Microsoft.Data.Edm.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\ja\Microsoft.Data.Edm.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\ko\Microsoft.Data.Edm.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\ru\Microsoft.Data.Edm.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\de\Microsoft.Data.OData.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\es\Microsoft.Data.OData.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\fr\Microsoft.Data.OData.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\it\Microsoft.Data.OData.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\ja\Microsoft.Data.OData.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\ko\Microsoft.Data.OData.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\ru\Microsoft.Data.OData.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\de\System.Spatial.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\es\System.Spatial.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\fr\System.Spatial.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\it\System.Spatial.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\ja\System.Spatial.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\ko\System.Spatial.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\ru\System.Spatial.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\zh-Hans\System.Spatial.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\zh-Hant\System.Spatial.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\obj\Debug\MughapuWeb.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\obj\Debug\MughapuWeb.pdb
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\obj\Debug\MughapuWeb.csprojResolveAssemblyReference.cache
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\obj\Debug\RdlCompile.cache
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\obj\Debug\RdlCompile.compiled
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\Microsoft.ReportViewer.WebForms.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+F:\Sunday Mughapu REL\Todays_REL_SourceCode\MughapuWeb\MughapuWeb\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\MughapuWeb.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\MughapuWeb.pdb
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\Antlr3.Runtime.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.AspNet.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.Core.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\EntityFramework.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\Microsoft.Data.Edm.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\Microsoft.Data.OData.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\Microsoft.ReportViewer.WebForms.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\Microsoft.Web.Infrastructure.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\Newtonsoft.Json.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\PagedList.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\PagedList.Mvc.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\PayPalMvc.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\System.Net.Http.Formatting.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\System.Spatial.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\System.Web.Helpers.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\System.Web.Http.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\System.Web.Http.OData.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\System.Web.Http.WebHost.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\System.Web.Mvc.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\System.Web.Optimization.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\System.Web.Razor.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Deployment.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Razor.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\WebGrease.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\WebMatrix.Data.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\WebMatrix.WebData.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\EntityFramework.xml
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\PagedList.xml
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\PagedList.Mvc.xml
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\PayPalMvc.pdb
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\Newtonsoft.Json.xml
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\System.Net.Http.Formatting.xml
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\System.Web.Helpers.xml
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\System.Web.Http.xml
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\System.Web.Http.WebHost.xml
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\System.Web.Mvc.xml
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\System.Web.Razor.xml
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.xml
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Deployment.xml
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\System.Web.WebPages.Razor.xml
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\WebMatrix.Data.xml
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\WebMatrix.WebData.xml
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.AspNet.xml
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.Core.xml
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OAuth.xml
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.xml
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\System.Web.Http.OData.xml
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\Microsoft.Data.Edm.xml
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\Microsoft.Data.OData.xml
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\System.Spatial.xml
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\de\Microsoft.Data.Edm.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\es\Microsoft.Data.Edm.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\it\Microsoft.Data.Edm.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\de\Microsoft.Data.OData.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\es\Microsoft.Data.OData.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\fr\Microsoft.Data.OData.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\it\Microsoft.Data.OData.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\ja\Microsoft.Data.OData.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\ko\Microsoft.Data.OData.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\ru\Microsoft.Data.OData.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\de\System.Spatial.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\es\System.Spatial.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\fr\System.Spatial.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\it\System.Spatial.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\ja\System.Spatial.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\ko\System.Spatial.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\ru\System.Spatial.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\zh-Hans\System.Spatial.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\bin\zh-Hant\System.Spatial.resources.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\obj\Debug\MughapuWeb.csprojResolveAssemblyReference.cache
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\obj\Debug\RdlCompile.cache
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\obj\Debug\RdlCompile.compiled
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\obj\Debug\MughapuWeb.dll
+D:\GitHub-SourceCode\Mughapuweb\mugapuweb\MughapuWeb\MughapuWeb\obj\Debug\MughapuWeb.pdb
+E:\Github\mugapuweb\MughapuWeb\MughapuWeb\obj\Debug\MughapuWeb.csprojResolveAssemblyReference.cache
+E:\Github\mugapuweb\MughapuWeb\MughapuWeb\obj\Debug\MughapuWeb.dll
+E:\Github\mugapuweb\MughapuWeb\MughapuWeb\obj\Debug\MughapuWeb.pdb

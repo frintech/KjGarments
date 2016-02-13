@@ -1,0 +1,42 @@
+﻿@model KJGarmentsWeb.Models.EditCouponModel
+@foreach (var item in Model.tvlists)
+{     <ul>
+    @if (item != null)
+    {  
+    
+
+         if(!string.IsNullOrEmpty(item.Discountpct.ToString()))
+                    {
+                        <li class="jstree-checked">
+                           <a href="#" class="usr" >@item.Item_Name @Html.TextBoxFor(model => item.Discountpct,String.Format("{0:f0}",item.Discountpct).ToString(), new { id = "itemdiscountId" })   @Html.DropDownListFor(model => item.offer_id ,new SelectList(ViewBag.offers, "Value", "Text"),new { @class = "dropdown dropdown-small", id = "itemOfrId" }) 
+                            @Html.HiddenFor(model=>item.menu_id, new { id = "itemMnuId" }) 
+                            @Html.HiddenFor(model =>item.origin, new { id = "itemOrigin" }) 
+                        </a>
+                             @if (item.tvlists.Count > 0)
+                            {         
+                                @Html.Partial("EditChildrens", item)           
+                            }
+                       </li> 
+                   } 
+        else
+        {
+                   <li>
+                       <a href="#" class="usr" >@item.Item_Name @Html.TextBoxFor(model => item.Discountpct,String.Format("{0:f0}",item.Discountpct).ToString(), new { id = "itemdiscountId" })   @Html.DropDownListFor(model => item.offer_id ,new SelectList(ViewBag.offers, "Value", "Text"),new { @class = "dropdown dropdown-small", id = "itemOfrId" }) 
+                        @Html.HiddenFor(model=>item.menu_id, new { id = "itemMnuId" }) 
+                        @Html.HiddenFor(model =>item.origin, new { id = "itemOrigin" }) 
+                    </a>
+                     @if (item.tvlists.Count > 0)
+                    {         
+                        @Html.Partial("EditChildrens", item)           
+                    }
+                   </li> 
+      
+        }  
+  
+    }
+         </ul>
+
+         
+     
+   
+}

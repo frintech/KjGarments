@@ -1,0 +1,158 @@
+﻿@model IEnumerable<KjfashionWeb.Models.CatDetailsViewModel>
+
+@{
+    ViewBag.Title = "Home Data";
+}
+
+
+
+
+
+<div class="content aligncenter">
+    <div class="floatleft margintop">
+
+
+     @*  @foreach (var item in Model) {
+            <a href="@Url.Action("Index", "CatDetails",new {catID= @item.categoryid},null)">
+                <div class="wraptocenter boxshadow imgcaption"><img class="indeximgsize" src="@Url.Content( @item.ImagePath)" /><br />
+                    @Html.DisplayFor(modelItem => item.ImageName)<br />
+                    @Html.DisplayFor(modelItem => item.Price)
+
+                </div>
+            </a>
+        }    *@
+
+ <div id="accordion">
+    @{
+        foreach (var item in Model.Select(a => a.categoryName).Distinct())
+        {
+            <h3>@item</h3>
+        
+            <div>
+                 <table cellspacing="10" border="0">
+                        <tr>                           
+                            <th>
+                               
+                            </th>
+                            <th>
+                                Name
+                            </th>
+                            <th>Price(INR)</th>
+                        </tr>
+                
+                       
+              @foreach (var i in Model.Where(a=>a.categoryName.Equals(@item)))
+                {
+                        <tr>
+                            <td>
+                                    <img class="indeximgsize" src="@Url.Content(i.ImagePath)" />
+                            </td>
+                            <td>
+                                      @Html.DisplayFor(modelItem => i.ImageName)
+                            </td>
+                
+                               <td>
+                                     @Html.DisplayFor(modelItem => i.Price)
+                                  
+                                    
+                                     
+                               </td>
+                          
+                              
+                            </tr>
+                           
+                      
+                }
+                       </table>
+            </div>
+                
+           
+        }
+    }
+</div>
+      
+
+
+
+
+               
+        </div>  
+</div>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" type="text/javascript" />
+<script src="http://code.jquery.com/jquery-1.9.1.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js" type="text/javascript"></script>
+<script language="javascript">
+    $(function () {
+        $("#accordion").accordion({
+            collapsible: true,
+            heightStyle: "content",
+            event: "click hoverintent"
+        });
+    });
+
+    /*
+   * hoverIntent | Copyright 2011 Brian Cherne
+   * http://cherne.net/brian/resources/jquery.hoverIntent.html
+   * modified by the jQuery UI team
+   */
+    $.event.special.hoverintent = {
+        setup: function () {
+            $(this).bind("mouseover", jQuery.event.special.hoverintent.handler);
+        },
+        teardown: function () {
+            $(this).unbind("mouseover", jQuery.event.special.hoverintent.handler);
+        },
+        handler: function (event) {
+            var currentX, currentY, timeout,
+              args = arguments,
+              target = $(event.target),
+              previousX = event.pageX,
+              previousY = event.pageY;
+
+            function track(event) {
+                currentX = event.pageX;
+                currentY = event.pageY;
+            };
+
+            function clear() {
+                target
+                  .unbind("mousemove", track)
+                  .unbind("mouseout", clear);
+                clearTimeout(timeout);
+            }
+
+            function handler() {
+                var prop,
+                  orig = event;
+
+                if ((Math.abs(previousX - currentX) +
+                    Math.abs(previousY - currentY)) < 7) {
+                    clear();
+
+                    event = $.Event("hoverintent");
+                    for (prop in orig) {
+                        if (!(prop in event)) {
+                            event[prop] = orig[prop];
+                        }
+                    }
+                    // Prevent accessing the original event since the new event
+                    // is fired asynchronously and the old event is no longer
+                    // usable (#6028)
+                    delete event.originalEvent;
+
+                    target.trigger(event);
+                } else {
+                    previousX = currentX;
+                    previousY = currentY;
+                    timeout = setTimeout(handler, 100);
+                }
+            }
+
+            timeout = setTimeout(handler, 100);
+            target.bind({
+                mousemove: track,
+                mouseout: clear
+            });
+        }
+    };
+</script>

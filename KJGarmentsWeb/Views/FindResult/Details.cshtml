@@ -1,0 +1,99 @@
+﻿@model MughapuWeb.DAL.Brand
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Brand</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BRND_id)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BRND_id)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BRND_Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BRND_Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BRND_Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BRND_Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BRND_Img_Path)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BRND_Img_Path)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Is_Add_img)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Is_Add_img)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Add_User_id)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Add_User_id)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Add_Datetime)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Add_Datetime)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Mod_User_Id)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Mod_User_Id)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Modify_Datetime)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Modify_Datetime)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IsActive)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsActive)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.cat_id)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.cat_id)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.sub_cat_id)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.sub_cat_id)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

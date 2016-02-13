@@ -1,0 +1,294 @@
+﻿@model KJGarmentsWeb.Models.AddUserModel
+@{
+    ViewBag.Title = "Add User";
+}
+
+ @if (TempData["brnd_Message"] != null)
+{
+<script language="javascript">
+    if (confirm('@TempData["Usr_Message"]' + "\nAre you OK to continue add User?") == true) {
+    }
+    else {
+        window.location.href = '@Url.Content("~/UserInfo/Index/{params}")';
+    }
+
+</script>
+}
+
+@using (Html.BeginForm("Create", "UserInfo", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+      
+   <div class="container">      
+
+
+     
+       <div class="row mrg-top-20">
+           <div class="col-md-3">      
+               <span class="mandatory">*</span>         
+           </div>          
+           <div class="col-md-5">
+                @Html.TextBoxFor(model => model.First_name,null, new {  @class="pName", @data_animation="slide",@data_label="First Name" })
+           </div>
+           <div class="col-md-3">
+               @Html.ValidationMessageFor(model => model.First_name)
+           </div>
+       </div>
+
+       <div class="row mrg-top-20">
+           <div class="col-md-3">     
+               <span class="mandatory">*</span>          
+           </div>           
+           <div class="col-md-5">
+                @Html.TextBoxFor(model => model.Last_name,null, new { @class="pName", @data_animation="slide",@data_label="Last Name" })
+           </div>
+           <div class="col-md-3">
+               @Html.ValidationMessageFor(model => model.Last_name)
+           </div>
+       </div>      
+     <div class="row mrg-top-20">
+       <div class="col-md-3">
+                <span class="mandatory">*</span>  
+           </div>
+           <div class="col-md-3">
+          @Html.DropDownListFor(model => model.Gender,new SelectList(ViewBag.Genders, "Value", "Text"), "- Select Gender -",new { @class = "dropdown dropdown-large" })
+               
+           </div>
+           <div class="col-md-3">
+                @Html.ValidationMessageFor(model => model.Gender)
+           </div>
+          </div>  
+       <div class="row mrg-top-20">
+           <div class="col-md-3">     
+               <span class="mandatory">*</span>          
+           </div>           
+           <div class="col-md-5">
+                @Html.TextBoxFor(model => model.Mobile_number,null, new { @class="pName", @data_animation="slide",@data_label="Mobile No" })
+           </div>
+           <div class="col-md-3">
+               @Html.ValidationMessageFor(model => model.Mobile_number)
+           </div>
+       </div>    
+          <div class="row mrg-top-20">
+           <div class="col-md-3">     
+               <span class="mandatory">*</span>          
+           </div>           
+           <div class="col-md-5">
+                @Html.TextBoxFor(model => model.Email_id,null, new { @class="pName", @data_animation="slide",@data_label="Email Id" })
+           </div>
+           <div class="col-md-3">
+               @Html.ValidationMessageFor(model => model.Email_id)
+               <div class="validate"  style=visibility:hidden  id="divChkexist">EMail Id has already registered.</div>
+           </div>
+
+       </div> 
+        <div class="row mrg-top-20">
+           <div class="col-md-3">     
+               <span class="mandatory">*</span>          
+           </div>           
+           <div class="col-md-5">
+                @Html.TextBoxFor(model => model.DOB,null, new { @class="pName", @data_animation="slide",@data_label="DOB",@type="date"})
+           </div>
+           <div class="col-md-3">
+               @Html.ValidationMessageFor(model => model.DOB)
+               
+               <div class="validate"  style=visibility:hidden  id="divDOBDate">DOB date should be less than  current date</div>
+           </div>
+       </div>  
+
+
+              <div class="row mrg-top-20">
+           <div class="col-md-3">     
+               <span class="mandatory">*</span>          
+           </div>           
+           <div class="col-md-5">
+                @Html.TextBoxFor(model => model.Address_Communication,null, new { @class="pName", @data_animation="slide",@data_label="Address for Communication" })
+           </div>
+           <div class="col-md-3">
+               @Html.ValidationMessageFor(model => model.Address_Communication)
+           </div>
+       </div> 
+              <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>
+                  
+           
+       </div> 
+                <div class="row mrg-top-20">
+           <div class="col-md-3">     
+               <span class="mandatory">*</span>          
+           </div>           
+           <div class="col-md-5">
+                @Html.TextBoxFor(model => model.Usr_pwd,null, new { @class="pName", @data_animation="slide",@data_label="Password" ,@type="Password"})
+           </div>
+           <div class="col-md-3">
+               @Html.ValidationMessageFor(model => model.Usr_pwd)
+           </div>
+       </div> 
+       <div class="row mrg-top-20">
+           <div class="col-md-3">     
+               <span class="mandatory">*</span>          
+           </div>           
+           <div class="col-md-5">
+                @Html.TextBoxFor(model => model.ConfirmPassword,null, new { @class="pName", @data_animation="slide",@data_label="Confirm Password" ,@type="Password"})
+           </div>
+           <div class="col-md-3">
+               @Html.ValidationMessageFor(model => model.ConfirmPassword)
+           </div>
+       </div> 
+       <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-2">
+                 <button type="submit" id="btnSubmit" class="btnBlue sub-reset" >Submit</button>
+           </div>
+           <div class="col-md-2">
+                 <h5 class="btnBlue sub-reset-cancel"> @Html.ActionLink("Cancel", "UserLogin")</h5>
+           </div>
+           <div class="col-md-2">
+                 <h5 class="btnBlue sub-reset-cancel"> @Html.ActionLink("Reset", "Create")</h5>
+           </div>
+       </div>
+   </div>
+      
+}
+
+<script type="text/javascript">
+    function randomString() {
+        var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+        var string_length = Math.floor((Math.random() * 5) + 1);
+        var randomstring = '';
+        for (var i = 0; i < string_length; i++) {
+            var rnum = Math.floor(Math.random() * chars.length);
+            randomstring += chars.substring(rnum, rnum + 1);
+        }
+        $('#spnstring').html(randomstring);
+    }
+
+    //get file size
+
+
+    //get file path from client system
+
+    function getNameFromPath(strFilepath) {
+        var objRE = new RegExp(/([^\/\\]+)$/);
+        var strName = objRE.exec(strFilepath);
+
+        if (strName == null) {
+            return null;
+        }
+        else {
+            return strName[0];
+        }
+    }
+
+
+
+    $(function () {
+        $("#BRND_Img_Path").change(function () {
+            var file = getNameFromPath($(this).val());
+            if (file != null) {
+                var extension = file.substr((file.lastIndexOf('.') + 1));
+                switch (extension) {
+                    case 'jpg':
+                        flag = true;
+                    case 'jpeg':
+                        flag = true;
+                    case 'JPG':
+                        flag = true;
+                    case 'png':
+                        flag = true;
+                    case 'gif':
+                        flag = true;
+                        break;
+                    default:
+                        flag = false;
+                }
+            }
+
+            if (flag == false) {
+                $("#validationTxt").text("You can upload only jpg,jpeg,png,gif extension file");
+                return false;
+            }
+            else {
+                var size = 0;
+                if (size > 3) {
+                    $("#validationTxt").text("You can upload file up to 1 MB");
+                }
+                else {
+                    $("#validationTxt").text("");
+                }
+            }
+        });
+    });
+
+
+
+    $(document).ready(function () {
+       
+       
+        $('#First_name').keypress(function (event) {
+            var keyCode = event.keyCode == 0 ? event.charCode : e.keyCode;
+            if ((keyCode >= 48 && keyCode <= 57) || (keyCode >= 65 && keyCode <= 90) || (keyCode >= 97 && keyCode <= 122) || (specialKeys.indexOf(e.keyCode) != -1 && e.charCode != e.keyCode)) {
+                event.preventDefault();
+            }
+        })
+
+        $('#Last_name').keypress(function (event) {
+            var keyCode = event.keyCode == 0 ? event.charCode : e.keyCode;
+            if ((keyCode >= 48 && keyCode <= 57) || (keyCode >= 65 && keyCode <= 90) || (keyCode >= 97 && keyCode <= 122) || (specialKeys.indexOf(e.keyCode) != -1 && e.charCode != e.keyCode)) {
+                event.preventDefault();
+            }
+        })
+       
+
+        
+
+        
+
+    });
+    $(document).on('click', '#btnSubmit', function () {
+       
+        var emailid = $("#Email_id").val();
+        var from = $("#DOB").val();
+        var fullDate = new Date();
+
+        var twoDigitMonth = fullDate.getMonth() + 1 + "";
+
+        if (twoDigitMonth.length == 1) twoDigitMonth = "0" + twoDigitMonth;
+        var twoDigitDate = fullDate.getDate() + "";
+        if (twoDigitDate.length == 1) twoDigitDate = "0" + twoDigitDate;
+        var currentDate = fullDate.getFullYear() + "-" + twoDigitMonth + "-" + twoDigitDate;
+
+        if (Date.parse(from) > Date.parse(currentDate)) {
+            document.getElementById("divDOBDate").style.visibility = "visible";
+            $("input[type=text]").first().focus();
+            return false;
+        }
+        else {
+            document.getElementById("divDOBDate").style.visibility = "hidden";
+        }
+
+        $.post('@Url.Action("ChkValidEmailID", "UserInfo")', { "emailid": emailid },
+          function (data) {
+              
+              if (data == "true") {
+                 
+                  document.getElementById("divChkexist").style.visibility = "visible";
+                  $("input[type=text]").first().focus();
+                  event.preventDefault();
+                  //return false;
+              }
+              else {
+                  document.getElementById("divChkexist").style.visibility = "hidden";
+                  return true
+              }
+              return false;
+          });
+    });
+</script>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    
+}

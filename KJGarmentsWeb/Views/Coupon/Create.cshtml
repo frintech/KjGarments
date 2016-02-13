@@ -1,0 +1,288 @@
+﻿@model KJGarmentsWeb.Models.CouponModel
+@{
+    ViewBag.Title = "Create";
+}
+
+    
+}
+<script src="@Url.Content("~/Scripts/jquery.jstree.js")" type="text/javascript"></script>
+<link href="@Url.Content("~/Scripts/themes/default/style.css")" rel="stylesheet" type="text/css" />
+<script src="~/Scripts/jquery.validate.js"></script>    
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>  
+ @if (TempData["Coupon_Message"] != null)
+{
+<script language="javascript">
+    if (confirm('@TempData["Coupon_Message"]' + "\nAre you OK to continue add Coupon?") == true) {
+    }
+    else {
+        window.location.href = '@Url.Content("~/Coupon/Index/{params}")';
+    }
+
+</script>
+}
+
+@using (Html.BeginForm("Create", "Coupon", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+  <div class="container">
+
+      <div class="row mrg-top-20">
+           <div class="col-md-3">      
+               <span class="mandatory">*</span>         
+           </div>          
+           <div class="col-md-5">
+                @Html.TextBoxFor(model => model.cupn_Code,null, new {@class="pName disable", @data_animation="slide",@data_label="Coupon Code", @readonly = true })
+           </div>
+           <div class="col-md-3">
+               @Html.ValidationMessageFor(model => model.cupn_Code)
+           </div>
+       </div>
+
+       <div class="row mrg-top-20">
+           <div class="col-md-3">     
+               <span class="mandatory">*</span>          
+           </div>           
+           <div class="col-md-5">
+                @Html.TextBoxFor(model => model.cupn_Name,null, new { @class="pName", @data_animation="slide",@data_label="Coupon Name" })
+           </div>
+           <div class="col-md-3">
+               @Html.ValidationMessageFor(model => model.cupn_Name)
+           </div>
+       </div>   
+       <div class="row mrg-top-20">
+           <div class="col-md-3">     
+                    
+           </div>           
+           <div class="col-md-5">
+                @Html.TextBoxFor(model => model.Description,null, new { @class="pName", @data_animation="slide",@data_label="Coupon Description" })
+           </div>
+           <div class="col-md-3">
+               @Html.ValidationMessageFor(model => model.Description)
+           </div>
+       </div> 
+       <div class="row mrg-top-xs">
+           <div class="col-md-3"> 
+               <span class="mandatory">*</span>              
+           </div>
+           <div class="col-md-2">
+               Users
+           </div>
+           <div class="col-md-3">
+               @Html.DropDownListFor(model => model.userid, new SelectList(ViewBag.users, "Value", "Text"), "- Select User -",new { @class = "dropdown dropdown-large" }) 
+           </div>
+           <div class="col-md-3">
+               @Html.ValidationMessageFor(model => model.userid,null,"Please select user ")
+           </div>
+       </div>
+        @* <div class="row mrg-top-20">
+           <div class="col-md-3">     
+               <span class="mandatory">*</span>          
+           </div>           
+           <div class="col-md-5">
+                @Html.TextBoxFor(model => model.MinQty,null, new { @class="pName", @data_animation="slide",@data_label="User Commision" })
+                @Html.DropDownListFor(model => model.MaxQty, new SelectList(ViewBag.offers, "Value", "Text"), "- Select Offer -",new { @class = "dropdown dropdown-large" }) 
+           </div>
+           <div class="col-md-3">
+               @Html.ValidationMessageFor(model => model.MinQty)
+                @Html.ValidationMessageFor(model => model.MaxQty)
+           </div>
+       </div>*@
+
+      <div class="row mrg-top-20">
+           <div class="col-md-3">               
+               <span class="mandatory">*</span>
+           </div>           
+           <div class="col-md-2">
+                 @Html.TextBoxFor(model => model.MinQty,null, new { @class="pOffer", @data_animation="slide",@data_label="User Commsion", @autocomplete = "off"})
+           </div>
+           
+            <div class="col-md-1">
+                &nbsp;
+                  @Html.DropDownListFor(model => model.MaxQty ,new SelectList(ViewBag.offers, "Value", "Text"),new { @class = "dropdown dropdown-small" }) 
+           </div>
+           @*<div class="col-md-1">
+              <div id="divPrice">price here</div>
+           </div>*@
+           <div class="col-md-3">
+               @Html.ValidationMessageFor(model => model.MinQty)
+               @Html.ValidationMessageFor(model => model.MaxQty)
+              
+           </div>
+       </div>
+
+
+       <div class="row mrg-top-20">
+           <div class="col-md-3">     
+               <span class="mandatory">*</span>          
+           </div>           
+           <div class="col-md-5">
+                @Html.TextBoxFor(model => model.StartDate,null, new {  @class="pName", @data_animation="slide",@data_label="Start Date",@type="date", @Value = Model.StartDate.ToString("dd/MM/yyyy")  })
+           </div>
+           <div class="col-md-3">
+               @Html.ValidationMessageFor(model => model.StartDate)
+           </div>
+       </div>      
+       <div class="row mrg-top-20">
+           <div class="col-md-3">     
+               <span class="mandatory">*</span>          
+           </div>           
+           <div class="col-md-5">
+                @Html.TextBoxFor(model => model.EndDate,null, new { @class="pName", @data_animation="slide",@type="date",@data_label="End Date",@Value = Model.EndDate.ToString("dd/MM/yyyy")  })
+           </div>
+           <div class="col-md-3">
+               @Html.ValidationMessageFor(model => model.EndDate)
+           </div>
+       </div>         
+      
+     @* <div class="row mrg-top-20">
+           <div class="col-md-3">     
+               <span class="mandatory">*</span>          
+           </div>           
+           <div class="col-md-5">
+                @Html.TextBoxFor(model => model.MaxQty,null, new { @class="pName", @data_animation="slide",@data_label="Max Qty" })
+           </div>
+           <div class="col-md-3">
+               @Html.ValidationMessageFor(model => model.MaxQty)
+           </div>
+       </div>     *@
+
+      <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-3">
+            <div id="divtree" class="clstree">
+            <ul id="tree" >
+                <li>  
+                    <a href="#" class="usr">@Model.Item_Name
+                    @Html.TextBoxFor(model => model.Discountpct, new {id = "itemdiscountId",@class="txtOffer" }) @Html.DropDownListFor(model => model.offer_id ,new SelectList(ViewBag.offers, "Value", "Text"),new { @class = "dropdown dropdown-smaller", id = "itemOfrId" })
+                     @Html.HiddenFor(model=>model.menu_id, new { id = "itemMnuId" }) 
+                   @Html.HiddenFor(model =>model.origin, new { id = "itemOrigin" }) 
+                        </a>
+                    @Html.Partial("Childrens",Model)    
+                </li>
+            </ul>
+            </div>
+           </div>
+           <div class="col-md-2">
+              
+                
+           </div>
+            <div class="col-md-3">                 
+               <div class="validate"  style=visibility:hidden  id="divAT">Please select one value</div>
+                 <div class="validate"  style=visibility:hidden  id="divDiscount">Please enter Offer discount at least one value</div>
+           </div>            
+       </div>  
+         
+     
+      <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-2">
+                 <button id='btnSubmit' type="submit" class="btnBlue sub-reset">Submit</button>
+                @*h5 id='btnSubmit' class="btnBlue sub-reset-cancel"> @Html.ActionLink("Save", "Index")</h5>*@
+           </div>
+           <div class="col-md-2">
+                 <h5 class="btnBlue sub-reset-cancel"> @Html.ActionLink("Cancel", "Index")</h5>
+           </div>
+           <div class="col-md-2">
+                 <h5 class="btnBlue sub-reset-cancel"> @Html.ActionLink("Reset", "Create")</h5>
+           </div>
+       </div>
+      <input type="hidden" name="PDT_Names" id="PDT_Names" value="" />
+      <input type="hidden" name="PDT_Discnt" id="PDT_Discnt" value="" />
+      <input type="hidden" name="PDT_OFRTYPE" id="PDT_OFRTYPE" value="" />
+</div>
+}
+
+<script type="text/javascript">
+
+    $(function () {
+
+        var selected_node = $("#divtree").jstree('get_selected').attr('id');
+        $("#divtree").jstree({
+            checkbox: {
+                real_checkboxes: true,
+                checked_parent_open: true,
+                real_checkboxes_names: function (n) { return [("check_" + (n[0].id || Math.ceil(Math.random() * 10000))), n[0].id] }
+            },
+           @* "json_data": {
+                "ajax": {
+                    "url": '@Url.Action("Create", "Offer")',
+                    "type": "POST",
+                    "data": { nodeId: selected_node },
+                    "dataType": "json",
+                    "contentType": "application/json; charset=utf-8"
+                }
+            },*@
+            plugins: ["html_data", "types", "themes", "ui", "checkbox"]
+        })
+        $("#divtree").bind("loaded.jstree", function (event, data) {
+            // you get two params - event & data - check the core docs for a detailed description
+            $(this).jstree("open_all");
+        })
+        $('#MinQty').keypress(function (event) {
+            if ((event.which != 46 || $(this).val().indexOf('.') != -1) && (event.which < 48 || event.which > 57)) {
+                event.preventDefault();
+            }
+            //if (($(this).val().indexOf('.') != -1) && ($(this).val().substring($(this).val().indexOf('.'), $(this).val().indexOf('.').length).length > 2)) {
+            //    event.preventDefault();
+            //}
+        })
+        $('#MaxQty').keypress(function (event) {
+            if ((event.which != 46 || $(this).val().indexOf('.') != -1) && (event.which < 48 || event.which > 57)) {
+                event.preventDefault();
+            }
+            if (($(this).val().indexOf('.') != -1) && ($(this).val().substring($(this).val().indexOf('.'), $(this).val().indexOf('.').length).length > 2)) {
+                event.preventDefault();
+            }
+        })
+
+    });
+    $(document).on('click', '#btnSubmit', function () {
+
+
+        var checked_PDT_names = [];
+        var checked_PDT_Discount_Value = [];
+        var checked_PDT_OFRTYPE = [];
+        var Item_Array = new Array();
+        var cnt = 0;
+        var chkdiscout = 0;
+        $('#divtree').jstree("get_checked", null, true).each(function () {
+
+
+            Item_Array[cnt] = { "Item": ($(this).children('a').text()), "discnt": $(this).children('a').find("#itemdiscountId").val(), "Offer": $(this).children('a').find("#itemOfrId").val(), "Menu": $(this).children('a').find("#itemMnuId").val(), "origin": $(this).children('a').find("#itemOrigin").val() };
+            //  Item_Array[cnt] = { "key": ($(this).children('a').text()), "value": $(this).children('a').find("#itemdiscountId").val() + "~" + $(this).children('a').find("#itemOfrId").val() + "*" + $(this).children('a').find("#itemMnuId").val() + "$" + $(this).children('a').find("#itemOrigin").val() };
+            cnt++
+            var stritem = $(this).children('a').find("#itemdiscountId").val();
+
+            if (stritem != "") {
+                chkdiscout++
+            }
+
+
+        });
+        if (cnt == 0) {
+            document.getElementById("divAT").style.visibility = "visible";
+            $("input[type=text]").first().focus();
+        }
+        else {
+            document.getElementById("divAT").style.visibility = "hidden";
+        }
+
+        if (chkdiscout == 0) {
+            document.getElementById("divDiscount").style.visibility = "visible";
+            $("input[type=text]").first().focus();
+        }
+        else {
+            document.getElementById("divDiscount").style.visibility = "hidden";
+        }
+        
+        //setting to hidden field
+        document.getElementById('PDT_Names').value = JSON.stringify(Item_Array);
+        //document.getElementById('PDT_Discnt').value = checked_PDT_Discount_Value.join(",");
+        //document.getElementById('PDT_OFRTYPE').value = checked_PDT_OFRTYPE.join(",");
+
+
+    });
+
+
+</script>

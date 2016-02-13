@@ -1,0 +1,138 @@
+﻿@model KJGarmentsWeb.Models.ApplicationCart
+@{
+    ViewBag.Title = "Confirm PayPal Payment";
+}
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+<style>
+    .fontstyl {
+        font-weight:bold;
+        font-size:14px;
+        width:550px;       
+    }
+    .fontstyl2 {
+        font-weight:normal;
+        font-size:14px;
+        margin-left:50px;
+        line-height:22px;
+    }
+    .fontstyl3 {
+        font-size:18px; 
+        margin-left:25px; 
+        font-weight:bold; 
+        color:#006793;
+    }
+    .fontstyl4 {
+        font-weight:bold; 
+        font-size:20px; 
+        color:rgb(0,71,102);
+    }
+    .mrgleft1 {
+        margin-left:19px;
+        font-weight:bold;
+        margin-right: 10px;
+    }
+    .mrgleft2 {
+        margin-left:57px;
+        font-weight:bold;
+        margin-right: 10px;
+    }
+    .mrgleft3 {
+        margin-left:106px;
+        font-weight:bold;
+        margin-right: 10px;
+    }
+    .mrgleft4 {
+        margin-left:94px;
+        font-weight:bold;
+        margin-right: 10px;
+    }
+</style>
+<div class="content aligncenter">
+    <div class="floatleft margintop">
+
+        <fieldset>
+            <legend class="fontstyl4">@ViewBag.Title</legend>
+            <div style="font-size:14px; color:red; margin-left:25px;">PayPal say even after the user has entered their details you must get the user to make a final confirmation back on your site.</div>
+            <br />
+            <div class="fontstyl3">Confirm purchase for :</div>            
+            <div class="fontstyl2"><span class="fontstyl">Tracking Reference Id</span><span class="mrgleft1">:</span>@Model.Id</div>
+            <div class="fontstyl2"><span class="fontstyl">Purchased From</span><span class="mrgleft2">:</span>@Model.PurchaseDescription</div>
+            <div class="fontstyl2"><span class="fontstyl">Currency</span><span class="mrgleft3">:</span>@Model.Currency</div>
+            <div class="fontstyl2"><span class="fontstyl">Total Price</span><span class="mrgleft4">:</span>$@Model.TotalPrice</div>
+            <br />
+             @if (Model.Items != null)
+             {
+                <div class="fontstyl3">Your cart contents :</div>
+                
+                    <div class="CSSTableGenerator" style="width:450px; margin-left:50px; margin-top:10px;">
+                        <table style="width:450px">
+                        <tr style="height:40px">
+                            <td>Image Name</td>
+                            <td>Price (SGD)</td>
+                            <td>Quantity</td>                            
+                        </tr>    
+                        @{  
+                 foreach (KJGarmentsWeb.Models.ApplicationCartItem item in Model.Items)
+                            {
+                                <tr id="row-@item.Name">
+                                    <td>@item.Name</td>
+                                    <td>$@item.Price</td>
+                                    <td id="item-count-@item.Name">@item.Quantity</td>                                    
+                                </tr>
+                            }
+     
+                        <tr style="height:35px">
+                            <td><b>Total (@System.Configuration.ConfigurationManager.AppSettings["currency_code"])</b></td>
+                            <td>        </td>
+                            <td id="cart-total"><b>$@Model.TotalPrice </b></td>
+                        </tr>
+                            }    
+                        </table>
+                    </div>                
+             }                 
+            <br />            
+            <div class="fontstyl3">Billing Address :</div>
+            <div class="fontstyl2">@ViewBag.Address</div>
+            <br />
+             @using (Html.BeginForm())
+             {
+                <div style="margin-left:25px;"><input type="submit" class="btnBlue" value="Confirm Payment" /></div>
+             }
+        </fieldset>
+
+        @*<h2>@ViewBag.Title</h2>
+        <p>PayPal say even after the user has entered their details you must get the user to make a final confirmation back on your site.</p>
+        <p>Confirm Purchase for;</p>
+        <ul>
+            <li>Tracking Referencd Id: @Model.Id</li>
+            @if (Model.PurchaseDescription != null)
+            {
+                <li>Purchase Description: @Model.PurchaseDescription</li>
+            }
+            <li>Currency: @Model.Currency</li>
+            <li>Total Price: @Model.TotalPrice</li>
+        </ul>*@
+
+
+
+       @* @if (Model.Items != null)
+        {
+            <p>Your cart contents;</p>
+            <ul>
+                @foreach (PeakzArtWeb.Models.ApplicationCartItem item in Model.Items)
+                {
+                    <li>@(item.Quantity + " x " + item.Name + " @ " + item.Price + " each")</li>
+                }
+            </ul>
+        }
+
+        <div class="dispBlock">
+          @ViewBag.Address
+        </div>
+
+        @using (Html.BeginForm())
+        {
+            <input type="submit" value="Confirm Payment" />
+        }*@
+    </div>
+</div>

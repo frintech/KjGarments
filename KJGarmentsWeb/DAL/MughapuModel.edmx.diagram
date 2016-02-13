@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="802db13be90e4348a4b137965db0b542" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="MughapuModel.Brand" Width="1.5" PointX="7.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MughapuModel.KEY_Specifications" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MughapuModel.Menu" Width="1.5" PointX="8.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MughapuModel.menuTree" Width="1.5" PointX="11" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MughapuModel.offer" Width="1.5" PointX="2.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MughapuModel.Offer_Mapping" Width="1.5" PointX="5" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MughapuModel.Offer_type" Width="1.5" PointX="2.75" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MughapuModel.OFFER_VALUE_TYPE" Width="1.5" PointX="7.75" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MughapuModel.PDT_IMAGE_PATH" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MughapuModel.PRODUCT" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MughapuModel.Spec_category" Width="1.5" PointX="9.75" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MughapuModel.Value_Specification" Width="1.5" PointX="6" PointY="4.5" IsExpanded="true" />
+        <AssociationConnector Association="MughapuModel.FK_Value_Specification_KEY_Specifications" ManuallyRouted="false" />
+        <AssociationConnector Association="MughapuModel.FK_menuTree_Menu" ManuallyRouted="false" />
+        <AssociationConnector Association="MughapuModel.FK_Offer_Mapping_offer" ManuallyRouted="false" />
+        <AssociationConnector Association="MughapuModel.FK_Offer_Mapping_Offer_type" ManuallyRouted="false" />
+        <AssociationConnector Association="MughapuModel.FK_PDT_IMAGE_PATH_PRODUCT" ManuallyRouted="false" />
+        <AssociationConnector Association="MughapuModel.FK_Value_Specification_PRODUCT" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="MughapuModel.ProductCart" Width="1.5" PointX="1.5" PointY="19.5" />
+        <EntityTypeShape EntityType="MughapuModel.ProductOrder" Width="1.5" PointX="2.125" PointY="0.5" />
+        <EntityTypeShape EntityType="MughapuModel.ProductOrderDetail" Width="1.5" PointX="1.1623449330974114" PointY="16.906308629040751" />
+        <AssociationConnector Association="MughapuModel.FK_Cart_Album_3" />
+        <AssociationConnector Association="MughapuModel.FK_InvoiceLine_Album2" />
+        <AssociationConnector Association="MughapuModel.FK__InvoiceLi__Invoi__2F10007B1" />
+        <EntityTypeShape EntityType="MughapuModel.Coupon" Width="1.5" PointX="7" PointY="0.875" />
+        <EntityTypeShape EntityType="MughapuModel.SpecialOffer" Width="1.5" PointX="7.625" PointY="17.125" />
+        <EntityTypeShape EntityType="MughapuModel.SpecialOfferProduct" Width="1.5" PointX="10" PointY="6.375" />
+        <EntityTypeShape EntityType="MughapuModel.TreeviewList" Width="1.5" PointX="5.75" PointY="16.875" />
+        <EntityTypeShape EntityType="MughapuModel.Coupon_Code" Width="1.5" PointX="0.5" PointY="0.5" />
+        <EntityTypeShape EntityType="MughapuModel.CouponProduct" Width="1.5" PointX="3.625" PointY="16.875" />
+        <EntityTypeShape EntityType="MughapuModel.User" Width="1.5" PointX="11.780290480600804" PointY="15.972224466489733" />
+        <EntityTypeShape EntityType="MughapuModel.User_Info" Width="1.5" PointX="9.5679828643649731" PointY="17.197857119700807" />
+        <EntityTypeShape EntityType="MughapuModel.Banner_Image_Dtl" Width="1.5" PointX="8.9442532458083015" PointY="7.0841903421488546" />
+        <EntityTypeShape EntityType="MughapuModel.ProductOfferValue" Width="1.5" PointX="5.7903767739377807" PointY="14.872666246664089" />
+        <EntityTypeShape EntityType="MughapuModel.ProductCouponValue" Width="1.5" PointX="0.36282684484628347" PointY="14.373617879289025" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

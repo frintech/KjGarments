@@ -1,0 +1,926 @@
+﻿@model KJGarmentsWeb.Models.EditProductdetails
+@{
+    ViewBag.Title = "Edit";
+}
+
+  @{  
+                                               
+     System.Globalization.CultureInfo Indian = new System.Globalization.CultureInfo("hi-IN");
+  }
+@using (Html.BeginForm("Edit", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    int lintFirstflag=0;
+    int Sidefalg=0;
+    int HoriFlag=0;
+    int vertiflag=0;
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+      <div class="container">      
+             @Html.HiddenFor(model => model.Pid)     
+            <div class="row mrg-top-xs">
+           <div class="col-md-3"> 
+               <span class="mandatory">*</span>              
+           </div>
+           <div class="col-md-2">
+               Category
+           </div>
+           <div class="col-md-3">
+               @Html.DropDownListFor(model => model.Category_id, new SelectList(ViewBag.Menus, "Value", "Text"), "- Select Category -",new { @disabled = "disabled", @class = "dropdown dropdown-large" }) 
+           </div>
+           <div class="col-md-3">
+               @Html.ValidationMessageFor(model => model.Category_id,null,"Please select Category")
+           </div>
+       </div>
+
+       <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>
+           <div class="col-md-2">
+               Sub Category
+           </div>
+           <div class="col-md-3">
+                @Html.DropDownListFor(model => model.Sub_Category_id ,new SelectList(ViewBag.subcategory, "Value", "Text"),null,new { @disabled = "disabled", @class = "dropdown dropdown-large" }) 
+           </div>
+           <div class="col-md-3">
+                @Html.ValidationMessageFor(model => model.Sub_Category_id)
+           </div>
+       </div>
+
+       <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>
+           <div class="col-md-2">
+               Brand
+           </div>
+           <div class="col-md-3">
+                @Html.DropDownListFor(model => model.brand_id ,new SelectList(ViewBag.Brands, "Value", "Text"),"- Select brands -",new { @disabled = "disabled", @class = "dropdown dropdown-large" }) 
+           </div>
+           <div class="col-md-3">
+               @Html.ValidationMessageFor(model => model.brand_id)
+                <div class="validate"  style=visibility:hidden  id="divBrnd">Please select the Brand.</div>
+           </div>
+       </div>
+       <div class="row mrg-top-20">
+           <div class="col-md-3">      
+               <span class="mandatory">*</span>         
+           </div>          
+           <div class="col-md-5">
+                @Html.TextBoxFor(model => model.Product_Code,null, new {  @class="pName disable", @data_animation="slide",@data_label="Product Code", @readonly = true })
+           </div>
+           <div class="col-md-3">
+               @Html.ValidationMessageFor(model => model.Product_Code)
+           </div>
+       </div>
+
+       <div class="row mrg-top-20">
+           <div class="col-md-3">     
+               <span class="mandatory">*</span>          
+           </div>           
+           <div class="col-md-5">
+                @Html.TextBoxFor(model => model.Product_Name,null, new { @class="pName", @data_animation="slide",@data_label="Product Name" })
+           </div>
+           <div class="col-md-3">
+               @Html.ValidationMessageFor(model => model.Product_Name)
+           </div>
+       </div>
+                
+        <div class="row mrg-top-20">
+           <div class="col-md-3">  
+               <span class="mandatory">*</span>             
+           </div>           
+           <div class="col-md-5">
+                @Html.TextBoxFor(model => model.Product_Price, String.Format("{0:f0}",Model.Product_Price).ToString() ,new { @class="pName", @data_animation="slide",@data_label="Product Price", @autocomplete = "off" })
+           </div>
+           <div class="col-md-3">
+               @Html.ValidationMessageFor(model => model.Product_Price)
+           </div>
+       </div>
+     
+ @*      <div class="row mrg-top-20">
+           <div class="col-md-3">               
+               <span class="mandatory">*</span>
+           </div>           
+           <div class="col-md-2">
+                 @Html.TextBoxFor(model => model.Product_offer,null, new { @class="pOffer", @data_animation="slide",@data_label="Offer", @autocomplete = "off"})
+           </div>
+           
+            <div class="col-md-1">
+                &nbsp;
+                  @Html.DropDownListFor(model => model.offer_id ,new SelectList(ViewBag.offers, "Value", "Text"),new { @class = "dropdown dropdown-small" }) 
+           </div>
+           <div class="col-md-1">
+              <div id="divPrice">price here</div>
+           </div>
+           <div class="col-md-3">
+               @Html.ValidationMessageFor(model => model.Product_offer)
+               @Html.ValidationMessageFor(model => model.offer_id)
+               <div class="validate"  style=visibility:hidden  id="divAT">Please enter the value 1 to 100</div>
+               <div class="validate"  style=visibility:hidden  id="divrs">Please enter the value less than price</div>
+           </div>
+       </div>*@
+       <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-3">
+                 Show this product in Home &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Html.CheckBoxFor(model => model.Homeflag, new { @checked = "checked",@class="pcheck-box" }) 
+           </div>
+            <div class="col-md-1">               
+                  
+           </div>            
+       </div>
+
+           @* banner Image
+          <div >
+               <img src="@Url.Content("~/Images/RESZIMGS/" + Model.BannerImageName)" alt="" width="75" height="75">
+               @Html.TextBoxFor(model => model.BannerImagepath, new { type = "file" })
+                   
+           </div>*@
+
+
+
+
+     
+   @foreach (var item in Model.ImageList) 
+                {
+                    if (item.Imagetype.Equals("F"))
+                    {
+                        lintFirstflag=1;
+                                 
+                             <div class="row mrg-top-20">
+                                   <div class="col-md-3"> 
+                                                     
+                                       <span class="mandatory"><img src="@Url.Content("~/Images/RESZIMGS/" +item.Imagepath)" alt="" width="75" height="75">&nbsp;*</span>
+                                   </div>           
+                                   <div class="col-md-3">
+                                        @Html.TextBoxFor(model => model.Imagepath, new { type = "file",@class="upload-file" })
+                                   </div>
+                                   <div class="col-md-2">
+                                        @Html.RadioButtonFor(model => model.Firstflag, 1, new { id = "Flag",@class="pcheck-box" }) Set as First Image
+                                   </div>
+                                    <div class="col-md-3">                 
+                                        @Html.ValidationMessageFor(model => model.Imagepath)
+                                   </div>            
+                               </div>
+                             
+                    } 
+                       
+                    if (item.Imagetype.Equals("S"))
+                    {
+                        Sidefalg=1;
+                                 
+                                  <div class="row mrg-top-20">
+                                       <div class="col-md-3">  
+                                           <span class="mandatory"><img src="@Url.Content("~/Images/RESZIMGS/" +item.Imagepath)" alt="" width="75" height="75">&nbsp;&nbsp;</span>
+                                       </div>           
+                                       <div class="col-md-3">
+                                            @Html.TextBoxFor(model => model.sideImagepath, new { type = "file",@class="upload-file" })
+                                       </div>
+                                       <div class="col-md-2">
+                                            @Html.RadioButtonFor(model => model.Firstflag, 2, new { id = "SideFlag",@class="pcheck-box" }) Set as First Image
+                                       </div>
+                                        <div class="col-md-3">                 
+               
+                                       </div>            
+                                   </div>
+                           
+                    }   
+                       
+                    if (item.Imagetype.Equals("V"))
+                    {
+                         vertiflag=1;
+                                 
+                                <div class="row mrg-top-20">
+                               <div class="col-md-3">    
+                                   <span class="mandatory"><img src="@Url.Content("~/Images/RESZIMGS/" +item.Imagepath)" alt="" width="75" height="75">&nbsp;&nbsp;</span>           
+                               </div>           
+                               <div class="col-md-3">
+                                    @Html.TextBoxFor(model => model.verticalImagepath, new { type = "file",@class="upload-file" })    
+                               </div>
+                               <div class="col-md-2">
+                                    @Html.RadioButtonFor(model => model.Firstflag,4, new { id = "vertiFlag",@class="pcheck-box" }) Set as First Image
+                               </div>
+                                <div class="col-md-3">                 
+               
+                               </div>            
+                           </div>
+                              
+                    } 
+                     
+                    if (item.Imagetype.Equals("H"))
+                    {
+                        HoriFlag=1;
+                                 @*<img src="@Url.Content("~/Images/RESZIMGS/" +item.Imagepath)" alt="" width="75" height="75">*@
+                         <div class="row mrg-top-20">
+                                   <div class="col-md-3">          
+                                       <span class="mandatory"><img src="@Url.Content("~/Images/RESZIMGS/" +item.Imagepath)" alt="" width="75" height="75">&nbsp;&nbsp;</span>        
+                                   </div>           
+                                   <div class="col-md-3">
+                                       @Html.TextBoxFor(model => model.horizontalImagepath, new { type = "file",@class="upload-file" })
+                                   </div>
+                                   <div class="col-md-2">
+                                       @Html.RadioButtonFor(model => model.Firstflag, 3, new { id = "horiFlag",@class="pcheck-box" }) Set as First Image
+                                   </div>
+                                    <div class="col-md-3">                 
+               
+                                   </div>            
+                               </div>
+                              
+                    } 
+                       
+           
+                } 
+          @if (Sidefalg==0)
+          {
+                                  <div class="row mrg-top-20">
+                                       <div class="col-md-3">               
+                                       </div>           
+                                       <div class="col-md-3">
+                                            @Html.TextBoxFor(model => model.sideImagepath, new { type = "file",@class="upload-file" })
+                                       </div>
+                                       <div class="col-md-2">
+                                            @Html.RadioButtonFor(model => model.Firstflag, 2, new { id = "SideFlag",@class="pcheck-box" }) Set as First Image
+                                       </div>
+                                        <div class="col-md-3">                 
+               
+                                       </div>            
+                                   </div>
+          }
+          @if (HoriFlag == 0)
+          {
+               <div class="row mrg-top-20">
+                                   <div class="col-md-3">               
+                                   </div>           
+                                   <div class="col-md-3">
+                                       @Html.TextBoxFor(model => model.horizontalImagepath, new { type = "file",@class="upload-file" })
+                                   </div>
+                                   <div class="col-md-2">
+                                       @Html.RadioButtonFor(model => model.Firstflag, 3, new { id = "horiFlag",@class="pcheck-box" }) Set as First Image
+                                   </div>
+                                    <div class="col-md-3">                 
+               
+                                   </div>            
+                               </div>
+          }
+           @if (vertiflag == 0)
+           {
+                                       <div class="row mrg-top-20">
+                               <div class="col-md-3">               
+                               </div>           
+                               <div class="col-md-3">
+                                    @Html.TextBoxFor(model => model.verticalImagepath, new { type = "file",@class="upload-file" })    
+                               </div>
+                               <div class="col-md-2">
+                                    @Html.RadioButtonFor(model => model.Firstflag,4, new { id = "vertiFlag",@class="pcheck-box" }) Set as First Image
+                               </div>
+                                <div class="col-md-3">                 
+               
+                               </div>            
+                           </div>
+                              
+           }
+       
+      @*<div class="row mrg-top-20">
+           <div class="col-md-3">               
+               <span class="mandatory"><img src="@Url.Content("~/Images/RESZIMGS/" + Model.BannerImageName)" alt="" width="75" height="75">&nbsp;&nbsp;</span>   
+           </div>           
+           <div class="col-md-3">               
+                 @Html.TextBoxFor(model => model.BannerImagepath, new { type = "file",@class="upload-file" })
+           </div>
+           <div class="col-md-2">
+               Upload Banner Image 
+               
+           </div>
+            <div class="col-md-3">                 
+               
+           </div>            
+       </div>   *@
+
+   <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-5">
+                @Html.TextBoxFor(model => model.Product_Description,null, new { @class="pName", @data_animation="slide",@data_label="Product Description" })                
+           </div>
+           <div class="col-md-3">
+               @Html.ValidationMessageFor(model => model.Product_Description)
+           </div>
+       </div>
+         <div class="row mrg-top-20">
+           <div class="col-md-3">  
+               <span class="mandatory">*</span>             
+           </div>           
+           <div class="col-md-5">
+                @Html.TextBoxFor(model => model.Brand,null, new { @class="pName", @data_animation="slide",@data_label="Brand"  })
+           </div>
+           <div class="col-md-3">
+               @Html.ValidationMessageFor(model => model.Brand)
+           </div>
+       </div>
+   <div id="divwatches">
+      <div class="row mrg-top-20">
+           <div class="col-md-3">               
+               <span class="mandatory">*</span>
+           </div>           
+           <div class="col-md-5">
+                 @Html.TextBoxFor(model => model.Model,null, new { @class="pName", @data_animation="slide",@data_label="Model" })
+           </div>
+           <div class="col-md-3">
+               @Html.ValidationMessageFor(model => model.Model)
+           </div>
+       </div>
+       <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-4">
+                 @Html.TextBoxFor(model => model.Movement,null, new { @class="pName", @data_animation="slide",@data_label="Movement" })
+           </div>
+           <div class="col-md-3">
+               @Html.ValidationMessageFor(model => model.Movement)
+           </div>
+       </div>
+       <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-4">
+                 @Html.TextBoxFor(model => model.Features,null, new { @class="pName", @data_animation="slide",@data_label="Features"   })
+           </div>
+           <div class="col-md-3">
+                @Html.ValidationMessageFor(model=>model.Features)
+           </div>
+       </div>
+       <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-4">
+                 @Html.TextBoxFor(model => model.Water_Resistance,null, new { @class="pName", @data_animation="slide",@data_label="Water Resistance"   })
+           </div>
+           <div class="col-md-3">
+                @Html.ValidationMessageFor(model=>model.Water_Resistance)
+           </div>
+       </div>
+       <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-4">
+                  @Html.TextBoxFor(model => model.Box,null, new {  @class="pName", @data_animation="slide",@data_label="Box"  })
+           </div>
+           <div class="col-md-3">
+                 @Html.ValidationMessageFor(model=>model.Box)
+           </div>
+       </div>
+       <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-4">
+                  @Html.TextBoxFor(model => model.Case_Material,null, new { @class="pName", @data_animation="slide",@data_label="Case Material" })
+           </div>
+           <div class="col-md-3">
+                 @Html.ValidationMessageFor(model=>model.Case_Material)
+           </div>
+       </div>
+       <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-4">
+                  @Html.TextBoxFor(model => model.Case_Back,null, new { @class="pName", @data_animation="slide",@data_label="Case Back" })
+           </div>
+           <div class="col-md-3">
+                 @Html.ValidationMessageFor(model=>model.Case_Back)
+           </div>
+       </div>
+       <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-4">
+                  @Html.TextBoxFor(model => model.Case_Size,null, new { @class="pName", @data_animation="slide",@data_label="Case Size" })
+           </div>
+           <div class="col-md-3">
+                 @Html.ValidationMessageFor(model=>model.Case_Size)
+           </div>
+       </div>
+       <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-4">
+                  @Html.TextBoxFor(model => model.Glass,null, new { @class="pName", @data_animation="slide",@data_label="Glass"  })
+           </div>
+           <div class="col-md-3">
+                 @Html.ValidationMessageFor(model=>model.Glass)
+           </div>
+       </div>
+       <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-4">
+                   @Html.TextBoxFor(model => model.Dial_Colour,null, new { @class="pName", @data_animation="slide",@data_label="Dial Colour"  })
+           </div>
+           <div class="col-md-3">
+                 @Html.ValidationMessageFor(model=>model.Dial_Colour)
+           </div>
+       </div>
+       <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-4">
+                   @Html.TextBoxFor(model => model.Strap_Type,null, new { @class="pName", @data_animation="slide",@data_label="Strap Type"  })
+           </div>
+           <div class="col-md-3">
+                 @Html.ValidationMessageFor(model=>model.Strap_Type)
+           </div>
+       </div>
+       </div>
+          <div id="divSunglasses" style="display:none">
+            <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-4">
+                   @Html.TextBoxFor(model => model.Lens_Type,null, new { @class="pName", @data_animation="slide",@data_label="Lens Type" })
+           </div>
+           <div class="col-md-3">
+                 @Html.ValidationMessageFor(model=>model.Lens_Type)
+           </div>
+       </div>
+       <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-4">
+                   @Html.TextBoxFor(model => model.Lens_Colour,null, new {  @class="pName", @data_animation="slide",@data_label="Lens Colour" })
+           </div>
+           <div class="col-md-3">
+                 @Html.ValidationMessageFor(model=>model.Lens_Colour)
+           </div>
+       </div>
+       <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-4">
+                   @Html.TextBoxFor(model => model.Frame_Colour,null, new { @class="pName", @data_animation="slide",@data_label="Frame Colour"})
+           </div>
+           <div class="col-md-3">
+                 @Html.ValidationMessageFor(model=>model.Frame_Colour)
+           </div>
+       </div>
+
+
+
+       </div>
+        <div id="divLuxuryPens" style="display:none">
+            <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-4">
+                   @Html.TextBoxFor(model => model.Model,null, new { @class="pName", @data_animation="slide",@data_label="Model" })
+           </div>
+           <div class="col-md-3">
+                 @Html.ValidationMessageFor(model=>model.Model)
+           </div>
+       </div>
+       <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-4">
+                   @Html.TextBoxFor(model => model.Product_Type,null, new {  @class="pName", @data_animation="slide",@data_label="Product Type" })
+           </div>
+           <div class="col-md-3">
+                 @Html.ValidationMessageFor(model=>model.Product_Type)
+           </div>
+       </div>
+       <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-4">
+                   @Html.TextBoxFor(model => model.Pen_Colour,null, new { @class="pName", @data_animation="slide",@data_label="Pen Colour"})
+           </div>
+           <div class="col-md-3">
+                 @Html.ValidationMessageFor(model=>model.Pen_Colour)
+           </div>
+       </div>
+
+
+
+       </div>
+       <div id="divBelts" style="display:none">
+            <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-4">
+                   @Html.TextBoxFor(model => model.Belt_Size,null, new { @class="pName", @data_animation="slide",@data_label="Belt Size" })
+           </div>
+           <div class="col-md-3">
+                 @Html.ValidationMessageFor(model=>model.Belt_Size)
+           </div>
+       </div>
+       <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-4">
+                   @Html.TextBoxFor(model => model.Buckle_Colour,null, new {  @class="pName", @data_animation="slide",@data_label="Buckle Colour" })
+           </div>
+           <div class="col-md-3">
+                 @Html.ValidationMessageFor(model=>model.Buckle_Colour)
+           </div>
+       </div>
+       <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-4">
+                   @Html.TextBoxFor(model => model.Belt_Colour,null, new { @class="pName", @data_animation="slide",@data_label="Belt Colour"})
+           </div>
+           <div class="col-md-3">
+                 @Html.ValidationMessageFor(model=>model.Belt_Colour)
+           </div>
+       </div>
+
+
+
+       </div>
+            <div id="divWallets" style="display:none">
+            <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-4">
+                   @Html.TextBoxFor(model => model.Wallet_Colour,null, new { @class="pName", @data_animation="slide",@data_label="Wallet Colour" })
+           </div>
+           <div class="col-md-3">
+                 @Html.ValidationMessageFor(model=>model.Wallet_Colour)
+           </div>
+       </div>
+                </div>
+
+       <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-4">
+                   @Html.TextBoxFor(model => model.Warranty,null, new { @class="pName", @data_animation="slide",@data_label="Warranty" })
+           </div>
+           <div class="col-md-3">
+                 @Html.ValidationMessageFor(model=>model.Warranty)
+           </div>
+       </div>
+       <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-4">
+                   @Html.TextBoxFor(model => model.Shipping,null, new {  @class="pName", @data_animation="slide",@data_label="Shipping" })
+           </div>
+           <div class="col-md-3">
+                 @Html.ValidationMessageFor(model=>model.Shipping)
+           </div>
+       </div>
+       <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-4">
+                   @Html.TextBoxFor(model => model.Payment_Method,null, new { @class="pName", @data_animation="slide",@data_label="Payment Method"})
+           </div>
+           <div class="col-md-3">
+                 @Html.ValidationMessageFor(model=>model.Payment_Method)
+           </div>
+       </div>
+       <div class="row mrg-top-20">
+           <div class="col-md-3">               
+           </div>           
+           <div class="col-md-2">
+                 <button type="submit" class="btnBlue sub-reset">Save</button>
+           </div>
+           <div class="col-md-2">
+                 <h5 class="btnBlue sub-reset-cancel"> @Html.ActionLink("Cancel", "Index")</h5>
+           </div>
+           <div class="col-md-2">
+                <h5 class="btnBlue sub-reset-cancel"> @Html.ActionLink("RESET", "Edit", Model.Pid)</h5>
+           </div>
+       </div>
+   </div>
+  
+}
+
+
+<script type="text/javascript">
+    function randomString() {
+        var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+        var string_length = Math.floor((Math.random() * 5) + 1);
+        var randomstring = '';
+        for (var i = 0; i < string_length; i++) {
+            var rnum = Math.floor(Math.random() * chars.length);
+            randomstring += chars.substring(rnum, rnum + 1);
+        }
+        $('#spnstring').html(randomstring);
+    }
+
+    //get file size
+
+
+    //get file path from client system
+
+    function getNameFromPath(strFilepath) {
+        var objRE = new RegExp(/([^\/\\]+)$/);
+        var strName = objRE.exec(strFilepath);
+
+        if (strName == null) {
+            return null;
+        }
+        else {
+            return strName[0];
+        }
+    }
+
+
+
+    $(function () {
+        $("#ImagePhoto").change(function () {
+            var file = getNameFromPath($(this).val());
+            if (file != null) {
+                var extension = file.substr((file.lastIndexOf('.') + 1));
+                switch (extension) {
+                    case 'jpg':
+                        flag = true;
+                    case 'jpeg':
+                        flag = true;
+                    case 'JPG':
+                        flag = true;
+                    case 'png':
+                        flag = true;
+                    case 'gif':
+                        flag = true;
+                        break;
+                    default:
+                        flag = false;
+                }
+            }
+
+            if (flag == false) {
+                $("#validationTxt").text("You can upload only jpg,jpeg,png,gif extension file");
+                return false;
+            }
+            else {
+                var size = 0;
+                if (size > 3) {
+                    $("#validationTxt").text("You can upload file up to 1 MB");
+                }
+                else {
+                    $("#validationTxt").text("");
+                }
+            }
+        });
+    });
+
+
+
+    $(document).ready(function () {
+        $("#Sub_Category_id").prop("disabled", true);
+        var menuid = $("#Category_id").val();
+        if (menuid == 1) {
+            document.getElementById("divSunglasses").style.display = "none";
+            document.getElementById("divwatches").style.display = "block";
+            document.getElementById("divLuxuryPens").style.display = "none";
+            document.getElementById("divBelts").style.display = "none";
+            document.getElementById("divWallets").style.display = "none";
+
+        }
+        else if (menuid == 4) {
+            document.getElementById("divSunglasses").style.display = "block";
+            document.getElementById("divwatches").style.display = "none";
+            document.getElementById("divLuxuryPens").style.display = "none";
+            document.getElementById("divBelts").style.display = "none";
+            document.getElementById("divWallets").style.display = "none";
+
+        }
+        else if (menuid == 5) {
+            document.getElementById("divSunglasses").style.display = "none";
+            document.getElementById("divwatches").style.display = "none";
+            document.getElementById("divLuxuryPens").style.display = "block";
+            document.getElementById("divBelts").style.display = "none";
+            document.getElementById("divWallets").style.display = "none";
+
+        }
+        else if (menuid == 6) {
+            document.getElementById("divSunglasses").style.display = "none";
+            document.getElementById("divwatches").style.display = "none";
+            document.getElementById("divLuxuryPens").style.display = "none";
+            document.getElementById("divBelts").style.display = "block";
+            document.getElementById("divWallets").style.display = "none";
+
+        }
+        else if (menuid == 7) {
+            document.getElementById("divSunglasses").style.display = "none";
+            document.getElementById("divwatches").style.display = "none";
+            document.getElementById("divLuxuryPens").style.display = "none";
+            document.getElementById("divBelts").style.display = "none";
+            document.getElementById("divWallets").style.display = "block";
+
+        }
+        else {
+            document.getElementById("divSunglasses").style.display = "none";
+            document.getElementById("divwatches").style.display = "block";
+            document.getElementById("divLuxuryPens").style.display = "none";
+            document.getElementById("divBelts").style.display = "none";
+            document.getElementById("divWallets").style.display = "none";
+        }
+
+
+
+        $("#Category_id").change(function () {
+
+            if ($("#Category_id").val() != "") {
+                var menuid = $("#Category_id").val();
+                $.post('@Url.Action("LoadSubCategory", "Admin")', { "menuid": menuid },
+                   function (data) {
+                       $("#Sub_Category_id").empty();
+                       $.each(data, function (id, option) {
+                           $("#Sub_Category_id").append($('<option></option>').val(option.Mnu_id).html(option.Mnu_Name));
+                       });
+                       $("#Sub_Category_id").prop("disabled", false);
+                   });
+            }
+        })
+
+        $('#Product_Name').keypress(function (event) {
+            if (($("#Category_id").val() == 1) && ($("#brand_id").val() < 1)) {
+
+                document.getElementById("divBrnd").style.visibility = "visible";
+            }
+            else {
+                document.getElementById("divBrnd").style.visibility = "hidden";
+
+            }
+
+
+        })
+        $('#Product_Price').keypress(function (event) {
+            if ((event.which != 46 || $(this).val().indexOf('.') != -1) && (event.which < 48 || event.which > 57)) {
+                event.preventDefault();
+            }
+            if (($(this).val().indexOf('.') != -1) && ($(this).val().substring($(this).val().indexOf('.'), $(this).val().indexOf('.').length).length > 2)) {
+                event.preventDefault();
+            }
+        })
+        $('#Product_Price').keyup(function (event) {
+            var value = $('#Product_offer').val();
+            if (($("#offer_id").val() == 1) && (value >= 100)) {
+                document.getElementById("divAT").style.visibility = "visible";
+            }
+            else {
+                document.getElementById("divAT").style.visibility = "hidden";
+
+            }
+            var pricevalue = $('#Product_Price').val();
+            if (($("#offer_id").val() == 2) && (parseInt(value) > parseInt(pricevalue))) {
+                document.getElementById("divrs").style.visibility = "visible";
+            }
+            else {
+                document.getElementById("divrs").style.visibility = "hidden";
+
+            }
+
+            calculate_DiscountPrice(pricevalue, value, $("#offer_id").val());
+        })
+        $("#offer_id").change(function () {
+
+            if ($("#offer_id").val() != "") {
+                var value = $('#Product_offer').val();
+                if (($("#offer_id").val() == 1) && (value >= 100)) {
+                    document.getElementById("divAT").style.visibility = "visible";
+                }
+                else {
+                    document.getElementById("divAT").style.visibility = "hidden";
+
+                }
+                var pricevalue = $('#Product_Price').val();
+                if (($("#offer_id").val() == 2) && (parseInt(value) > parseInt(pricevalue))) {
+                    document.getElementById("divrs").style.visibility = "visible";
+                }
+                else {
+                    document.getElementById("divrs").style.visibility = "hidden";
+
+                }
+                calculate_DiscountPrice(pricevalue, value, $("#offer_id").val());
+            }
+        })
+        $('#Product_offer').keypress(function (event) {
+            if ((event.which != 46 || $(this).val().indexOf('.') != -1) && (event.which < 48 || event.which > 57)) {
+                event.preventDefault();
+            }
+            if ($(this).val().length > 5) {
+                event.preventDefault();
+            }
+
+        })
+
+        $('#Product_offer').keyup(function (event) {
+            var value = $('#Product_offer').val();
+            if (($("#offer_id").val() == 1) && (value >= 100)) {
+                document.getElementById("divAT").style.visibility = "visible";
+            }
+            else {
+                document.getElementById("divAT").style.visibility = "hidden";
+
+            }
+
+            var pricevalue = $('#Product_Price').val();
+
+            if (($("#offer_id").val() == 2) && (parseInt(value) > parseInt(pricevalue))) {
+                document.getElementById("divrs").style.visibility = "visible";
+            }
+            else {
+                document.getElementById("divrs").style.visibility = "hidden";
+
+            }
+
+            calculate_DiscountPrice(pricevalue, value, $("#offer_id").val());
+        })
+        $('#Product_offer').keypress(function (event) {
+            if ((event.which != 46 || $(this).val().indexOf('.') != -1) && (event.which < 48 || event.which > 57)) {
+                event.preventDefault();
+            }
+            if ($(this).val().length > 5) {
+                event.preventDefault();
+            }
+
+
+        })
+
+        calculate_DiscountPrice($('#Product_Price').val(), $('#Product_offer').val(), $("#offer_id").val());
+
+        function calculate_DiscountPrice(pricevalue, offervalue, offertype) {
+            var result = pricevalue;
+            if (pricevalue != "" && offervalue != "") {
+                if (offertype == 1) {
+                    result = pricevalue - (pricevalue * (offervalue / 100));
+                } else {
+                    result = pricevalue - offervalue;
+                }
+            }
+
+            var x = result;
+            x = x.toString();
+            var arr = x.split('.');
+            x = arr[0].toString();
+
+            var lastThree = x.substring(x.length - 3);
+            var otherNumbers = x.substring(0, x.length - 3);
+            if (otherNumbers != '')
+                lastThree = ',' + lastThree;
+            var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
+            if (arr.length == 2) {
+                res += "." + arr[1].toString();
+            }
+            //alert(res);
+
+            $('#divPrice').text("Rs." + res + "");
+            //$('#divPrice').html = "jjjk";
+        }
+
+        $("#brand_id").change(function () {
+
+            if ($("#brand_id").val() != "") {
+                document.getElementById("divBrnd").style.visibility = "hidden";
+                var text = "";
+                var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+                for (var i = 0; i < 3; i++) {
+                    text += possible.charAt(Math.floor(Math.random() * possible.length));
+                }
+
+
+
+                // var menuid = $("#offer_id").val();
+                $("#Product_Code").val($("#brand_id option:selected").text().substring(0, 3).toUpperCase() + "-" + text.toUpperCase());
+
+
+
+            }
+        })
+
+        $("#Category_id").change(function () {
+
+            if ($("#Category_id").val() != "") {
+
+                var text = "";
+                var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+                for (var i = 0; i < 3; i++) {
+                    text += possible.charAt(Math.floor(Math.random() * possible.length));
+                }
+
+
+
+                // var menuid = $("#offer_id").val();
+                $("#Product_Code").val($("#Category_id option:selected").text().substring(0, 3).toUpperCase() + "-" + text.toUpperCase());
+
+
+
+            }
+        })
+
+
+
+    });
+
+
+</script>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    
+}

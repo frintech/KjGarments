@@ -1,0 +1,138 @@
+﻿@model KJGarmentsWeb.Models.UserLoginModel
+
+@{
+    ViewBag.Title = "Log in";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ @if (TempData["Usr_Message"] != null)
+{
+<script>
+    alert('@TempData["Usr_Message"]');
+       
+ 
+</script>
+}
+
+
+
+<section id="loginForm">
+
+@using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnURL}))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container">
+         <div class="row mrg-top-xs">
+           <div class="col-md-5"> 
+                        
+           </div>
+           <div class="col-md-2">
+              <h3> User Login </h3>
+           </div>
+        </div>
+           <div class="row mrg-top-20">
+               <div class="col-md-4">               
+               </div>
+               @*<div class="col-md-2">
+                   User Name
+               </div>*@
+               <div class="col-md-3">
+                     
+                    @Html.TextBoxFor(model => model.UserName,null, new { @class="pName", @data_animation="slide",@data_label="EmailId" })
+               </div>
+               <div class="col-md-3">
+                     @Html.ValidationMessageFor(m => m.UserName)
+               </div>
+           </div>
+           
+             <div class="row mrg-top-20">
+               <div class="col-md-4">               
+               </div>
+               @*<div class="col-md-2">
+                   Password
+               </div>*@
+               <div class="col-md-3">
+                   
+                   @Html.TextBoxFor(model => model.Password,null, new { @class="pName", @data_animation="slide",@data_label="Password",@type="Password" })
+               </div>
+               <div class="col-md-3">
+                      @Html.ValidationMessageFor(m => m.Password)
+               </div>
+             </div>
+
+            <div class="row mrg-top-20">
+               <div class="col-md-4">               
+               </div>              
+               <div class="col-md-1">
+                   @Html.CheckBoxFor(m => m.RememberMe,new { @class="login-chkx" })
+                 
+               </div>
+               <div class="col-md-2">
+                   <h5 class="login-chk">Remember Me?</h5>
+               </div>
+             </div>
+
+             <div class="row mrg-top-20">
+               <div class="col-md-4">               
+               </div>
+               
+               <div class="col-md-3">
+                  <input type="submit" class="btnBlue" value="Log in" />
+               </div>
+
+                 <div class="col-md-3">
+            
+<input type='submit' class="btnBlue" formaction='/UserInfo/Create' value='Register'>
+                     &nbsp;&nbsp;&nbsp;&nbsp;
+                   <input type='submit' class="btnBlue" formaction='/UserInfo/ForgotPassword' value='Forgot  Password'>
+              
+                  </div>
+                
+               
+               <div class="col-md-3">
+                   
+               </div>
+             </div>
+
+             
+    </div>
+   
+}
+</section>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+<script type="text/javascript">
+
+    $.ajaxSetup({ cache: false });
+
+    $(document).ready(function () {
+        $(".openDialog").live("click", function (e) {
+            e.preventDefault();
+
+            $("<div></div>")
+                .addClass("dialog")
+                .attr("id", $(this)
+                .attr("data-dialog-id"))
+                .appendTo("body")
+                .dialog({
+                    title: $(this).attr("data-dialog-title"),
+                    close: function () { $(this).remove(); },
+                    modal: true,
+                    height: 250,
+                    width: 400,
+                    left: 0
+
+                })
+            .load(this.href);
+        });
+
+        $(".close").live("click", function (e) {
+            e.preventDefault();
+            $(this).closest(".dialog").dialog("close");
+        });
+    });
+</script>

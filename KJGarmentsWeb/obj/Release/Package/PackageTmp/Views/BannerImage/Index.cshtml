@@ -1,0 +1,141 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@using GridMvc.Html
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+<link href="~/css/theme.default.css" rel="stylesheet" type="text/css" />
+@model IPagedList<KJGarmentsWeb.Models.ViewBannerImageModel>
+@{
+    ViewBag.Title = "View Banner Images";
+}
+ @if (TempData["Message"] != null)
+{
+<script>  
+         alert('@TempData["Message"]');
+       
+ 
+</script>
+}
+
+@using (Html.BeginForm())
+{
+     
+     <div class="container">
+         @*<div class="admin-container">*@
+             <div class="row">
+                 <div class="col-md-2">
+                     <h5 class="btnBlue btnAddProduct">@Html.ActionLink("Add", "Create")</h5>
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="col-md-2">
+                     @Html.PagedListPager(Model, page => Url.Action("Index", new { page }), PagedListRenderOptions.PageNumbersOnly)
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="col-md-12">
+                     <div class="datagrid">
+                <table class="tablesorter">
+                    <thead>
+                         <tr>
+                            <th>
+                               Id                              
+                            </th>
+        
+                            <th>
+                              Banner image
+                            </th>                          
+                            
+                           <th></th>
+                           <th></th>
+                        </tr>
+
+                    </thead>
+                  
+                    <tbody>                        
+                        @{        
+    var i = 0;
+    foreach (var item in Model)
+    {
+
+        if (i % 2 == 0)
+        {
+                                    <tr>
+                                        <td>@item.BNRImgId</td>                                     
+                                         <td><img src="@Url.Content(System.Configuration.ConfigurationManager.AppSettings["BNR_IMG_Path"] + @item.Imagepath)" width="200" height="50" class="img-admin-view" /></td>  
+                                         @if (item.Active == false)
+                                         {
+                                             <td></td>   
+                                           <td>@Html.ActionLink("ReActivate", "ReActivate", new { id = item.BNRImgId }, new { @class = "reactivate-link" })</td>
+                                         }
+                                         else
+                                         {
+                                            
+                                            <td>@Html.ActionLink("Delete", "Delete", new { id = item.BNRImgId }, new { @class = "delete-link" })</td>
+                                         }
+                                    </tr>
+        }
+        else
+        {
+                                    <tr class="alt">
+                                       <td>@item.BNRImgId</td>                                     
+                                         <td><img src="@Url.Content(System.Configuration.ConfigurationManager.AppSettings["BNR_IMG_Path"] + @item.Imagepath)" width="200" height="50" class="img-admin-view" /></td>  
+                                         @if (item.Active == false)
+                                         {
+                                             <td></td>   
+                                           <td>@Html.ActionLink("ReActivate", "ReActivate", new { id = item.BNRImgId }, new { @class = "reactivate-link" })</td>
+                                         }
+                                         else
+                                         {
+                                            
+                                            <td>@Html.ActionLink("Delete", "Delete", new { id = item.BNRImgId }, new { @class = "delete-link" })</td>
+                                         }
+                                    </tr>
+        }
+
+        i += 1;
+    }
+                        }
+                    </tbody>
+                </table>
+            </div>
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="col-md-2">
+                     @Html.PagedListPager(Model, page => Url.Action("Index", new { page }), PagedListRenderOptions.PageNumbersOnly)
+                 </div>
+             </div>
+          @*</div>*@
+    </div>
+            
+}
+
+	<script src="~/Scripts/jquery.tablesorter.min.js"></script>
+	<script src="~/Scripts/jquery.tablesorter.widgets.min.js"></script>
+<script>
+    //$(document).ready(function () {
+
+    //});
+
+    $(function () {
+
+        var $table = $('table').tablesorter({
+            theme: 'blue',
+            widgets: ["zebra", "filter"],
+            widgetOptions: {
+                // filter_anyMatch replaced! Instead use the filter_external option
+                // Set to use a jQuery selector (or jQuery object) pointing to the
+                // external filter (column specific or any match)
+                filter_external: '.search',
+                // add a default type search to the first name column
+                filter_defaultFilter: { 1: '~{query}' },
+                // include column filters
+                filter_columnFilters: true,
+                filter_placeholder: { search: 'Search...' },
+                filter_saveFilters: true,
+                filter_reset: '.reset'
+            }
+        });
+
+    });
+</script>

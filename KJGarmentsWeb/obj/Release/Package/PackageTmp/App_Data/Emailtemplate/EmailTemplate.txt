@@ -1,0 +1,63 @@
+﻿    <html>
+    <body style=”color:grey; font-size:15px;”>
+    <font face=”Helvetica, Arial, sans-serif”>
+
+    <div style=”position:absolute; height:100px; width:600px; background-color:0d1d36; padding:30px;”>
+    <img src=”logo” />
+    </div>
+
+    <br/>
+    <br/>
+
+    <div style=”background-color: #ece8d4; width:600px; height:200px; padding:30px; margin-top:30px;”>
+
+    <p>Dear Mughapu,<p>
+	  
+   <table border ="1">
+   <tr>
+   <td>
+			 Name:
+   </td>
+   <td>
+		   {0} 
+   </td>
+   </tr>
+     <tr>
+   <td>
+			Email ID:
+   </td>
+   <td>
+		    {1}
+   </td>
+   </tr>
+     <tr>
+   <td>
+			 Mobile:
+   </td>
+   <td>
+		    {2}
+   </td>
+   </tr>
+     <tr>
+   <td>
+			Address:
+   </td>
+   <td>
+		    {3}
+   </td>
+   </tr>
+        <tr>
+   <td>
+			  Commnets:
+   </td>
+   <td>
+		    {4}
+   </td>
+   </tr>
+   </table>
+  
+    <br/>
+    <p>Thank you</p>
+    </div>
+    </body>
+    </html>
